@@ -1,0 +1,268 @@
+$hmc: $red;
+$header_main_color: $hmc;
+// $header_main_color: $red;
+
+
+header.main-header {
+	text-align: center;
+	position: relative;
+	//left: -10000%;
+	min-height: 90px;
+
+	hr {
+		background-color: $hmc;
+		border-color: $hmc;
+		height: 4px;
+		// NAME DURATION TIMING() DELAY DIRECTION ITERATION_cnt FILLmde PLAYste
+		// animation: destruction 0.5s ease-in 1s alternate 1 forwards;
+	}
+
+	h2 {
+		font-size: 1.8em;
+		line-height: 2em;
+		// ### ### ANIMATION				
+		// animation: destruction 0.5s ease-in 1s alternate 1 forwards;	
+	}
+
+	h1 {
+		font-size: 2em;
+		line-height: 1.8em;
+		// ### ### ANIMATION				
+		// animation: destruction 0.5s ease-in 1s alternate 1 forwards;
+	}	
+
+	@at-root .main-header__ninja-area {
+		position: absolute;
+		top: 3px;
+		right: 8px;
+		z-index: 10000;
+
+		span.ninja {
+			background: url(../pics/ninja.png) 0 0/100% no-repeat transparent;
+			width: 23px;
+			height: 28px;
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+
+		h3 {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	@at-root .main-header__circle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		// ### ### ANIMATION			
+		// animation: moveCircle 1s ease-in 1s alternate 1 forwards;
+
+		$out_circle_dim: 90px;
+		$out_circle_color: 90px;
+		$in_circle_dim: 80px;
+
+		@at-root .circle_in {
+			width: 80px;
+			height: 80px;
+			border-radius: 40px;
+			display: block;
+			background-color: #a8211e;
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			border: 5px solid #00b0eb;
+			box-sizing: border-box;
+		}
+	}
+
+	@at-root .main-header__menu {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
+
+		$menu_text_color: #fff;
+		box-sizing: border-box;
+		padding: 0 3em;
+		border-top: 1px solid $hmc;
+		border-bottom: 1px solid $hmc;
+		opacity: 0;
+
+		// transform: rotateX(90deg);
+
+		// // animation: rotation 0.5s ease-in 2s alternate 1 forwards;
+
+
+		ul {
+			display: flex;
+			flex-flow: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+
+			li {
+				min-width: 14em;
+				transition: all 0.5s ease;
+				padding: 5px 0;
+
+				a {
+					display: block;
+
+					span {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					svg path {
+						transition: all 0.5s ease;
+					}
+				}
+
+				&:hover {
+					background-color: #000;
+
+					svg path {
+						fill: red;
+					}
+				}
+
+				&.skills {
+
+					&:hover {
+						img {
+							filter: none;
+							-webkit-filter: grayscale(0);
+						}
+					}
+				}
+				&.portfolio {
+
+					&:hover {
+						img {
+							filter: none;
+							-webkit-filter: grayscale(0);
+						}
+					}
+				}			
+
+			}
+		}
+
+		.icon__who {
+			svg {
+				width: 37px;
+				height: 40px;			
+			}
+		}
+		.icon__work {
+			svg {
+				width: 43px;
+				height: 40px;			
+			}
+		}
+		.icon__portfolio {
+			img {
+				width: 43px;
+				height: 40px;		
+				filter: gray;
+				-webkit-filter: grayscale(1);
+				transition: all 0.5s ease;				
+			}
+		}
+		.icon__skills {
+			img {
+				width: 49px;
+				height: 40px;		
+				filter: gray;
+				-webkit-filter: grayscale(1);
+				transition: all 0.5s ease;	
+			}
+		}
+		.menu__text {
+			font-size: 1.2em;
+			color: $menu_text_color;
+		}
+	}
+
+
+	&.animated01 {
+
+		hr, h2, h1 {
+			// animation: destruction 0.5s ease-in 1s 1 forwards;
+			animation: destruction 0.5s ease-in 1 forwards;
+			animation-direction: normal;
+		}
+
+		.main-header__circle {
+			// animation: moveCircle 1s ease-in 1s 1 forwards;
+			animation: moveCircle 1s ease-in 1 forwards;
+			animation-direction: normal;
+		}
+
+		.main-header__menu {
+
+			// animation: rotation 0.5s ease-in 2s 1 forwards;
+			animation: rotation 0.5s ease-in  1 forwards;
+			animation-direction: normal;
+		}
+
+		.main-header__ninja-area {
+			top: 12px;
+			right: 12px;
+			transition: all 1s cubic-bezier(.39,.76,.82,.21);
+			transition-delay: 1.5s;
+		}
+
+		&.reverse {
+			hr, h2, h1 {
+				animation: destructionReverse 0.5s ease-in 2s 1 backwards;
+				animation-direction: normal;
+			}
+
+			.main-header__circle {
+				animation: moveCircleReverse 0.5s ease-in 2s 1 backwards;
+				animation-direction: normal;
+			}
+
+			.main-header__menu {
+				animation: rotationReverse 0.5s ease-in 2s 1 backwards;
+				animation-direction: normal;
+			}
+
+			.main-header__ninja-area {
+				top: 12px;
+				right: 12px;
+				transition: all 1s cubic-bezier(.39,.76,.82,.21);
+				transition-delay: 1.5s;
+			}			
+		}
+
+		&.foward {
+			hr, h2, h1 {
+				animation-direction: normal;
+			}
+
+			.main-header__circle {
+				animation-direction: normal;
+			}
+
+			.main-header__menu {
+
+				animation-direction: normal;
+			}
+
+			.main-header__ninja-area {
+				top: 12px;
+				right: 12px;
+				transition: all 1s cubic-bezier(.39,.76,.82,.21);
+				transition-delay: 1.5s;
+			}			
+		}
+
+	}
+}
+
+
+

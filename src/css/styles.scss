@@ -1,0 +1,55 @@
+// // ========= MANDATORY =========
+@import "base/_reset.scss";
+@import "base/_fonts.scss";
+
+// // // ========= HELPERS (utils) =========
+@import "helpers/_variables.scss";
+@import "helpers/_mixins.scss"; 
+@import "helpers/_animations.scss"; 
+
+// // // ==== COMPONENTS ====
+// @import "components/_responsive-menu.scss";
+@import "components/_special_link.scss";
+@import "components/_main_header.scss";
+@import "components/_pacman.scss";
+// @import "components/_language-dropdown.scss";
+// @import "components/_lobby-world-lottos.scss";
+// @import "components/_lobby-results.scss";
+// @import "components/_gameinfo.scss";
+// @import "components/_all-lotteries.scss";
+// @import "components/_tilt_system.scss";
+// @import "components/_inner_cart.scss";
+// @import "components/_preloader.scss";
+// // @import "components/_large_banner.scss";
+// // @import "components/_small_banners.scss";
+// @import "components/_large_banner2.scss";
+// @import "components/_small_banners2.scss";
+// @import "components/_lobby-head-rotator.scss"; 
+
+// // // ==== LAYOUT ====
+// @import "layout/_header.scss"; 
+@import "layout/_layout.scss"; 
+
+
+// // // ==== PAGES ====
+@import "pages/_home.scss"; 
+// @import "pages/_game.scss"; 
+// @import "pages/_results.scss"; 
+// @import "pages/_cart.scss"; 
+// @import "pages/_mytickets.scss"; 
+
+
+// // ==== VENDORS ====
+// @import "vendors/_jquery-ui.scss"; 
+// @import "vendors/_jquery.bxslider.scss"; 
+
+.layer1 {
+	color: inherit;
+}
+
+.copycat {
+	color: green;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

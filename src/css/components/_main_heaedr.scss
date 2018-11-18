@@ -1,0 +1,106 @@
+$bar_color: #f13433;
+
+
+header.main-header {
+	text-align: center;
+	position: relative;
+
+	hr {
+		background-color: $bar_color;
+		border-color: $bar_color;
+		height: 4px;
+	}
+
+}
+
+.main-header__ninja-area {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	h2 {
+		font-size: 1.8em;
+		line-height: 2em;
+	}
+
+	h1 {
+		font-size: 2em;
+		line-height: 1.8em;
+	}
+
+	span.ninja {
+		background: url(../pics/ninja.png) 0 0/100% no-repeat transparent;
+		width: 23px;
+		height: 28px;
+		display: inline-block;
+	}
+
+
+	h3 {
+		display: inline-block;
+	}
+}
+
+
+.main-header__circle {
+
+	$out_circle_dim: 90px;
+	$out_circle_color: 90px;
+	$in_circle_dim: 80px;
+
+	@at-root .circle_in {
+		width: 80px;
+		height: 80px;
+		border-radius: 40px;
+		display: block;
+		background-color: #a8211e;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		border: 5px solid #00b0eb;
+		box-sizing: border-box;
+	}
+}
+
+
+.main-header__menu {
+
+	ul {
+		display: flex;
+		flex-flow: row;
+		flex-wrap: nowrap;
+
+		li {
+
+			a {
+
+				span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+
+		}
+	}
+
+	.icon__who {
+		background: url(../pics/whoami.png) 0 0/100% no-repeat transparent;
+		width: 26px;
+		height: 28px;
+	}
+	.icon__work {
+		background: url(../pics/work.png) 0 0/100% no-repeat transparent;
+		width: 31px;
+		height: 29px;
+	}
+	.icon__portfolio {
+		background: url(../pics/portfolio.png) 0 0/100% no-repeat transparent;
+		width: 40px;
+		height: 33px;
+	}
+	.icon__skills {
+		background: url(../pics/skills.png) 0 0/100% no-repeat transparent;
+		width: 49px;
+		height: 39px;
+	}
+}

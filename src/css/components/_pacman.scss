@@ -1,0 +1,20 @@
+.pacman{
+  // margin:40px 10px;
+}
+
+.pacman-top{
+  background-color:yellow;
+  height:5px;
+  width:10px;
+  border-radius:5px 5px 0 0;
+  animation: spin1 0.5s infinite linear;
+}
+
+.pacman-bottom{
+background-color:yellow;
+  height:5px;
+  width:10px;
+  border-radius:0 0 5px 5px;
+  animation: spin2 0.5s infinite linear;
+}
+

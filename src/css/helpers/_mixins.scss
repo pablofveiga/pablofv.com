@@ -1,0 +1,78 @@
+/*
+    Example usage: 
+    @include animation(10s, 5s, changecolour)
+ */
+ // NAME DURATION TIMING() DELAY DIRECTION ITERATION_cnt FILLmde PLAYste
+// @mixin animation (
+//     $name,
+//     $duration,
+//     $timing: null,
+//     $delay: null,
+//     $direction: null,
+//     $iteration: null,
+//     $fillMode: null,
+//     $playState: null){
+
+//     -webkit-animation-name: $name;
+//     -webkit-animation-duration: $duration;
+//     -webkit-animation-timing-function: $timing;
+//     -webkit-animation-delay: $delay;
+//     -webkit-animation-direction: $direction;
+//     -webkit-animation-iteration-count: $iteration;
+//     -webkit-animation-fill-mode: $fillMode;
+//     -webkit-animation-play-state: $playState;
+//     -moz-animation-name: $name;
+//     -moz-animation-duration: $duration;
+//     -moz-animation-timing-function: $timing;
+//     -moz-animation-delay: $delay;
+//     -moz-animation-direction: $direction;
+//     -moz-animation-iteration-count: $iteration;
+//     -moz-animation-fill-mode: $fillMode;
+//     -moz-animation-play-state: $playState;
+//     -o-animation-name: $name;
+//     -o-animation-duration: $duration;
+//     -o-animation-timing-function: $timing;
+//     -o-animation-delay: $delay;
+//     -o-animation-direction: $direction;
+//     -o-animation-iteration-count: $iteration;
+//     -o-animation-fill-mode: $fillMode;
+//     -o-animation-play-state: $playState;
+//     animation-name: $name;
+//     animation-duration: $duration;
+//     animation-timing-function: $timing;
+//     animation-delay: $delay;
+//     animation-direction: $direction;
+//     animation-iteration-count: $iteration;
+//     animation-fill-mode: $fillMode;
+//     animation-play-state: $playState;
+// }
+
+// p {
+//     // @include animation(destruction,5s,ease-in,$delay: null $direction: null $iteration: null $fillMode: null $playState: null);
+//     //    @include animation($name: "destruction", $duration: "5s", $timing: "ease-in",$delay: null $direction: null $iteration: null $fillMode: null $playState: null);
+//     @include animation("destruction" 2 3 4 5 6 7 8);
+// }
+
+
+//     $delay, $duration, $animation) {
+// // @mixin animation ($delay, $duration, $animation) {
+//     -webkit-animation-delay: $delay;
+//     -webkit-animation-duration: $duration;
+//     -webkit-animation-name: $animation;
+//     -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+//     -moz-animation-delay: $delay;
+//     -moz-animation-duration: $duration;
+//     -moz-animation-name: $animation;
+//     -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+//     -o-animation-delay: $delay;
+//     -o-animation-duration: $duration;
+//     -o-animation-name: $animation;
+//     -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+//     animation-delay: $delay;
+//     animation-duration: $duration;
+//     animation-name: $animation;
+//     animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+// }
