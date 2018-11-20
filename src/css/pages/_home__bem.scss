@@ -1,0 +1,175 @@
+.lobbySection {
+
+    &__header {
+
+        &__title {
+
+        }
+    }
+
+    &__image {
+
+    }
+
+    &__text {
+
+        p {
+
+        }
+    }
+
+    &.whoIam {
+        
+    }
+}
+
+
+
+
+
+
+
+.lobby_mainSection__content {
+
+	p {
+		font-size: 1.6em;
+	}
+}
+
+.lobby_mainSection__header {
+	margin: 0 0 1em;
+}
+
+
+.showcase__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    @at-root article.showcase__item {
+	    flex-basis: 25%;
+	    max-width: 224px;
+	    text-align: center; // fallback for align-items
+	    height: 300px;
+	    border: 3px solid #fff;
+	    border-radius: 3px;
+	    margin: 0.75em;
+	    display: inline-flex;
+	    flex-direction: column;
+	    flex-wrap: nowrap;
+	    transition: all 0.5s ease;
+	    position: relative;
+	    overflow: hidden;
+
+
+	    svg {
+	    	width: 190px;
+    	    margin-top: 2.5em;
+    	    transition: all 0.5s ease;
+	    }
+
+	    @at-root .showcase__item__header {
+	    	order: 2;
+	    	margin-top: 2em;
+
+	    	h3 {
+	    		font-size: 2em;
+	    	}
+	    }
+
+	    @at-root .showcase__item__image {
+	    	order: 1;
+	    }
+
+	    @at-root .showcase__item__content {
+	    	order: 3;
+	    	// position: absolute;	    	
+	    	position: relative;	    	
+	    	// bottom: 0;
+	    	left: -100%;
+	    	opacity: 0;
+	    	transition: all 1s ease;
+	    	// display: none;
+	    	// width: 0;
+
+	    	p {
+	    		padding: 0 0.5em;
+	    		color: $red;
+	    		// font-size: 0;
+	    	}
+	    }
+
+	    .mrPacMan {
+	    	display: none;
+	    	position: absolute;
+	    	top: 0;
+	    	left: 0;
+
+
+	    	&.hungry {
+	    		display: block;
+	    	}
+	    }
+
+
+	    &:hover {
+	    	border-color: $red;
+	    	background-color: #000;
+	    	transition: all 0.5s ease;
+
+	    	svg>g {
+	    		fill: $red;
+	    		transition: all 0.5s ease;	    		
+	    	}
+	    	svg>path {
+	    		fill: $red;
+	    		transition: all 0.5s ease;
+	    	}
+
+	    	h3 {
+	    		color: $red;
+	    		transition: all 0.5s ease;
+	    	}
+
+
+	    	svg {
+	    		// width: 134px;
+	    		width: 80px;
+	    	}
+
+	    	.showcase__item__content {
+	    		display: block;
+	    		opacity: 1;
+	    		transition: all 1s ease;
+	    		// bottom: 0;
+	    		left: 0;
+	    		position: relative;
+
+	    		p {
+				    font-size: 1.75em;
+				    line-height: 1.25em;
+				    font-weight: 300;
+				    margin-top: 0.5em;
+				    color: #fff;
+				    transition: all 0.5s ease;
+				    transition: color 1s ease-in;
+	    		}
+	    	}
+	    }
+
+	    &.portfolio {
+	    	&:hover {
+	    		svg path {
+
+	    			&:first-child,
+	    			&:nth-child(3),
+	    			&:nth-child(5)
+	    			 {
+	    				fill: $red;	    				
+	    			}
+	    		}
+	    	}
+	    }
+	}
+}

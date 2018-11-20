@@ -4,78 +4,78 @@ $header_main_color: $hmc;
 
 
 header.main-header {
-	text-align: center;
-	position: relative;
-	//left: -10000%;
-	min-height: 90px;
+	// text-align: center;
+	// position: relative;
+	// //left: -10000%;
+	// min-height: 90px;
 
-	hr {
-		background-color: $hmc;
-		border-color: $hmc;
-		height: 4px;
-		// NAME DURATION TIMING() DELAY DIRECTION ITERATION_cnt FILLmde PLAYste
-		// animation: destruction 0.5s ease-in 1s alternate 1 forwards;
-	}
+	// hr {
+	// 	background-color: $hmc;
+	// 	border-color: $hmc;
+	// 	height: 4px;
+	// 	// NAME DURATION TIMING() DELAY DIRECTION ITERATION_cnt FILLmde PLAYste
+	// 	// animation: destruction 0.5s ease-in 1s alternate 1 forwards;
+	// }
 
-	h2 {
-		font-size: 1.8em;
-		line-height: 2em;
-		// ### ### ANIMATION				
-		// animation: destruction 0.5s ease-in 1s alternate 1 forwards;	
-	}
+	// h2 {
+	// 	font-size: 1.8em;
+	// 	line-height: 2em;
+	// 	// ### ### ANIMATION				
+	// 	// animation: destruction 0.5s ease-in 1s alternate 1 forwards;	
+	// }
 
-	h1 {
-		font-size: 2em;
-		line-height: 1.8em;
-		// ### ### ANIMATION				
-		// animation: destruction 0.5s ease-in 1s alternate 1 forwards;
-	}	
+	// h1 {
+	// 	font-size: 2em;
+	// 	line-height: 1.8em;
+	// 	// ### ### ANIMATION				
+	// 	// animation: destruction 0.5s ease-in 1s alternate 1 forwards;
+	// }	
 
-	@at-root .main-header__ninja-area {
-		position: absolute;
-		top: 3px;
-		right: 8px;
-		z-index: 10000;
+	// @at-root .main-header__ninja-area {
+	// 	position: absolute;
+	// 	top: 3px;
+	// 	right: 8px;
+	// 	z-index: 10000;
 
-		span.ninja {
-			background: url(../pics/ninja.png) 0 0/100% no-repeat transparent;
-			width: 23px;
-			height: 28px;
-			display: inline-block;
-			vertical-align: middle;
-			cursor: pointer;
-		}
+	// 	span.ninja {
+	// 		background: url(../pics/ninja.png) 0 0/100% no-repeat transparent;
+	// 		width: 23px;
+	// 		height: 28px;
+	// 		display: inline-block;
+	// 		vertical-align: middle;
+	// 		cursor: pointer;
+	// 	}
 
-		h3 {
-			display: inline-block;
-			vertical-align: middle;
-		}
-	}
+	// 	h3 {
+	// 		display: inline-block;
+	// 		vertical-align: middle;
+	// 	}
+	// }
 
-	@at-root .main-header__circle {
-		position: absolute;
-		top: 0;
-		left: 0;
-		// ### ### ANIMATION			
-		// animation: moveCircle 1s ease-in 1s alternate 1 forwards;
+	// @at-root .main-header__circle {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	// ### ### ANIMATION			
+	// 	// animation: moveCircle 1s ease-in 1s alternate 1 forwards;
 
-		$out_circle_dim: 90px;
-		$out_circle_color: 90px;
-		$in_circle_dim: 80px;
+	// 	$out_circle_dim: 90px;
+	// 	$out_circle_color: 90px;
+	// 	$in_circle_dim: 80px;
 
-		@at-root .circle_in {
-			width: 80px;
-			height: 80px;
-			border-radius: 40px;
-			display: block;
-			background-color: #a8211e;
-			position: absolute;
-			top: 5px;
-			left: 5px;
-			border: 5px solid #00b0eb;
-			box-sizing: border-box;
-		}
-	}
+	// 	@at-root .circle_in {
+	// 		width: 80px;
+	// 		height: 80px;
+	// 		border-radius: 40px;
+	// 		display: block;
+	// 		background-color: #a8211e;
+	// 		position: absolute;
+	// 		top: 5px;
+	// 		left: 5px;
+	// 		border: 5px solid #00b0eb;
+	// 		box-sizing: border-box;
+	// 	}
+	// }
 
 	@at-root .main-header__menu {
 		position: absolute;

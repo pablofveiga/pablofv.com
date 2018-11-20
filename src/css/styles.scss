@@ -11,6 +11,7 @@
 // @import "components/_responsive-menu.scss";
 @import "components/_special_link.scss";
 @import "components/_main_header.scss";
+@import "components/_main_header--new.scss";
 @import "components/_pacman.scss";
 // // // ==== LAYOUT ====
 // @import "layout/_header.scss";
@@ -19,6 +20,7 @@
 
 // // // ==== PAGES ====
 @import "pages/_home.scss";
+@import "pages/_home__bem.scss";
 
 // // ==== VENDORS ====
 
@@ -67,7 +69,6 @@ body#menu {
 				height: 300px;
 			}
 		}
-
 		// 	Items desplegables
 		&__list {
 			display: none;
@@ -146,13 +147,7 @@ body#menu {
 				}
 			}
 		}
-
 	}
-
-
-
-
-
 }
 .topMenu__trigger {
 	width: 90px;
@@ -183,71 +178,10 @@ body#test {
 		}
 	}
 
-	// quitar hr del css y del marcado
-	hr {
-		display: none;
-	}
-
-
-	.hr {
-		background-color: #c41b18;
-		height: 4px;
-		position: absolute;
-		width: 100%;
-		// width: 10000%;
-		top: 33px;
-		z-index: 1000;
-
-		&.animated {
-			animation: headerHR 1s ease-in 1 forwards;
-			animation-direction: normal;
-		}
-	}
-
 	@media (max-width: 468px) {
 		overflow-x: hidden;
 	}
 
 }
-
-	// animación HR
-@keyframes headerHR {
-	  0% {
-			transform: rotate(0deg);
-			transform-origin: 24px 120px;
-			width: 10000%;
-	}
-	//  26% {
-	// 	 	transform: rotate(26deg)
-	// }
-
-	//  27% {
-	// 	transform: rotate(27deg);
-	// 	transform-origin: 10px 70px;
-	// }
-
-	//  43% {
-	// 	transform: rotate(43deg);
-	// 	transform-origin: 21px 44px;
-	//  }
-
-	//  62% {
-	// 	transform: rotate(62deg);
-	// 	transform-origin: 13px 33px;
-	//  }
-
-	 83% {
-		transform: rotate(83deg);
-		transform-origin: 18px 22px;
-	 }
-
-
-	100% {
-		transform: rotate(100deg);
-		opacity: 0;
-	}
-}
-
-
 
 

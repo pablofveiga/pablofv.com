@@ -13,26 +13,19 @@
 
     <div class="testContainer">
 
-    <div class="hr"></div>
 
+	<div class="wrapper no-padding">		
+		<header id="main-header" class="main-header mainHeader">
+			<h2 class="mainHeader__subtitle">pablofv.com</h2>
+			<hr class="mainHeader__bar">            
+			<h1 class="cursive mainHeader__title">Front-End Developer</h1>
 
-	<div class="wrapper no-padding">
-
-		
-		<header id="main-header" class="main-header">
-			<h2>pablofv.com</h2>
-			<hr>
-            
-			<h1 class="cursive">Front-End Developer</h1>
-
-			<div class="main-header__circle">
-				<span class="circle_in"></span>
+			<div class="mainHeader__circle">
+				<span class="closeIcon"></span>
 			</div>
 
-			<div class="main-header__ninja-area">
-				<span class="ninja">
-					
-				</span>
+			<div class="mainHeader__ninjaArea">
+				<span class="mainHeader__ninjaArea__ninja"></span>
 				<h3>css<br>ninja</h3>
 			</div>
 
@@ -77,6 +70,23 @@
 	</div>
 
 	<div class="wrapper">
+
+		<section class="whoIam lobbySection">
+			<header class="lobbySection__header">
+				<h3 class="lobbySection__header__title">Who I am?</h3>
+			</header>
+			<span class="lobbySection__image"></span>
+			<div class="lobbySection__text">
+				<p>I am a front-end developer with 6 years of experience, four of them in Malta working at betting companies. I have also worked as a freelance, and even in a small company created with some colleagues and me.</p>
+				<p>I am very focus in user experience and very detailed in graphics and DOM interaction. However, I keep constantly updating with latest technologies.</p>
+				<p>I am very passionate about CSS and my goal is to become top 1000 in Spain as a CSS developer.</p>
+			</div>
+		</section>
+
+
+
+
+
 
 		<section class="lobby_mainSection">
 			<header class="lobby_mainSection__header section-header">
@@ -247,19 +257,33 @@
 
 
     <script>
-        let trigger = document.querySelector(".main-header__circle");
-        let victim = document.querySelector(".hr");
+        // let trigger = document.querySelector(".main-header__circle");
+        // let victim = document.querySelector(".hr");
 
-        // trigger.click(function(){
-        //     $(".hr")
-        // })
+        // // trigger.click(function(){
+        // //     $(".hr")
+        // // })
 
-        trigger.addEventListener("click",function(e){
-            e.preventDefault();
-            victim.classList.add("animated");
+        // trigger.addEventListener("click",function(e){
+        //     e.preventDefault();
+        //     victim.classList.add("animated");
 
-        })    
+        // })    
     
+
+
+
+// MENU AMPLIA PEQUE
+		$(".main-header__circle").click(function(){            
+            $(".main-header__circle").toggleClass("openMenu");
+            setTimeout(muestraMenu,400);
+        })
+
+        function muestraMenu() {
+            $(".topMenu").toggleClass("extended");
+        }       
+
+
     </script>
 </body>
 </html>
