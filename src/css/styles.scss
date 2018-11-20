@@ -4,44 +4,23 @@
 
 // // // ========= HELPERS (utils) =========
 @import "helpers/_variables.scss";
-@import "helpers/_mixins.scss"; 
-@import "helpers/_animations.scss"; 
+@import "helpers/_mixins.scss";
+@import "helpers/_animations.scss";
 
 // // // ==== COMPONENTS ====
 // @import "components/_responsive-menu.scss";
 @import "components/_special_link.scss";
 @import "components/_main_header.scss";
 @import "components/_pacman.scss";
-// @import "components/_language-dropdown.scss";
-// @import "components/_lobby-world-lottos.scss";
-// @import "components/_lobby-results.scss";
-// @import "components/_gameinfo.scss";
-// @import "components/_all-lotteries.scss";
-// @import "components/_tilt_system.scss";
-// @import "components/_inner_cart.scss";
-// @import "components/_preloader.scss";
-// // @import "components/_large_banner.scss";
-// // @import "components/_small_banners.scss";
-// @import "components/_large_banner2.scss";
-// @import "components/_small_banners2.scss";
-// @import "components/_lobby-head-rotator.scss"; 
-
 // // // ==== LAYOUT ====
-// @import "layout/_header.scss"; 
-@import "layout/_layout.scss"; 
+// @import "layout/_header.scss";
+@import "layout/_layout.scss";
 
 
 // // // ==== PAGES ====
-@import "pages/_home.scss"; 
-// @import "pages/_game.scss"; 
-// @import "pages/_results.scss"; 
-// @import "pages/_cart.scss"; 
-// @import "pages/_mytickets.scss"; 
-
+@import "pages/_home.scss";
 
 // // ==== VENDORS ====
-// @import "vendors/_jquery-ui.scss"; 
-// @import "vendors/_jquery.bxslider.scss"; 
 
 .layer1 {
 	color: inherit;
@@ -53,3 +32,222 @@
 	bottom: 0;
 	right: 0;
 }
+
+
+
+
+// TESTING AREA 51
+
+// test menu
+body#menu {
+	background-color: #212121;
+	color: #fff;
+	box-sizing: border-box;
+	font-size: 100%;
+
+	.topMenu {
+		position: relative;
+
+		// TRIGGER
+		&__trigger {
+			width: 90px;
+			height: 90px;
+			background-color: #a73434;
+			border-radius: 50%;
+			border: 3px solid #0e759a;
+			transition: all 0.3s ease-in;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			&.position2 {
+				top: -150px;
+				left: -150px;
+				width: 300px;
+				height: 300px;
+			}
+		}
+
+		// 	Items desplegables
+		&__list {
+			display: none;
+		}
+
+		&.extended {
+			transition: all 0.4s ease-in;
+			.topMenu__list {
+				display: flex;
+				position: relative;
+
+				&__item {
+					position: absolute;
+					left: 50%;
+					top: 0;
+					transform-origin: 0 0;
+
+					a {
+						display: block;
+					}
+
+					&:nth-child(1) {
+						transform: rotate(12deg);
+						top: 0;
+
+						a {
+							transform: rotate(-12deg);
+							transform-origin: 0 0;
+						}
+					}
+					&:nth-child(2) {
+						transform: rotate(24deg);
+						top: 12px;
+
+						a {
+							transform: rotate(-24deg);
+							transform-origin: 0 0;
+						}
+					}
+					&:nth-child(3) {
+						transform: rotate(36deg);
+						top: 24px;
+
+						a {
+							transform: rotate(-36deg);
+							transform-origin: 0 0;
+						}
+					}
+					&:nth-child(4) {
+						transform: rotate(48deg);
+						top: 36px;
+
+						a {
+							transform: rotate(-48deg);
+							transform-origin: 0 0;
+						}
+					}
+					&:nth-child(5) {
+						transform: rotate(60deg);
+						top: 48px;
+
+						a {
+							transform: rotate(-60deg);
+							transform-origin: 0 0;
+						}
+					}
+					&:nth-child(6) {
+						transform: rotate(72deg);
+						top: 60px;
+
+						a {
+							transform: rotate(-72deg);
+							transform-origin: 0 0;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+
+
+
+
+}
+.topMenu__trigger {
+	width: 90px;
+	height: 90px;
+	background-color: #a73434;
+	border-radius: 50%;
+	border: 3px solid #0e759a;
+}
+
+
+
+
+
+// test02
+body#test {
+
+	.main-header__circle {
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		width: 52px;
+		height: 52px;
+		background: url(../pics/ninjaboton.png) 0 0 no-repeat transparent;
+		z-index: 10000;
+
+		.circle_in {
+			display: none;
+		}
+	}
+
+	// quitar hr del css y del marcado
+	hr {
+		display: none;
+	}
+
+
+	.hr {
+		background-color: #c41b18;
+		height: 4px;
+		position: absolute;
+		width: 100%;
+		// width: 10000%;
+		top: 33px;
+		z-index: 1000;
+
+		&.animated {
+			animation: headerHR 1s ease-in 1 forwards;
+			animation-direction: normal;
+		}
+	}
+
+	@media (max-width: 468px) {
+		overflow-x: hidden;
+	}
+
+}
+
+	// animación HR
+@keyframes headerHR {
+	  0% {
+			transform: rotate(0deg);
+			transform-origin: 24px 120px;
+			width: 10000%;
+	}
+	//  26% {
+	// 	 	transform: rotate(26deg)
+	// }
+
+	//  27% {
+	// 	transform: rotate(27deg);
+	// 	transform-origin: 10px 70px;
+	// }
+
+	//  43% {
+	// 	transform: rotate(43deg);
+	// 	transform-origin: 21px 44px;
+	//  }
+
+	//  62% {
+	// 	transform: rotate(62deg);
+	// 	transform-origin: 13px 33px;
+	//  }
+
+	 83% {
+		transform: rotate(83deg);
+		transform-origin: 18px 22px;
+	 }
+
+
+	100% {
+		transform: rotate(100deg);
+		opacity: 0;
+	}
+}
+
+
+
+

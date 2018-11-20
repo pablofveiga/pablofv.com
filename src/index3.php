@@ -8,13 +8,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 </head>
-<body>
+<body id="test">
+
+
+    <div class="testContainer">
+
+    <div class="hr"></div>
+
 
 	<div class="wrapper no-padding">
+
 		
 		<header id="main-header" class="main-header">
 			<h2>pablofv.com</h2>
 			<hr>
+            
 			<h1 class="cursive">Front-End Developer</h1>
 
 			<div class="main-header__circle">
@@ -70,24 +78,6 @@
 
 	<div class="wrapper">
 
-
-<!-- 		<section class="welcome-section">
-			<header class="section-header">
-				<h2>Welcome to my website!</h2>
-			</header>
-
-			<div class="section-content">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>				
-			</div>
-		</section>
- -->
 		<section class="lobby_mainSection">
 			<header class="lobby_mainSection__header section-header">
 				<h2>Welcome to my website!</h2>
@@ -226,27 +216,7 @@
 		
 	</div>
 
-
-
-<!-- 	<header id="main-header">
-		<h2>pablofv.com</h2>
-		<h1>Front-End Developer</h1>
-		<abbr>abreviatura</abbr>
-	</header>
-
-
-	<div class="layer01">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	</div>
-
-	<p>esto es un <a href="#" class="link">Link especial</a></p>
- -->
+</div>
 
 
 
@@ -265,25 +235,31 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 
 
-<script type="text/javascript">
-	
-// $(window).scroll(function(e) {
-// 	console.log($(window).scrollTop());
-//   rotate($(window).scrollTop());
-// });
 
-// function rotate(deg) {   
-
-// 	console.log(deg);
+    <script>
+        // CALCULADOR D ANGULOS:
+        let numElemnts = 5;
+        let divisiones = numElemnts + 2;
+        let divGrados = Math.floor(90 / divisiones);    // 12.85 grados para 5 elementos
     
-//     $('img').css('transform', 'rotate('+-deg/10+'deg)');
-// }
-
     
-   
+    </script>
 
 
-</script>
+    <script>
+        let trigger = document.querySelector(".main-header__circle");
+        let victim = document.querySelector(".hr");
 
+        // trigger.click(function(){
+        //     $(".hr")
+        // })
+
+        trigger.addEventListener("click",function(e){
+            e.preventDefault();
+            victim.classList.add("animated");
+
+        })    
+    
+    </script>
 </body>
 </html>
