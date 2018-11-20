@@ -19,7 +19,12 @@
     }
 
     &.whoIam {
-        
+
+        .lobbySection__image {
+            background: url(../pics/whoami.svg) 0 0 no-repeat transparent;
+            background-size: 100%;
+        }
+
     }
 }
 
