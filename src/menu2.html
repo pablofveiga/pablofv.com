@@ -26,8 +26,8 @@
 </head>
 <body id="menu">
     
-    <div class="topMenu extended">
-        <div class="topMenu__trigger position2">
+    <div class="topMenu">
+        <div class="topMenu__trigger">
 
         </div>
 
@@ -59,64 +59,44 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
     <script>
-        // $(".topMenu__trigger").click(function(){            
-        //     $(".topMenu__trigger").toggleClass("position2");
-        //     setTimeout(muestraMenu,400);
-        // })
-
-        // function muestraMenu() {
-        //     $(".topMenu").toggleClass("extended");
-        // }
 
         // CALCULADOR D ANGULOS:
+
+            // user input
         let radio = 180; // (pixels)    
-
-        let numElemnts = 5;
-        let divisiones = numElemnts + 2;
-        let divGrados = Math.floor(90 / divisiones);    // 12.85 grados para 5 elementos
-    
-   
-            // coordenadas
-        let ang1 = divGrados;
-        let ang2 = 2*divGrados;
-        let ang3 = 3*divGrados;
-        let ang4 = 4*divGrados;
-        let ang5 = 5*divGrados;
-        let ang6 = 6*divGrados;
-
-        let el1X = radio * Math.cos(ang1);
-        let el2X = radio * Math.cos(ang2);
-        let el3X = radio * Math.cos(ang3);
-        let el4X = radio * Math.cos(ang4);
-        let el5X = radio * Math.cos(ang5);
-        let el6X = radio * Math.cos(ang6);
-        
-        let el1Y = radio * Math.sin(ang1);
-        let el2Y = radio * Math.sin(ang2);
-        let el3Y = radio * Math.sin(ang3);
-        let el4Y = radio * Math.sin(ang4);
-        let el5Y = radio * Math.sin(ang5);
-        let el6Y = radio * Math.sin(ang6);
 
         let nodos = document.querySelectorAll(".topMenu__list ul li");
 
-        // nodos.each(function(){
-            
-        // })
 
+        // let numElemnts = 5;
+        let numElemnts = nodos.length;
+        let divisiones = numElemnts + 2;
+        let divGrados = Math.floor(90 / divisiones);    
+    
+        // SET DATA TO ELEMNTS
+        for( let i = 0; i< nodos.length; i++ ) {
+            let _ord = i+1;     // start with 1 instead of 0
+            nodos[i].setAttribute("data-order", _ord);      // set "data-order"
 
+            let _ang = _ord * divGrados;
+            nodos[i].setAttribute("data-angle", _ang);      // set "data-angle"
 
-        for (i=0; nodos.length; i++) {
-            // nodos[i].setAttribute("data-order", i);
-         
+            let _cordX  = radio * Math.cos(_ang);
+            nodos[i].setAttribute("data-cX", _cordX);      // set "data-cX"
+
+            let _cordY  = radio * Math.sin(_ang);
+            nodos[i].setAttribute("data-cY", _cordY);      // set "data-cY"
         }
 
-        // $(".topMenu__list ul li").each(function(){
 
-            
+        $(".topMenu__trigger").click(function(){            
+            $(".topMenu__trigger").toggleClass("position2");
+            setTimeout(muestraMenu,400);
+        })
 
-        // });
-        
+        function muestraMenu() {
+            $(".topMenu").toggleClass("extended");
+        }        
     
     </script>
 

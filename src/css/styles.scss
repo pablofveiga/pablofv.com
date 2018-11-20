@@ -80,69 +80,69 @@ body#menu {
 				position: relative;
 
 				&__item {
-					position: absolute;
-					left: 50%;
-					top: 0;
-					transform-origin: 0 0;
+					// position: absolute;
+					// left: 50%;
+					// top: 0;
+					// transform-origin: 0 0;
 
-					a {
-						display: block;
-					}
+					// a {
+					// 	display: block;
+					// }
 
-					&:nth-child(1) {
-						transform: rotate(12deg);
-						top: 0;
+					// &:nth-child(1) {
+					// 	transform: rotate(12deg);
+					// 	top: 0;
 
-						a {
-							transform: rotate(-12deg);
-							transform-origin: 0 0;
-						}
-					}
-					&:nth-child(2) {
-						transform: rotate(24deg);
-						top: 12px;
+					// 	a {
+					// 		transform: rotate(-12deg);
+					// 		transform-origin: 0 0;
+					// 	}
+					// }
+					// &:nth-child(2) {
+					// 	transform: rotate(24deg);
+					// 	top: 12px;
 
-						a {
-							transform: rotate(-24deg);
-							transform-origin: 0 0;
-						}
-					}
-					&:nth-child(3) {
-						transform: rotate(36deg);
-						top: 24px;
+					// 	a {
+					// 		transform: rotate(-24deg);
+					// 		transform-origin: 0 0;
+					// 	}
+					// }
+					// &:nth-child(3) {
+					// 	transform: rotate(36deg);
+					// 	top: 24px;
 
-						a {
-							transform: rotate(-36deg);
-							transform-origin: 0 0;
-						}
-					}
-					&:nth-child(4) {
-						transform: rotate(48deg);
-						top: 36px;
+					// 	a {
+					// 		transform: rotate(-36deg);
+					// 		transform-origin: 0 0;
+					// 	}
+					// }
+					// &:nth-child(4) {
+					// 	transform: rotate(48deg);
+					// 	top: 36px;
 
-						a {
-							transform: rotate(-48deg);
-							transform-origin: 0 0;
-						}
-					}
-					&:nth-child(5) {
-						transform: rotate(60deg);
-						top: 48px;
+					// 	a {
+					// 		transform: rotate(-48deg);
+					// 		transform-origin: 0 0;
+					// 	}
+					// }
+					// &:nth-child(5) {
+					// 	transform: rotate(60deg);
+					// 	top: 48px;
 
-						a {
-							transform: rotate(-60deg);
-							transform-origin: 0 0;
-						}
-					}
-					&:nth-child(6) {
-						transform: rotate(72deg);
-						top: 60px;
+					// 	a {
+					// 		transform: rotate(-60deg);
+					// 		transform-origin: 0 0;
+					// 	}
+					// }
+					// &:nth-child(6) {
+					// 	transform: rotate(72deg);
+					// 	top: 60px;
 
-						a {
-							transform: rotate(-72deg);
-							transform-origin: 0 0;
-						}
-					}
+					// 	a {
+					// 		transform: rotate(-72deg);
+					// 		transform-origin: 0 0;
+					// 	}
+					// }
 				}
 			}
 		}
