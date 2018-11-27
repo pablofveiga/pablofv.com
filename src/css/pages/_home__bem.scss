@@ -1,31 +1,203 @@
+.lobbyContainer {
+	padding-top: 1em;
+	border-radius: 0 0 50px 50px;
+    box-shadow: 0 0 20px #000 inset;
+    padding-top: 3em;
+    padding-bottom: 3.5em;
+    position: relative;
+}
+
 .lobbySection {
+	padding: 1em 0 1.3em;
 
     &__header {
-
         &__title {
-
+			font-size: 1.25em;
         }
     }
 
     &__image {
-
+		// option 1
+		float: left;
+		transition: all 1s ease;
     }
 
     &__text {
 
         p {
+			font-size: 0.813em;
+			font-weight: 300;
+			line-height: 1.1em;
+			font-family: 'MuseoSans-300';
+			margin: 4px 0;
+		}
+		
+		&--link {
+			margin-top: 0.3em;
+		}
+	}
+	
+	&__link {
+		font-size: 0.85em;
+		line-height: 1.2em;
+		clear: both;
+	}
 
-        }
-    }
+	&__introText {
+		display: none;
+	}
 
     &.whoIam {
 
         .lobbySection__image {
-            background: url(../pics/whoami.svg) 0 0 no-repeat transparent;
-            background-size: 100%;
+            // background: url(../pics/whoami.svg) 0 4px no-repeat transparent;
+			// background-size: 100%;
+			display: block;
+			width: 100px;
+			height: 100px;
+			margin: 0 5px 0 0;
         }
 
-    }
+	}
+	
+	&.work {
+        .lobbySection__image {
+            background: url(../pics/espartan.svg) 0 0 no-repeat transparent;
+			background-size: 100%;
+			display: block;
+			width: 100px;
+			height: 100px;
+			margin: 0 5px 0 0;
+        }
+
+	}
+
+	&.skills {
+		.lobbySection__image {
+            background: url(../pics/ninja2.svg) 0 0 no-repeat transparent;
+			background-size: 100%;
+			display: block;
+			width: 100px;
+			height: 100px;
+			margin: 8px 5px 6px 0;
+        }
+
+	}
+
+	&.portfolio {
+		.lobbySection__image {
+            background: url(../pics/folder.svg) 0 0 no-repeat transparent;
+			background-size: 100%;
+			display: block;
+			width: 100px;
+			height: 90px;
+			margin: 0 5px 0 0;
+        }
+
+	}
+
+	&.contact {
+        .lobbySection__image {
+            background: url(../pics/contact.svg) 0 0 no-repeat transparent;
+			background-size: 100%;
+			display: block;
+			width: 100px;
+			height: 100px;
+			margin: 4px 5px 0 0;
+        }
+
+	}
+}
+
+// TABLET & PC
+@media(min-width: 960px) {
+	.lobbyContainer {		
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		// height: calc(100vh - 71px);
+	}
+
+	.lobbySection {
+		transition: all 1s ease;
+		width: 150px;
+		height: 210px;
+		text-align: center;
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		border: 2px solid #fff;
+		padding: 0.75em;
+		justify-content: space-evenly;
+		overflow: hidden;
+
+		&__text {
+			display: none;
+		}
+		&__link {
+			display: none;
+		}
+		&__introText {
+			display: block;
+			position: relative;
+			left: -100%;
+			opacity: 0;
+			font-size: 0;
+			color: $red;
+			transition: all 1s ease;
+		}
+
+		&:hover {
+			transition: all 1s ease;
+			border-color: $red;
+
+			.lobbySection {
+
+				&__introText {
+					order: 3;
+					transition: all 1s ease;
+					left: 0;
+					opacity: 1;
+					color: #fff;
+					font-size: 0.8em;
+					line-height: 1.22em;
+				}
+
+				&__header {
+					order: 2;
+
+					&__title {
+						color: $red;
+						border-style: solid;
+						border-color: #00b0eb;
+						border-width: 1px 0 1px 0;
+						padding: 2px 0;
+					}
+				}
+
+				&__image {
+					width: 80px;
+					height: 80px;
+					transition: all 1s ease;
+
+					svg>path {
+						fill: $red;
+						transition: all 0.5s ease;
+					}
+				}
+
+			}
+
+
+
+
+
+		}
+
+
+	}
+
 }
 
 

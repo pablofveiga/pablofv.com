@@ -3,23 +3,29 @@ html body#test {
 
 .mainHeader {
 	text-align: center;
-	position: relative;
+    position: relative;
+    overflow: hidden;
+    height: 70px;
 	// min-height: 90px;
 
 	&__bar {
 		background-color: $hmc;
 		border-color: $hmc;
-		height: 4px;
+        height: 4px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 25px;
 	}
 
 	&__subtitle {
-		font-size: 1.8em;
+		font-size: 1.2em;
 		line-height: 2em;
     }
     
 	&__title {
-		font-size: 2em;
-		line-height: 1.8em;
+		font-size: 1.3em;
+		line-height: 1.6em;
     }	    
     
     &__ninjaArea {
@@ -39,7 +45,8 @@ html body#test {
 
         h3 {
 			display: inline-block;
-			vertical-align: middle;
+            vertical-align: middle;
+            font-size: 0.7em;
 		}
     }
 

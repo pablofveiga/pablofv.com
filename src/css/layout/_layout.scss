@@ -1,4 +1,5 @@
-$outside_color: $darkBlue;
+// $outside_color: $darkBlue;
+$outside_color: #212121;
 $inside_color: #212121;
 $text-color: #fff;
 
@@ -16,8 +17,12 @@ body {
 	background-color: $outside_color;
 	color: $text-color;
 	box-sizing: border-box;
-	font-size: 62.5%;	// RESET EM TO DECIMAL
+	// font-size: 62.5%;	// RESET EM TO DECIMAL
 	// min-height: 100vh;
+
+	&#caca {
+		font-size: 62.5%;	// RESET EM TO DECIMAL
+	}
 }
 
 .wrapper {
@@ -76,9 +81,25 @@ svg {
 
 
 
-::selection {
-  background: #ffb7b7; /* WebKit/Blink Browsers */
+// ::selection {
+//   background: #ffb7b7; /* WebKit/Blink Browsers */
+// }
+// ::-moz-selection {
+//   background: #ffb7b7; /* Gecko Browsers */
+// }
+
+// AVOID USER SELECT:
+*, body {
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
 }
-::-moz-selection {
-  background: #ffb7b7; /* Gecko Browsers */
+
+
+// CUSTOM COLOR CLASSES
+.red {
+	color: $red;
 }

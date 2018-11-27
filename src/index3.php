@@ -11,9 +11,7 @@
 <body id="test">
 
 
-    <div class="testContainer">
-
-
+<!--
 	<div class="wrapper no-padding">		
 		<header id="main-header" class="main-header mainHeader">
 			<h2 class="mainHeader__subtitle">pablofv.com</h2>
@@ -68,7 +66,7 @@
 
 		</header>
 	</div>
-
+-->
 	<div class="wrapper">
 
 		<section class="whoIam lobbySection">
@@ -87,6 +85,7 @@
 
 
 
+<!--
 
 		<section class="lobby_mainSection">
 			<header class="lobby_mainSection__header section-header">
@@ -126,26 +125,24 @@
 						<header class="showcase__item__header">
 							<h3>Portfolio</h3>						
 						</header>
+				
+
+						
 						<div class="showcase__item__image">
-							<!-- <img src="pics/avion.png" alt="Portfolio"> -->
+						
 							<?php echo file_get_contents("pics/paperplane.svg"); ?>		
 						</div>
 						<div class="showcase__item__content">
 							<p>Take a look into the websites and projects I have been part from</p>
 						</div>
-						<!-- 					
-						<div class="mrPacMan">
-							<div class="pacman">
-							<div class="pacman-top"></div>
-							<div class="pacman-bottom"></div>	
-						</div> -->
+						
 					</article>
 					<article class="showcase__item skills">
 						<header class="showcase__item__header">
 							<h3>Skills & CV</h3>						
 						</header>
 						<div class="showcase__item__image">
-							<!-- <img src="pics/big_miyagi.png" alt="skills">		 -->		
+						
 							<?php echo file_get_contents("pics/ninja_simple.svg"); ?>					
 						</div>
 						<div class="showcase__item__content">
@@ -157,7 +154,7 @@
 							<h3>Contact</h3>						
 						</header>
 						<div class="showcase__item__image">
-							<!-- <img src="pics/big_miyagi.png" alt="skills">		 -->		
+								
 							<?php echo file_get_contents("pics/contact.svg"); ?>					
 						</div>
 						<div class="showcase__item__content">
@@ -212,7 +209,7 @@
 			</div>
 		</section>
 
-
+-->
 
 
 
@@ -220,13 +217,13 @@
 
 		<div class="blank" style="height: 400px;"></div>
 
+<!--
 		<span class="copycat">&pi;</span>
-
+-->
 
 		
 	</div>
 
-</div>
 
 
 
