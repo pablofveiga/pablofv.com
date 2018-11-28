@@ -62,8 +62,8 @@
 	
 	&.work {
         .lobbySection__image {
-            background: url(../pics/espartan.svg) 0 0 no-repeat transparent;
-			background-size: 100%;
+            // background: url(../pics/espartan.svg) 0 0 no-repeat transparent;
+			// background-size: 100%;
 			display: block;
 			width: 100px;
 			height: 100px;
@@ -74,8 +74,8 @@
 
 	&.skills {
 		.lobbySection__image {
-            background: url(../pics/ninja2.svg) 0 0 no-repeat transparent;
-			background-size: 100%;
+            // background: url(../pics/ninja2.svg) 0 0 no-repeat transparent;
+			// background-size: 100%;
 			display: block;
 			width: 100px;
 			height: 100px;
@@ -86,8 +86,8 @@
 
 	&.portfolio {
 		.lobbySection__image {
-            background: url(../pics/folder.svg) 0 0 no-repeat transparent;
-			background-size: 100%;
+            // background: url(../pics/folder.svg) 0 0 no-repeat transparent;
+			// background-size: 100%;
 			display: block;
 			width: 100px;
 			height: 90px;
@@ -98,8 +98,8 @@
 
 	&.contact {
         .lobbySection__image {
-            background: url(../pics/contact.svg) 0 0 no-repeat transparent;
-			background-size: 100%;
+            // background: url(../pics/contact.svg) 0 0 no-repeat transparent;
+			// background-size: 100%;
 			display: block;
 			width: 100px;
 			height: 100px;
@@ -119,6 +119,26 @@
 		// height: calc(100vh - 71px);
 	}
 
+	.introSection {
+		padding: 3em 20px 1.5em;
+		font-family: $font-light;
+
+		&__header {
+
+			h2 {
+				font-size: 2.5em;
+				line-height: 1.3em;
+			}
+		}
+
+		&__content {
+			p {
+				font-size: 1em;
+				line-height: 1.3em;
+			}
+		}
+	}
+
 	.lobbySection {
 		transition: all 1s ease;
 		width: 150px;
@@ -131,6 +151,7 @@
 		padding: 0.75em;
 		justify-content: space-evenly;
 		overflow: hidden;
+		cursor: pointer;
 
 		&__text {
 			display: none;
@@ -158,6 +179,7 @@
 					order: 3;
 					transition: all 1s ease;
 					left: 0;
+					top: 6px;
 					opacity: 1;
 					color: #fff;
 					font-size: 0.8em;
@@ -185,14 +207,17 @@
 						fill: $red;
 						transition: all 0.5s ease;
 					}
+					svg>g {
+						fill: $red;
+						transition: all 0.5s ease;
+					}
 				}
 
 			}
+		}
 
-
-
-
-
+		&.notHovered {
+			opacity: 0.1;
 		}
 
 

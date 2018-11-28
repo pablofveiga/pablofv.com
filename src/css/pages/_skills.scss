@@ -1,0 +1,194 @@
+#skills {
+
+    // PONER EN LAYOUT
+    .introSection {
+        margin-top: 1.5em;
+
+        h2 {
+            font-size: 2.5em;
+            line-height: 1.3em;
+            font-family: $font-light;
+        }
+    }
+}
+
+// testing
+ul.skillsList {
+    // padding-left: 2em;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+
+    li {        
+        margin: 20px 0;
+        width: auto;
+        text-align: center;
+        display: flex;
+        align-items: center;        
+        
+        .text {
+            padding: 5px 9px;
+            border: 1px solid;
+            display: inline-flex;
+            min-width: 134px;
+            justify-content: center;            
+        }
+        .mark {
+            display: inline-flex;
+            margin-left: 10px;
+
+            .square {
+                width: 15px;
+                height: 15px;
+                border: 1px solid #fff;
+                margin-right: 5px;
+                background-color: transparent;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+        .mobileText {
+            font-size: 0.8em;
+            padding-left: 1em;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &:hover {
+            color: #0bb10b;
+
+            .square {
+                background-color: #095009;
+                border-color: #0bb10b;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .mobileText {
+                opacity: 1;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+    }    
+}
+
+.skillsContainer {
+    display: grid;
+
+    // GRID AREAS DELCARATION
+    @at-root .frontList {
+        grid-area: front;
+    }
+    @at-root .jsList {
+        grid-area: js;
+    }
+    @at-root .otherList {
+        grid-area: other;
+    }
+    @at-root .cmsList {
+        grid-area: cms;
+    }
+    @at-root .uxList {
+        grid-area: ux;
+    }
+    @at-root .w3cList {
+        grid-area: w3c;
+    }
+    @at-root .gitList {
+        grid-area: git;
+    }
+    @at-root .graphicList {
+        grid-area: graphic;
+    }
+
+    @media(min-width: 960px) {
+
+
+    }
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "front js ux graphic" 
+        "front js ux graphic" 
+        "front js ux graphic" 
+        "front js . graphic" 
+        "front js w3c graphic" 
+        "front js w3c graphic" 
+        "front . w3c ." 
+        "front cms . ." 
+        "front cms git .";
+
+//        grid-template-areas: "front js ux graphic" "front js ux graphic" "front js ux graphic" "front js . graphic" "front js w3c graphic" "front js w3c graphic" "front . w3c ." "front cms . ." "front cms git .";
+
+    .skillsList {
+        // display: grid;
+        // align-items: start;
+        // grid-template-rows: repeat(9, 53px);
+    }
+
+}
+
+
+
+// MOBILE !!!
+    // add mobile first
+@media (max-width: 960px) {
+    .skillsContainer {
+        display: block;
+        padding: 0;
+
+        margin-top: 1em;
+        position: relative;
+
+        .skillsList {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0.7em 20px;
+            // border-top: 1px dotted #fff;
+            border-bottom: 1px dotted #fff;
+            position: relative;
+
+            // CAMBIAR CON MEDIA QUERIES
+            width: 100%;
+
+            li {
+                margin: 6px 0;
+            }
+
+            &:first-child {
+                border-top: 1px dotted #fff;
+            }
+
+            // &:before {
+            //     content: "<";   // CAMBIAR POR DROPDOWN ARROW
+            //     position: absolute;
+            //     right: 6px;
+            //     top: 6px;
+            //     cursor: pointer;
+            // }
+        }
+
+    }
+
+    .downloadCV {
+        margin: 1.5em 0;
+        text-align: center;
+
+        p {
+            font-family: $font-light;
+
+            a {
+                color: $red;
+            }
+        }
+    }
+
+    .pdfIcon {
+        display: inline-block;
+        display: none;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        background: url(../pics/pdficon.svg) 0 0/100% no-repeat transparent;
+    }
+}    
