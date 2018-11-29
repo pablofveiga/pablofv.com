@@ -1,29 +1,49 @@
+.introSection {
+    padding: 2em 0;
+}
+
 .jobsContainer {
 
     &__item {
+        margin-top: 2em;
+
+        &:first-child {
+            margin-top: 0;
+        }
 
         &__header {
             display: flex;
             align-items: center;
 
             &__logo {
+                display: block;
+                height: 60px;
+                width: 140px;
+                background-size: 100%;
             }
 
             &__info {
                 margin-left: 0.25em;
+                padding-left: 0.3em;
                 text-align: center;
+                align-self: flex-end;
                 
                 h4 {
-
+                    color: #00aee9; // MAIN BLUE!!
                 }
 
                 h5 {
                     a {
                         color: $red;
-                        font-size: 0.9em;
+                        font-size: 0.75em;
                         line-height: 1.2em;
                         padding-top: 0.25em;
                         display: block;
+
+                        &.offline {
+                            opacity: 0.5;
+                            cursor: not-allowed;
+                        }
                     }
                 }
             }
@@ -34,17 +54,33 @@
             display: table;
             width: 100%;
 
-            p {
-                font-family: $font-light;
-                display: table-row;
+            &__item {
+                font-family: $font-lighter;
+                font-size: 0.875em;
+                // display: table-row;
 
+                // GRID RULES
+                padding: 4px 0;
+
+                &:nth-child(1),
+                &:nth-child(3),
+                &:nth-child(5) {
+                    text-align: right;
+                    padding-right: 2em;
+                }
+
+
+
+
+                // SPAM TO BE DELETED
                 span {
                     display: table-cell;
                     vertical-align: top;
                     padding: 5px 0;
 
                     &.title {
-                        min-width: 140px;
+                        // min-width: 140px;
+                        width: 140px;
                         font-size: 0.9em;
                         line-height: 1.2em;
                         text-align: right;
@@ -52,9 +88,83 @@
 
                     &.content {
                         padding-left: 0.5em;
+                        font-size: 0.95em;
+                        line-height: 1.15em;
                     }
                 }
+
+                &.companyName {
+                    p:first-child {
+                        color: $blue;
+                    }
+
+                    a {
+                        color: $red;
+                        font-size: 0.75em;
+                        line-height: 1.2em;
+                        padding-top: 0.25em;
+                        display: block;
+
+                        &.offline {
+                            opacity: 0.5;
+                            cursor: not-allowed;
+                        }
+                    }
+                }
+
             }
+
+
+                &.grid {
+                    display: grid;
+                    grid-template-columns: 40% 60%;
+                    grid-template-rows: 64px 1fr 1fr 1fr 1fr auto 1fr auto;
+                    grid-template-areas: "logo companyName" "roleT roleC" "perT perC" "typeC contract" "functionsT functionsT" "functionsD functionsD" "techT techT" "techD techD";                                                                 
+          
+
+
+
+
+                    .logo { grid-area: logo; }
+                    .companyName { 
+                        grid-area: companyName; 
+                        align-self: center;
+                        justify-self: center;
+                        text-align: center;
+                        font-size: inherit;
+                    }
+                    .perT { grid-area: perT; }
+                    .perD { 
+                        grid-area: perC; 
+                        font-size: 0.8em;
+                    }
+                    .roleT { grid-area: roleT; }
+                    .roleC { grid-area: roleC; }
+                    .perT { grid-area: perT; }
+                    .perC { grid-area: perC; }
+                    .typeC { grid-area: typeC; }
+                    .contract { grid-area: contract; }
+                    .functionsT { 
+                        grid-area: functionsT; 
+                        align-self: end;
+                    }
+                    .functionsD { 
+                        grid-area: functionsD;
+                        padding-top: 0;
+                        // font-size: 0.91em;
+                        line-height: 1.16em;
+                        letter-spacing: 0.5px;
+                    }
+                    .techT { 
+                        grid-area: techT; 
+                        align-self: end;
+                    }
+                    .techD { 
+                        grid-area: techD; 
+                        padding-top: 0;
+                    }
+                }
+            
         }
 
 
@@ -63,11 +173,77 @@
 
         &.betsson {
             .logo {
-                background: url("../pics/betsson.png") no-repeat scroll center center/100% transparent;
-                display: block;
-                width: 165px;   // ver proporción
-                height: 60px;
+                background: url("../pics/betsson.png") no-repeat scroll left center/contain transparent;
             }
         }
+        &.spinola {
+            .logo {
+                background: url("../pics/spinola.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.web360 {
+            .logo {
+                background: url("../pics/360webstudio.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.tipbet {
+            .logo {
+                background: url("../pics/tipbet-black.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.zarpa {
+            .logo {
+                background: url("../pics/zarpa.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.footballfather {
+            .logo {
+                background: url("../pics/footballfather.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.itea {
+            .logo {
+                background: url("../pics/itea.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.ticmedia {
+            .logo {
+                background: url("../pics/ticmedia.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.farmaciaveiga {
+            .logo {
+                background: url("../pics/farmaciaveiga.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.laquintar {
+            .logo {
+                background: url("../pics/laquintar.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.adagiodanza {
+            //  conseguir mejor logo
+            .logo {
+                background: url("../pics/adagio.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+        &.sleepngo {
+            .logo {
+                background: url("../pics/fnsrooms.png") no-repeat scroll left center/contain transparent;
+            }
+        }
+    }
+}
+
+.techList {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+        font-size: 0.8em;
+        border: 1px dotted white;
+        padding: 3px;
+        margin: 0 6px 6px 0;
     }
 }
