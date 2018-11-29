@@ -1,0 +1,73 @@
+.jobsContainer {
+
+    &__item {
+
+        &__header {
+            display: flex;
+            align-items: center;
+
+            &__logo {
+            }
+
+            &__info {
+                margin-left: 0.25em;
+                text-align: center;
+                
+                h4 {
+
+                }
+
+                h5 {
+                    a {
+                        color: $red;
+                        font-size: 0.9em;
+                        line-height: 1.2em;
+                        padding-top: 0.25em;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            margin-top: 0.5em;
+            display: table;
+            width: 100%;
+
+            p {
+                font-family: $font-light;
+                display: table-row;
+
+                span {
+                    display: table-cell;
+                    vertical-align: top;
+                    padding: 5px 0;
+
+                    &.title {
+                        min-width: 140px;
+                        font-size: 0.9em;
+                        line-height: 1.2em;
+                        text-align: right;
+                    }
+
+                    &.content {
+                        padding-left: 0.5em;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        &.betsson {
+            .logo {
+                background: url("../pics/betsson.png") no-repeat scroll center center/100% transparent;
+                display: block;
+                width: 165px;   // ver proporción
+                height: 60px;
+            }
+        }
+    }
+}
