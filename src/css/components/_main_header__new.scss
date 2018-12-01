@@ -1,4 +1,32 @@
+$hmc: $red;
+$header_main_color: $hmc;
+
 // delete test after merge
+
+
+.headerContainer {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10000;
+
+    // @media (min-width: 1200px) {
+    //     width: 100%;
+
+        
+    // }
+
+    &.sticky {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+    }
+}
+
+
 .mainHeader {
 	text-align: center;
     position: relative;
@@ -15,17 +43,14 @@
         left: 0;
         top: 25px;
 	}
-
 	&__subtitle {
 		font-size: 1.2em;
 		line-height: 2em;
-    }
-    
+    }    
 	&__title {
 		font-size: 1.3em;
 		line-height: 1.6em;
-    }	    
-    
+    }    
     &__ninjaArea {
 		position: absolute;
 		top: 3px;
@@ -40,14 +65,12 @@
 			vertical-align: middle;
 			cursor: pointer;
         }
-
         h3 {
 			display: inline-block;
             vertical-align: middle;
             font-size: 0.7em;
 		}
     }
-
     &__circle {
         position: absolute;
         top: 8px;
@@ -55,10 +78,10 @@
         width: 52px;
         height: 52px;
         z-index: 10000;
-        background: url(../pics/ninja.svg) center center no-repeat #c41b18;
+        background: url(../pics/ninja.svg) center center no-repeat $red;
         background-size: 60%;
         border-radius: 50%;      
-        border: 3px solid #00b0eb;
+        border: 3px solid $blue;
         cursor: pointer;
         transition: all 0.3s ease-in;
 
@@ -73,11 +96,9 @@
             transition: all 0.3s ease-in;
         }
     }
-}
 
-
-
-
-
-
+    @media (min-width: 1200px) {
+        width: 1200px;
+        margin: auto;
+    }
 }

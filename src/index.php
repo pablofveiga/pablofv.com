@@ -8,23 +8,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 </head>
-<body id="caca">
+<body id="">
 
-	<div class="wrapper no-padding">
-		
-		<header id="main-header" class="main-header">
-			<h2>pablofv.com</h2>
-			<hr>
-			<h1 class="cursive">Front-End Developer</h1>
+	<div class="wrapper">
 
-			<div class="main-header__circle">
-				<span class="circle_in"></span>
+		<header id="main-header" class="mainHeader">
+			<h2 class="mainHeader__subtitle">pablofv.com</h2>
+			<hr class="mainHeader__bar">
+			<h1 class="cursive mainHeader__title">Front-End Developer</h1>
+
+			<div class="mainHeader__circle">
+				<span class="closeIcon"></span>
 			</div>
 
-			<div class="main-header__ninja-area">
-				<span class="ninja">
-					
-				</span>
+			<div class="mainHeader__ninjaArea">
+				<span class="mainHeader__ninjaArea__ninja"></span>
 				<h3>css<br>ninja</h3>
 			</div>
 
@@ -33,7 +31,7 @@
 					<li class="main-header__menu__link who">
 						<a href="#">
 							<span class="icon icon__who">
-								<?php echo file_get_contents("pics/whoami.svg"); ?>
+								<!-- <?php echo file_get_contents("pics/whoami.svg"); ?> -->
 							</span>
 							<span class="menu__text">who<br>am I?</span>
 						</a>
@@ -41,11 +39,11 @@
 					<li>
 						<a href="#">
 							<span class="icon icon__work">
-								<?php echo file_get_contents("pics/espartan.svg"); ?>
+								<!-- <?php echo file_get_contents("pics/espartan.svg"); ?> -->
 							</span>
 							<span class="menu__text">work<br>experience</span>
 						</a>
-					</li>					
+					</li>
 					<li class="header__menu__link portfolio">
 						<a href="#">
 							<span class="icon icon__portfolio">
@@ -53,7 +51,7 @@
 							</span>
 							<span class="menu__text">portfolio</span>
 						</a>
-					</li>					
+					</li>
 					<li class="main-header__menu__link skills">
 						<a href="#">
 							<span class="icon icon__skills">
@@ -61,10 +59,9 @@
 							</span>
 							<span class="menu__text">skills<br>&amp; cv</span>
 						</a>
-					</li>					
+					</li>
 				</ul>
 			</nav>
-
 		</header>
 	</div>
 

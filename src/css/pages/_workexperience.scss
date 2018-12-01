@@ -1,5 +1,23 @@
 .introSection {
     padding: 2em 0;
+
+    &__header {
+
+        h2 {
+            font-size: 1.7em;
+            font-family: $font-light;
+        }
+    }
+
+    &__content {
+        padding-top: 0.2em;
+
+        p {
+            font-family: $font-lighter;
+            font-size: 0.9em;
+            margin: 2px 0;
+        }
+    }
 }
 
 .jobsContainer {
