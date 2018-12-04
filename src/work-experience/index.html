@@ -82,9 +82,16 @@
             <p>I have different skills, focus on graphics, interaction and user experience.</p>
             <p>I have worked as a freelance in my origins, as part of a company, and even founded a small company with some colleagues.</p>
             <p>Scroll down to see a brief of my professional experience.</p>
+            <p>You can sort them ascendant or descendant in chronological time or just hide them.</p>
         </div>
     </section>
 
+    <div class="jobSelector">
+        <ul class="jobSelector__controls">
+            <li class="jobSelector__controls__item asc"><a href="#" id="asc">Asc.</a></li>
+            <li class="jobSelector__controls__item collapse"><a href="#" id="collapse">Collapse</a></li>
+        </ul>
+    </div>
 
 
     <div class="jobsContainer">
@@ -468,12 +475,12 @@
                     </ul>
                 </div>                
             </div>
-        </div>
-    
+        </div> 
 
+    </div>
 
-
-
+    <div class="expandBar">
+        <a href="#" id="expand">Expand</a>
     </div>
 
     <div class="downloadCV">
@@ -482,6 +489,46 @@
 
 
     </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+
+$("#collapse").click(function(){
+    $(".jobsContainer").toggleClass("collapsed");
+
+    if( ($(".expandBar").height()) ) {
+        $("#collapse a").text("EXPAND");
+    } else {
+        $("#collapse a").text("COLLAPSE");
+    }
+})
+
+
+// ORDEN
+let _jobs = document.querySelectorAll(".jobsContainer__item");
+
+// asignarles "data-order='01'" 
+for (i=0; i<_jobs.length; i++) {
+    let _val = i+1;
+    if (_val <10) {
+        _val = "0"+_val;
+    }
+    _jobs[i].setAttribute("data-order",_val);
+}
+
+// contar el número de objetos, en este caso 11;
+let _total = _jobs.length;
+
+// ASCENDENTE o desc
+$("#asc").click(function(){
+    for (i=0; i<_jobs.length; i++) {
+        let _or = _total+1 - _jobs[i].getAttribute("data-order");
+        _jobs[i].setAttribute("data-order", _or);
+        _jobs[i].style.order = _or;
+    }
+});
+
+</script>
 
 
 </body>

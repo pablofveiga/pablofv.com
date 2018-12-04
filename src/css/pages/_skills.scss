@@ -129,6 +129,32 @@ ul.skillsList {
 
 
 
+
+// ESTA PARTE ES COMUN EN SKILLS Y WORK EXPERIENCE
+.downloadCV {
+    margin: 1.5em 0;
+    text-align: center;
+
+    p {
+        font-family: $font-light;
+
+        a {
+            color: $red;
+        }
+    }
+}
+.pdfIcon {
+    display: inline-block;
+    display: none;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url(../pics/pdficon.svg) 0 0/100% no-repeat transparent;
+}
+
+
+
+
 // MOBILE !!!
     // add mobile first
 @media (max-width: 960px) {
@@ -168,27 +194,5 @@ ul.skillsList {
             // }
         }
 
-    }
-
-    .downloadCV {
-        margin: 1.5em 0;
-        text-align: center;
-
-        p {
-            font-family: $font-light;
-
-            a {
-                color: $red;
-            }
-        }
-    }
-
-    .pdfIcon {
-        display: inline-block;
-        display: none;
-        vertical-align: middle;
-        width: 20px;
-        height: 20px;
-        background: url(../pics/pdficon.svg) 0 0/100% no-repeat transparent;
     }
 }    
