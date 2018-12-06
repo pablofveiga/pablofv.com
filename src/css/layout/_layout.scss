@@ -131,10 +131,28 @@ svg {
 
 	&__header {
 		padding: 0.5em 0;
+		display: flex;
+		align-items: center;
+
+		&__icon {
+			width: 50px;
+			height: 50px;
+			margin-right: 0.65em;
+
+			&.workExperience {
+				background: url(../pics/espartan.svg) center center no-repeat transparent;
+			}
+		}
+
+		&__text {
+
+		}
 
 		h2 {
-			font-size: 1.75em;
+			font-family: $font-lighter;
+			font-size: 2.5em;
 			line-height: 1.15em;
+			border-bottom: 2px solid #fff;
 		}
 	}
 
@@ -142,7 +160,9 @@ svg {
 
 		p {
 			font-family: $font-lighter;
+			font-size: 1.15em;
 			line-height: 1.15em;
+			margin: 0.05em 0;
 		}
 	}
 }
