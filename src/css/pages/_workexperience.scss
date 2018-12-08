@@ -282,6 +282,36 @@
             border-radius: 3px;
         }
     }
+
+
+    // SCROLLED HORIZONTAL
+    &.scrolledH {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 20em;
+        flex-wrap: wrap;
+        padding-top: 0.25em;
+        padding-left: 1em;
+
+        &::-webkit-scrollbar {
+            width: 0.5em;
+            height: 0.5em;
+        }
+         
+        &::-webkit-scrollbar-thumb {
+            background-color: $blue;
+            border-radius: 3px;
+        }
+
+        >div {
+            width: 100%;
+
+            &::before {
+                width: 0;
+            }
+        }
+
+    }
 }
 
 // NUEVO!!!

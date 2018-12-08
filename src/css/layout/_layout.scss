@@ -142,6 +142,10 @@ svg {
 			&.workExperience {
 				background: url(../pics/espartan.svg) center center no-repeat transparent;
 			}
+
+			&.contact {
+				background: url(../pics/contact.svg) center center no-repeat transparent;
+			}
 		}
 
 		&__text {
@@ -256,5 +260,77 @@ svg {
 			}
 		}
 	}
+
+}
+
+// CONTACT
+.form {
+
+	p {
+
+		label {
+
+		}
+		input {
+
+		}		
+	}
+
+	.message {
+		label {
+
+		}
+		textarea {
+
+		}
+	}
+}
+
+
+.contactForm {
+	border: 1px dashed;
+	padding: 1.5em;
+	
+	.send {
+		margin: 1.5em auto 0;
+		display: block;
+	}
+}
+
+.formContainer {
+	display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 3em 1.5em 3em 1.5em;
+    grid-template-areas: "nameLabel messageLabel" "name message" "emailLabel message" "email message";
+	column-gap: 2em;
+	
+	label {
+		font-family: $font-lighter;
+		font-size: 0.85em;
+	}
+
+	.nameLabel { 
+		grid-area: nameLabel; 
+		align-self: self-end;
+		padding-bottom: 0.25em;
+	}
+  
+	.name { grid-area: name; }
+  
+	.emailLabel {
+		grid-area: emailLabel;
+		align-self: self-end;
+		padding-bottom: 0.25em;
+  	}
+  
+	.email { grid-area: email; }
+  
+  	.messageLabel { 
+		grid-area: messageLabel; 
+		align-self: self-end;
+		padding-bottom: 0.25em;
+	}
+  
+	.message { grid-area: message; }
 
 }
