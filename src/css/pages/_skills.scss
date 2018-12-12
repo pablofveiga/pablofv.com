@@ -27,11 +27,12 @@ ul.skillsList {
         align-items: center;        
         
         .text {
-            padding: 5px 9px;
-            border: 1px solid;
+            padding: 4px 0;
+            border: 1px solid #fff;
             display: inline-flex;
-            min-width: 134px;
+            min-width: 104px;
             justify-content: center;            
+            font-size: 0.8em;
         }
         .mark {
             display: inline-flex;

@@ -2,37 +2,18 @@ $hmc: $red;
 $header_main_color: $hmc;
 
 // delete test after merge
-
-
-.headerContainer {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            z-index: 10000;
-
-    // @media (min-width: 1200px) {
-    //     width: 100%;
-
-        
-    // }
-
-    &.sticky {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        z-index: 10000;
-    }
-}
-
-
 .mainHeader {
-	text-align: center;
-    position: relative;
-    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
     height: 70px;
-	// min-height: 90px;
+    overflow: hidden;
+	text-align: center;
+    background-color: $bg-color;
+    z-index: 1000;
+    // min-height: 90px;    
+    transition: all 0.5s ease-in;
 
 	&__bar {
 		background-color: $hmc;
@@ -85,17 +66,29 @@ $header_main_color: $hmc;
         cursor: pointer;
         transition: all 0.3s ease-in;
 
-        &.openMenu {
-            top: -150px;
-            left: -150px;
-            width: 300px;
-            height: 300px;		
-            transition: all 0.3s ease-in;
-            border-width: 0;	// better to change color
-            background-size: 0%;
-            transition: all 0.3s ease-in;
-        }
+        // QUITAR E IMPLEMENTAR NUEVO MENU MOVIL
+        // &.openMenu {
+        //     top: -150px;
+        //     left: -150px;
+        //     width: 300px;
+        //     height: 300px;		
+        //     transition: all 0.3s ease-in;
+        //     border-width: 0;	// better to change color
+        //     background-size: 0%;
+        //     transition: all 0.3s ease-in;
+        // }
     }
+
+	&.relative {
+		position: relative;
+    }
+    
+	&.rotated {
+		transform: rotateX(90deg);
+		transform-origin: 0 0;
+		transition: all 0.5s ease-in;
+	}
+
 
     @media (min-width: 1200px) {
         width: 1200px;
