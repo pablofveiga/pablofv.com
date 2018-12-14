@@ -80,11 +80,12 @@
                     <p>I was working in other betting companies and also created a small company with some coleagues.</p>
                 
                     <div class="jobSelector">
+                        <!-- TODO: think about UTF-8 icons (especially for animating (crossing betwen) collapse/expand arrows) -->
                         <ul class="jobSelector__controls">
-                            <li class="jobSelector__controls__item asc"><a href="#" id="asc"></a></li>
-                            <li class="jobSelector__controls__item collapse"><a href="#" id="collapse"></a></li>
-                            <li class="jobSelector__controls__item scrollV"><a href="#" id="scrollV"></a></li>
-                            <li class="jobSelector__controls__item scrollV"><a href="#" id="scrollH"></a></li>
+                            <li class="jobSelector__controls__item scrollV"><a href="#" class="scrollV" id="scrollV"></a></li>
+                            <li class="jobSelector__controls__item scrollV"><a href="#" class="scrollH" id="scrollH"></a></li>
+                            <li class="jobSelector__controls__item asc"><a href="#" class="asc" id="asc"></a></li>
+                            <li class="jobSelector__controls__item collapse"><a href="#" class="collapse" id="collapse"></a></li>
                         </ul>
                     </div>                        
                     
@@ -495,8 +496,16 @@
 
     $("#collapse").click(function(e){
         e.preventDefault();
-        $(".jobSelector__controls__item a").removeClass("active");
         $(this).toggleClass("active");
+
+        if( $(".jobsContainer").hasClass("collapsed") ) {
+            console.log("expandido")
+            $("#asc, #scrollV, #scrollH").fadeIn(500);
+        } else {
+            console.log("colapsado")
+            $("#asc, #scrollV, #scrollH").fadeOut(500);
+            // change background (with adding class)
+        }
 
         $(".jobsContainer").toggleClass("collapsed");
 
@@ -533,14 +542,30 @@
     // SCROLLED
         // Add event listener on click and delegate over the classes (change that id thing)
     $("#scrollV").click(function(e){
-        e.preventDefault();
-        $(".jobSelector__controls__item a").removeClass("active");
+        e.preventDefault();   
+        
+        // let flag = "active";
+
+        if( $(".scrollH").hasClass("active")  ) {
+            console.log("el otro está activo");
+            $(".scrollH").removeClass("active");
+        } else {
+            console.log("no habia nada apretao");
+        }
+
         $(this).toggleClass("active");
         $(".jobsContainer").toggleClass("scrolledV");
     });
     $("#scrollH").click(function(e){
         e.preventDefault();
-        $(".jobSelector__controls__item a").removeClass("active");
+
+        if( $(".scrollV").hasClass("active")  ) {
+            console.log("el otro está activo");
+            $(".scrollV").removeClass("active");
+        } else {
+            console.log("no habia nada apretao");
+        }
+
         $(this).toggleClass("active");
         $(".jobsContainer").toggleClass("scrolledH");
     });

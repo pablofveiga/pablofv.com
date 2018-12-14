@@ -393,9 +393,18 @@
                 // it's better to avoid id's
                 &#asc {
                     background: url(../pics/asc.png) center center/contain no-repeat $bg-color;
+                
+                    &.active {
+                        background: url(../pics/desc.png) center center/contain no-repeat $bg-color;
+                    }
                 }
-                &#collapse {
+                &.collapse {
                     background: url(../pics/collapse.png) center center/contain no-repeat $bg-color;
+                
+                    &.active {
+                        background: url(../pics/expand.png) center center/contain no-repeat $bg-color;
+                        // border-color: $blue;
+                    }
                 }
                 &#scrollV {
                     background: url(../pics/scrollv.png) center center/contain no-repeat $bg-color;
