@@ -379,13 +379,35 @@
             margin-left: 0.25em;
 
             a {
+                $d: 24px;
                 display: block;
-                color: $red;
-                text-transform: uppercase;
-                font-size: 0.75em;
-                padding: 0.25em;
+                // color: $red;
+                // text-transform: uppercase;
+                // font-size: 0.75em;
+                // padding: 0.25em;
                 border: 1px solid $blue;
                 background-color: #212121;
+                width: $d;
+                height: $d;
+
+                // it's better to avoid id's
+                &#asc {
+                    background: url(../pics/asc.png) center center/contain no-repeat $bg-color;
+                }
+                &#collapse {
+                    background: url(../pics/collapse.png) center center/contain no-repeat $bg-color;
+                }
+                &#scrollV {
+                    background: url(../pics/scrollv.png) center center/contain no-repeat $bg-color;
+                }
+                &#scrollH {
+                    background: url(../pics/scrollh.png) center center/contain no-repeat $bg-color;
+                }
+
+                &.active {
+                    border-color: $red;
+                }
+
             }
         }
 
