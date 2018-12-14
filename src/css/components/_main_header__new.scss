@@ -79,6 +79,250 @@ $header_main_color: $hmc;
         // }
     }
 
+
+
+    // MERGING!!
+    &__menu {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
+
+		$menu_text_color: #fff;
+		box-sizing: border-box;
+		padding: 0 3em;
+		border-top: 1px solid $hmc;
+		border-bottom: 1px solid $hmc;
+		opacity: 0;
+
+		// transform: rotateX(90deg);
+        // // animation: rotation 0.5s ease-in 2s alternate 1 forwards;        
+        
+		ul {
+			display: flex;
+			flex-flow: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+
+			li {
+				min-width: 14em;
+				transition: all 0.5s ease;
+				padding: 5px 0;
+
+				a {
+					display: block;
+
+					span {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					svg path {
+						transition: all 0.5s ease;
+					}
+				}
+
+				&:hover {
+					background-color: #000;
+
+					svg path {
+						fill: red;
+					}
+				}
+
+				&.skills {
+
+					&:hover {
+						img {
+							filter: none;
+							-webkit-filter: grayscale(0);
+						}
+					}
+				}
+				&.portfolio {
+
+					&:hover {
+						img {
+							filter: none;
+							-webkit-filter: grayscale(0);
+						}
+					}
+				}			
+
+			}
+		}
+		ul {
+			display: flex;
+			flex-flow: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+
+			li {
+				min-width: 14em;
+				transition: all 0.5s ease;
+				padding: 5px 0;
+
+				a {
+					display: block;
+
+					span {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					svg path {
+						transition: all 0.5s ease;
+					}
+				}
+
+				&:hover {
+					background-color: #000;
+
+					svg path {
+						fill: red;
+					}
+				}
+
+				&.skills {
+
+					&:hover {
+						img {
+							filter: none;
+							-webkit-filter: grayscale(0);
+						}
+					}
+				}
+				&.portfolio {
+
+					&:hover {
+						img {
+							filter: none;
+							-webkit-filter: grayscale(0);
+						}
+					}
+				}			
+
+			}
+		}
+
+		.icon__who {
+			svg {
+				width: 37px;
+				height: 40px;			
+			}
+		}
+		.icon__work {
+			svg {
+				width: 43px;
+				height: 40px;			
+			}
+		}
+		.icon__portfolio {
+			img {
+				width: 43px;
+				height: 40px;		
+				filter: gray;
+				-webkit-filter: grayscale(1);
+				transition: all 0.5s ease;				
+			}
+		}
+		.icon__skills {
+			img {
+				width: 49px;
+				height: 40px;		
+				filter: gray;
+				-webkit-filter: grayscale(1);
+				transition: all 0.5s ease;	
+			}
+		}
+		.menu__text {
+			font-size: 1.2em;
+			color: $menu_text_color;
+		}
+
+
+    }
+	&.animated01 {
+
+		hr, h2, h1 {
+			// animation: destruction 0.5s ease-in 1s 1 forwards;
+			animation: destruction 0.5s ease-in 1 forwards;
+			animation-direction: normal;
+		}
+
+		.mainHeader__circle {
+			// animation: moveCircle 1s ease-in 1s 1 forwards;
+			animation: moveCircle 1s ease-in 1 forwards;
+            animation-direction: normal;
+		}
+
+		.mainHeader__menu {
+
+			// animation: rotation 0.5s ease-in 2s 1 forwards;
+			animation: rotation 0.5s ease-in  1 forwards;
+			animation-direction: normal;
+		}
+
+		.mainHeader__ninjaArea {
+			top: 12px;
+			right: 12px;
+			transition: all 1s cubic-bezier(.39,.76,.82,.21);
+			transition-delay: 1.5s;
+		}
+
+		&.reverse {
+			hr, h2, h1 {
+				animation: destructionReverse 0.5s ease-in  1 backwards;
+				animation-direction: normal;
+			}
+
+			.mainHeader__circle {
+				animation: moveCircleReverse 0.5s ease-in  1 backwards;
+				animation-direction: normal;
+			}
+
+			.mainHeader__menu {
+				animation: rotationReverse 0.5s ease-in  1 backwards;
+				animation-direction: normal;
+			}
+
+			.mainHeader__ninjaArea {
+				top: 12px;
+				right: 12px;
+				transition: all 1s cubic-bezier(.39,.76,.82,.21);
+				transition-delay: 1.5s;
+			}			
+		}
+
+		&.foward {
+			hr, h2, h1 {
+				animation-direction: normal;
+			}
+
+			.mainHeader__circle {
+				animation-direction: normal;
+			}
+
+			.mainHeader__menu {
+
+				animation-direction: normal;
+			}
+
+			.mainHeader__ninjaAreaarea {
+				top: 12px;
+				right: 12px;
+				transition: all 1s cubic-bezier(.39,.76,.82,.21);
+				transition-delay: 1.5s;
+			}			
+		}
+
+	}
+    // END OF MERGING
+
+
+
+
 	&.relative {
 		position: relative;
     }
