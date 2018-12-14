@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+            box-sizing: border-box;
+            font-size: 100%;
+        }
+        .topMenu__trigger {
+            width: 90px;
+            height: 90px;
+            background-color: #a73434;
+            border-radius: 50%;
+            border: 3px solid #0e759a;
+        }
+    </style>
+</head>
+<body id="menu">
+    
+    <div class="topMenu">
+        <div class="topMenu__trigger">
+
+        </div>
+
+        <nav class="topMenu__list">
+            <ul>
+                <li class="topMenu__list__item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="topMenu__list__item">
+                    <a href="#">Work Experience</a>
+                </li>
+                <li class="topMenu__list__item">
+                    <a href="#">Skills & CV</a>
+                </li>
+                <li class="topMenu__list__item">
+                    <a href="#">Portfolio</a>
+                </li>
+                <li class="topMenu__list__item">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+
+        // CALCULADOR D ANGULOS:
+
+            // user input
+        let radio = 180; // (pixels)    
+
+        let nodos = document.querySelectorAll(".topMenu__list ul li");
+
+
+        // let numElemnts = 5;
+        let numElemnts = nodos.length;
+        let divisiones = numElemnts + 2;
+        let divGrados = Math.floor(90 / divisiones);    
+    
+        // SET DATA TO ELEMNTS
+        for( let i = 0; i< nodos.length; i++ ) {
+            let _ord = i+1;     // start with 1 instead of 0
+            nodos[i].setAttribute("data-order", _ord);      // set "data-order"
+
+            let _ang = _ord * divGrados;
+            nodos[i].setAttribute("data-angle", _ang);      // set "data-angle"
+
+            let _cordX  = radio * Math.cos(_ang);
+            nodos[i].setAttribute("data-cX", _cordX);      // set "data-cX"
+
+            let _cordY  = radio * Math.sin(_ang);
+            nodos[i].setAttribute("data-cY", _cordY);      // set "data-cY"
+        }
+
+
+        $(".topMenu__trigger").click(function(){            
+            $(".topMenu__trigger").toggleClass("position2");
+            setTimeout(muestraMenu,400);
+        })
+
+        function muestraMenu() {
+            $(".topMenu").toggleClass("extended");
+        }        
+    
+    </script>
+
+
+
+</body>
+</html>

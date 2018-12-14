@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+            box-sizing: border-box;
+            font-size: 100%;
+        }
+        .topMenu__trigger {
+            width: 90px;
+            height: 90px;
+            background-color: #a73434;
+            border-radius: 50%;
+            border: 3px solid #0e759a;
+        }
+    </style>
+</head>
+<body id="menu">
+    
+    <div class="topMenu extended">
+        <div class="topMenu__trigger position2">
+
+        </div>
+
+        <nav class="topMenu__list">
+            <ul>
+                <li class="topMenu__list__item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="topMenu__list__item">
+                    <a href="#">Work Experience</a>
+                </li>
+                <li class="topMenu__list__item">
+                    <a href="#">Skills & CV</a>
+                </li>
+                <li class="topMenu__list__item">
+                    <a href="#">Portfolio</a>
+                </li>
+                <li class="topMenu__list__item">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+
+    </div>
+
+
+    <div style="height: 12em"></div>
+
+    <div class="container">
+        <div class="header">
+            HEADER
+        </div>
+        <div class="foto">
+            foto
+        </div>
+        <div class="cuerpo">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut magni excepturi ducimus ea alias quaerat est ratione, voluptatum explicabo illum eaque enim in dignissimos, voluptates molestiae omnis ab consequatur tenetur.
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+        // $(".topMenu__trigger").click(function(){            
+        //     $(".topMenu__trigger").toggleClass("position2");
+        //     setTimeout(muestraMenu,400);
+        // })
+
+        // function muestraMenu() {
+        //     $(".topMenu").toggleClass("extended");
+        // }
+
+        // CALCULADOR D ANGULOS:
+        let radio = 180; // (pixels)    
+
+        let numElemnts = 5;
+        let divisiones = numElemnts + 2;
+        let divGrados = Math.floor(90 / divisiones);    // 12.85 grados para 5 elementos
+    
+   
+            // coordenadas
+        let ang1 = divGrados;
+        let ang2 = 2*divGrados;
+        let ang3 = 3*divGrados;
+        let ang4 = 4*divGrados;
+        let ang5 = 5*divGrados;
+        let ang6 = 6*divGrados;
+
+        let el1X = radio * Math.cos(ang1);
+        let el2X = radio * Math.cos(ang2);
+        let el3X = radio * Math.cos(ang3);
+        let el4X = radio * Math.cos(ang4);
+        let el5X = radio * Math.cos(ang5);
+        let el6X = radio * Math.cos(ang6);
+        
+        let el1Y = radio * Math.sin(ang1);
+        let el2Y = radio * Math.sin(ang2);
+        let el3Y = radio * Math.sin(ang3);
+        let el4Y = radio * Math.sin(ang4);
+        let el5Y = radio * Math.sin(ang5);
+        let el6Y = radio * Math.sin(ang6);
+
+        let nodos = document.querySelectorAll(".topMenu__list ul li");
+
+        // nodos.each(function(){
+            
+        // })
+
+
+
+        // for (i=0; nodos.length; i++) {
+        //     // nodos[i].setAttribute("data-order", i);
+         
+        // }
+
+        // $(".topMenu__list ul li").each(function(){
+
+            
+
+        // });
+        
+    
+    </script>
+
+
+
+</body>
+</html>
