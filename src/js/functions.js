@@ -150,4 +150,20 @@ $(document).ready(function(){
 		$("body").toggleClass("blocked");
 	})
 
+
+
+	// TEMP FUNCTIONS
+
+	// delete when finishing routing:
+	$(".mainHeader__circle").click(function(){
+
+		if(!(window.location.host == "localhost")) {
+			window.location.href = "http://dev.pablofv.com/";
+		} else {
+			console.warn("start working on routes and quit this shit!!");
+		}
+
+		
+	})
+
 });
