@@ -82,11 +82,15 @@
                     <div class="jobSelector">
                         <!-- TODO: think about UTF-8 icons (especially for animating (crossing betwen) collapse/expand arrows) -->
                         <ul class="jobSelector__controls">
+                            <li class="jobSelector__controls__item asc"><a href="#" class="asc" id="asc"></a></li>
                             <li class="jobSelector__controls__item scrollV"><a href="#" class="scrollV" id="scrollV"></a></li>
                             <li class="jobSelector__controls__item scrollV"><a href="#" class="scrollH" id="scrollH"></a></li>
-                            <li class="jobSelector__controls__item asc"><a href="#" class="asc" id="asc"></a></li>
                             <li class="jobSelector__controls__item collapse"><a href="#" class="collapse" id="collapse"></a></li>
                         </ul>
+                        <div class="jobSelector__trigger">
+                            <a href="#" class="settingsTrigger"></a>
+                            <span class="settingsTrigger--title">settings</span>
+                        </div>
                     </div>                        
                     
                     <div class="jobsContainer asc">        
@@ -471,20 +475,49 @@
         </div>        
     </main>
     
-
+    
+    <div class="mobileMenu">
+        <span class="mobileMenu__trigger">
+            <ul>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>                
+            </ul>
+        </span>
+    </div>
+    <div class="mobileMenuOverlay">        
+        <h3>pablofv.com</h3>
+        <nav>
+            <ul>
+                <li><a href="#"><span class="mobIcon home"></span> Home</a></li>
+                <li><a href="#"><span class="mobIcon whoIam"></span> Who I am?</a></li>
+                <li><a href="#"><span class="mobIcon skills"></span> Skills</a></li>
+                <li><a href="#"><span class="mobIcon workExperience"></span> Work Experience</a></li>
+                <li><a href="#"><span class="mobIcon contact"></span> Contact</a></li>
+            </ul>
+        </nav>
+        <p>
+            <a href="#"><span class="pdfIcon"></span>  Download CV</a>
+        </p>
+        <p>
+            <a href="#">Send me a <span class="whatsapp"></span> whatsapp</a>
+        </p>        
+    </div>
+    
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type='text/javascript' src='../js/jquery.mousewheel.min.js'></script>
     <script src="../js/functions.js"></script>
 <script>
 
 
     // sticky filter bar for jobs
-    var selectBar = $('.jobSelector__controls').offset().top;   	
+    var selectBar = $('.jobSelector').offset().top;   	
    	var stickySelect = function(){
 	    var scrollTop = $(window).scrollTop();
 	    if (scrollTop > selectBar) { 
-	        $('.jobSelector__controls').addClass('sticky');
+	        $('.jobSelector').addClass('sticky');
 	    } else {
-	        $('.jobSelector__controls').removeClass('sticky'); 
+	        $('.jobSelector').removeClass('sticky'); 
 	    }
 	};
 	stickySelect();
@@ -568,7 +601,27 @@
 
         $(this).toggleClass("active");
         $(".jobsContainer").toggleClass("scrolledH");
+
+        // scrolling mouse wheel horizontal
+        $(".jobsContainer.scrolledH").mousewheel(function(event, delta) {
+            this.scrollLeft -= (delta * 30);
+            event.preventDefault();
+        });
+
     });
+
+
+    $(".settingsTrigger").click(function(e){
+        e.preventDefault();
+        $(".jobSelector__controls").toggleClass("active");
+        $(this).toggleClass("active");
+    });
+
+    $(".settingsTrigger:not(.active)").hover(function(){
+        $(this).toggleClass("hovered");
+    });
+
+        
 
 
 </script>

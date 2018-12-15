@@ -311,6 +311,20 @@
             }
         }
 
+        // COLLISIONS:
+        @media (max-width: 378px) {
+            height: 30em!important;
+        }
+        @media (min-width:379px) and (max-width: 440px) {
+            height: 24em!important;
+        }
+        @media (min-width:441px) and (max-width: 530px) {
+            height: 24em!important;
+        }
+        @media (min-width:531px) and (max-width: 690px) {
+            height: 22em!important;
+        }
+
     }
 }
 
@@ -368,9 +382,70 @@
 
 .jobSelector {
     margin: 0.5em 0;
+    display: flex;
+    justify-content: flex-end;
+
+    &__trigger {
+        display: inline-flex;
+        margin-left: 0.25em;
+        position: relative;
+        
+        .settingsTrigger {
+            position: relative;
+            display: block;
+            width: 24px;
+            height: 24px;
+            border: 1px solid $blue;
+            background-color: #212121;
+            background: url(../pics/settingsred.png) center center/contain no-repeat $bg-color;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+
+            &.active {
+                background: url(../pics/settings.png) center center/contain no-repeat $bg-color;
+                border-color: $red;
+
+                &+ .settingsTrigger--title {
+                    display: none;
+                }
+            }
+            &--title {
+                color: #fff;
+                font-family: $font-lighter;
+                font-size: 0;
+                position: absolute;
+                opacity: 0;
+                left: -27px;
+                bottom: 7px;
+            }
+            &.hovered {
+                overflow: visible;
+                transition: all 0.5s ease-in-out;
+
+                &+ .settingsTrigger--title {
+                    left: -40px;
+                    opacity: 1;
+                    font-size: 0.65em;                    
+                }
+            }
+        }
+    }
+
+    &.sticky {
+        position: fixed;
+        width: 1160px;
+        top: 0;
+        left: 0;
+        padding-right: 5px;
+        padding-top: 70px;
+
+        @media(max-width: 1160px) {
+            width: 100%;
+        }
+    }
 
     &__controls {
-        display: flex;
+        display: none;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: flex-end;
@@ -378,13 +453,11 @@
         &__item {
             margin-left: 0.25em;
 
+
+            // TODO: Create mixin for control items, with active state
             a {
                 $d: 24px;
                 display: block;
-                // color: $red;
-                // text-transform: uppercase;
-                // font-size: 0.75em;
-                // padding: 0.25em;
                 border: 1px solid $blue;
                 background-color: #212121;
                 width: $d;
@@ -413,36 +486,18 @@
                     background: url(../pics/scrollh.png) center center/contain no-repeat $bg-color;
                 }
 
-                &.active {
+                &.active,
+                &:hover {
                     border-color: $red;
                 }
 
             }
         }
 
-        &.sticky {
-            position: fixed;
-            width: 1160px;
-            // top: 90px;
-            
-            top: 0;
-            padding: 95px 0 0 0;
-            box-shadow: 11px 0px 3px 2px #212121;
-
-
-            // @media(min-width: 1200px) {
-            //     width: 1200px;
-            // }
-
-            @media(max-width: 1160px) {
-                width: 100%;
-                right: 5px;
-            }
-
+        &.active {
+            display: inline-flex;
         }
-
     }
-
 }
 
 .expandBar {
