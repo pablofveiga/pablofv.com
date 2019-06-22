@@ -1,46 +1,36 @@
+// #############################
+// ###	TEMPLATE COLORS
 // $outside_color: $darkBlue;
 $outside_color: #212121;
 $inside_color: #212121;
 $text-color: #fff;
 
-$hederHeight: 70px;
-
-// BOX SIZING DECLARATION:
+// #############################
+// ###	PAGE LAYOUT
+// box sizing declaration:
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-
 body {
 	background-color: $outside_color;
 	color: $text-color;
 	box-sizing: border-box;
-	// transition: transform 0.5s ease-in;
 	transition: all 0.5s ease-in;
 
+	// for testing porpouse
 	&.blocked {
 		overflow: hidden;
 	}
-
-
-
-	// font-size: 62.5%;	// RESET EM TO DECIMAL
-	// min-height: 100vh;
-
-	// &#caca {
-	// 	font-size: 62.5%;	// RESET EM TO DECIMAL
-	// }
 }
-
-.wrapper {
+// .wrapper {
+.container {
 	box-sizing: border-box;
 	width: 1200px;
 	margin: auto;
 	background-color: $inside_color;
-	// overflow: hidden;		// BE EXPERT
 	position: relative;
 	padding: 0 20px;
 
@@ -54,29 +44,29 @@ body {
 
 }
 
-.hidden {
-	display: none;
+// #############################
+// TEMPLATE HEADER
+$hederHeight: 70px;
+// anchor links and sections
+.anchor::before {
+	display: block;
+	content: "";
+	padding-top: 70px; // altura del sticky header
 }
-
 main {
 	padding-top: $hederHeight;
-
-	// @media(max-width: 600px) {
-	// 	padding-top: 0;
-	// }
 }
 
+// #############################
+// ###	SECTIONS LAYOUT
 section {
 	padding: 2em 0;
 }
-
 .section-header {
-
 	h2 {
 		font-size: 1.8em;
 	}
 }
-
 .section-content {
 	p {
 		font-size: 1.4em;
@@ -84,12 +74,8 @@ section {
 	}
 }
 
-.cursive {
-	font-style: oblique;
-	font-style: cursive;
-	font-style: italic;
-}
-
+// #############################
+// ###	ELEMENTS LAYOUT
 img {
 	max-width: 100%;
 }
@@ -97,40 +83,38 @@ svg {
 	max-width: 100%;
 }
 
-
-
+// #############################
+// ###	UX LAYOUT DEFINITION
+// avoid user select:
+*, body {
+	-webkit-touch-callout: none; // iOS Safari 
+    -webkit-user-select: none;   // Chrome/Safari/Opera 
+    -khtml-user-select: none;    // Konqueror 
+    -moz-user-select: none;      // Firefox 
+    -ms-user-select: none;       // Internet Explorer/Edge 
+    user-select: none;           // Non-prefixed version, currently supported by any browser but < IE9 
+}
 // ::selection {
-//   background: #ffb7b7; /* WebKit/Blink Browsers */
+//   background: #ffb7b7; // WebKit/Blink Browsers
 // }
 // ::-moz-selection {
-//   background: #ffb7b7; /* Gecko Browsers */
+//   background: #ffb7b7; // Gecko Browsers
 // }
 
-// AVOID USER SELECT:
-*, body {
-	-webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* Internet Explorer/Edge */
-    user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+// #############################
+// ###	CUSTOM CLASSES
+// position classes:
+.static { position: static; }
+// display classes:
+.hidden { display: none; }
+// text classes:
+.cursive {
+	font-style: oblique;
+	font-style: cursive;
+	font-style: italic;
 }
-
-
-// CUSTOM COLOR CLASSES
-.red {
-	color: $red;
-}
-
-
-// ANCHOR LINKS AND SECTIONS
-.anchor::before {
-	display: block;
-	content: "";
-	padding-top: 70px; // altura del sticky header
-}
-
-
+// color classes
+.red { color: $red; }
 
 
 

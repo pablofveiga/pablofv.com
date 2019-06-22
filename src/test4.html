@@ -15,56 +15,67 @@
 
 
     <!-- HEADER -->
-    <header id="main-header" class="mainHeader cutter">
-        <h2 class="mainHeader__subtitle">pablofv.com</h2>
+    <header class="mainHeader static" id="main-header" >
+        <div class="container">
+            
+            <h2 class="mainHeader__subtitle">pablofv.com</h2>
+            
+            <h1 class="cursive mainHeader__title">Front-End Developer</h1>
+
+            <div class="mainHeader__circle">
+                <span class="closeIcon"></span>
+            </div>
+
+            <div class="mainHeader__ninjaArea">
+                <span class="mainHeader__ninjaArea__ninja ninja"></span>
+                <h3>css<br>ninja</h3>
+            </div>
+
+            <nav class="main-header__menu mainHeader__menu">
+                <ul>
+                    <li class="main-header__menu__link who">
+                        <a href="#">
+                            <span class="icon icon__who">
+                                <img src="../pics/whoami.svg" width="50" alt="who i am">                                
+                            </span>
+                            <span class="menu__text">who<br>am I?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon icon__work">
+                                <img src="../pics/espartan.svg" width="50" alt="who i am">                                
+                            </span>
+                            <span class="menu__text">work<br>experience</span>
+                        </a>
+                    </li>
+                    <li class="header__menu__link portfolio">
+                        <a href="#">
+                            <span class="icon icon__portfolio">
+                                <img src="../pics/portfolio_red.png" width="50" alt="Portfolio">
+                            </span>
+                            <span class="menu__text">portfolio</span>
+                        </a>
+                    </li>
+                    <li class="main-header__menu__link skills">
+                        <a href="#">
+                            <span class="icon icon__skills">
+                                <img src="../pics/skills_red.png" width="50" alt="skills">
+                            </span>
+                            <span class="menu__text">skills<br>&amp; cv</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+        </div>
+
+
         <hr class="mainHeader__bar">
-        <h1 class="cursive mainHeader__title">Front-End Developer</h1>
 
-        <div class="mainHeader__circle">
-            <span class="closeIcon"></span>
-        </div>
 
-        <div class="mainHeader__ninjaArea">
-            <span class="mainHeader__ninjaArea__ninja ninja"></span>
-            <h3>css<br>ninja</h3>
-        </div>
-
-        <nav class="main-header__menu mainHeader__menu">
-            <ul>
-                <li class="main-header__menu__link who">
-                    <a href="#">
-                        <span class="icon icon__who">
-                            <img src="../pics/whoami.svg" width="50" alt="who i am">                                
-                        </span>
-                        <span class="menu__text">who<br>am I?</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon icon__work">
-                            <img src="../pics/espartan.svg" width="50" alt="who i am">                                
-                        </span>
-                        <span class="menu__text">work<br>experience</span>
-                    </a>
-                </li>
-                <li class="header__menu__link portfolio">
-                    <a href="#">
-                        <span class="icon icon__portfolio">
-                            <img src="../pics/portfolio_red.png" width="50" alt="Portfolio">
-                        </span>
-                        <span class="menu__text">portfolio</span>
-                    </a>
-                </li>
-                <li class="main-header__menu__link skills">
-                    <a href="#">
-                        <span class="icon icon__skills">
-                            <img src="../pics/skills_red.png" width="50" alt="skills">
-                        </span>
-                        <span class="menu__text">skills<br>&amp; cv</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </header>
     
 
@@ -73,6 +84,9 @@
 
         <section style="height: calc(100vh - 70px)" class="wrapper introSection"> <!-- TODO! : Create class for "Full Height Container (100vh - $headerHeight)  " -->
             
+
+            <div class="container">
+
                <header class="introSection__header">
                     <h2>Welcome to my website!</h2>
                     <p>I am a Front-End developer guy focus on UX, graphics and crafting accesible and nice websites.</p>
@@ -181,7 +195,10 @@
                     
 
                 </div>
-  
+                  
+
+            </div>
+
 
 
 
@@ -194,743 +211,749 @@
 
 
         <section class="homeSection whoIam wrapper" id="whoIam" style="background-color: tan; ">
-            <header class="homeSection__header">
-                <span class="homeSection__header__icon whoIam"></span>
-                <h2 class="homeSection__header__text">Who I am?</h2>
-            </header>
-            <div class="homeSection__content">        
-                <div class="homeSection__content__text">
-                    <p>I am a very creative and unquiet person.</p>
-                    <p>I have lived in three different countries: Spain, Brazil and Malta, so I can speak fluently spanish, english and brazilian. Anyway, I love to travel, meet people and discover new cultures and traditions.</p>
-                    <p>I like music, photography, collage, esculpture and any kind of art and craft stuff.</p>
-                    <p>My first contact with technologies began with a ZX Spectrum 48k at the 80’s. When I was 9 years old I took a course on Basic with Ms-DOS and the “ide” gwBasic. I saved my code in a maravellous 5 1/4 floppy disk, although I hadn’t got any computer at that time, so I “copy/paste” my code , from my notebook papers to my brother’s Casio calcultor he used for university. Next yerar I would get my first computer, an Olivetti 386DX.</p>
-                    <p>But I was just a child and I prefered playing Monkey Island rather than writing kilometric pokes. Years gone by and I got my Pentium 100 and enough power for starting with what took years of entartaiment: Paint Shop Pro, Corel  and 3D Studio (I still have that mitic black book from Anaya).</p>
-                    <p>I was working as amateur with graphic software since 1995, I started using Photoshop in 1998, and in my first professional job as a creative and graphic designer, I created over 200 logos in 4 months.</p>
-                    <p>That year I was coursing a 1000 hours dual training course, that included XHTML, HTML, JS, Flash (yes, with ActionScript) among other disciplines, and I also coded a little in the job.</p>
-                    <p>During the dual training and the job I was decided to became a good graphic designer, but when I finished it, I started to deep in into the HTML and the CSS. The HTML5 and CSS3 was boiling at that time, and I could make a lot of graphic effects very fast with a few lines of code. Months later, when I was playing Monkey Island (yes, I still play that game once per year), I quitted the game because I thought something funny for doing with CSS. In that momment I realized that coding was funnier than playing videogames, and it would be awesome to make a living in that way. So I started diving and diving into the web technologies from those days till today.</p>
+            <div class="container">
+                <header class="homeSection__header">
+                    <span class="homeSection__header__icon whoIam"></span>
+                    <h2 class="homeSection__header__text">Who I am?</h2>
+                </header>
+                <div class="homeSection__content">        
+                    <div class="homeSection__content__text">
+                        <p>I am a very creative and unquiet person.</p>
+                        <p>I have lived in three different countries: Spain, Brazil and Malta, so I can speak fluently spanish, english and brazilian. Anyway, I love to travel, meet people and discover new cultures and traditions.</p>
+                        <p>I like music, photography, collage, esculpture and any kind of art and craft stuff.</p>
+                        <p>My first contact with technologies began with a ZX Spectrum 48k at the 80’s. When I was 9 years old I took a course on Basic with Ms-DOS and the “ide” gwBasic. I saved my code in a maravellous 5 1/4 floppy disk, although I hadn’t got any computer at that time, so I “copy/paste” my code , from my notebook papers to my brother’s Casio calcultor he used for university. Next yerar I would get my first computer, an Olivetti 386DX.</p>
+                        <p>But I was just a child and I prefered playing Monkey Island rather than writing kilometric pokes. Years gone by and I got my Pentium 100 and enough power for starting with what took years of entartaiment: Paint Shop Pro, Corel  and 3D Studio (I still have that mitic black book from Anaya).</p>
+                        <p>I was working as amateur with graphic software since 1995, I started using Photoshop in 1998, and in my first professional job as a creative and graphic designer, I created over 200 logos in 4 months.</p>
+                        <p>That year I was coursing a 1000 hours dual training course, that included XHTML, HTML, JS, Flash (yes, with ActionScript) among other disciplines, and I also coded a little in the job.</p>
+                        <p>During the dual training and the job I was decided to became a good graphic designer, but when I finished it, I started to deep in into the HTML and the CSS. The HTML5 and CSS3 was boiling at that time, and I could make a lot of graphic effects very fast with a few lines of code. Months later, when I was playing Monkey Island (yes, I still play that game once per year), I quitted the game because I thought something funny for doing with CSS. In that momment I realized that coding was funnier than playing videogames, and it would be awesome to make a living in that way. So I started diving and diving into the web technologies from those days till today.</p>
+                    </div>
                 </div>
-            </div>
+            </div>    
         </section>
 
         <section class="homeSection skills wrapper" id="skills" >
-            <header class="homeSection__header">
-                <span class="homeSection__header__icon skills"></span>
-                <h2 class="homeSection__header__text">Skills</h2>
-            </header>
+            <div class="container">
+                <header class="homeSection__header">
+                    <span class="homeSection__header__icon skills"></span>
+                    <h2 class="homeSection__header__text">Skills</h2>
+                </header>
 
-            <div class="homeSection__content">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat hic molestias totam molestiae, dicta commodi quae harum iure, repellendus ipsa quisquam deserunt consequuntur numquam facere consequatur esse, asperiores eos?
-                </p>
-                <div class="skillsContainer">
-                    <ul class="skillsList frontList">
-                        <li>
-                            <span class="text">HTML5</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">CSS4</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">CSS3</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">LESS /SASS</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">STYLUS</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">FLEXBOX</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">GRID</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">BEM</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">POSTCSS</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                    </ul>
-            
-                    <ul class="skillsList jsList">
-                        <li>
-                            <span class="text">JQUERY</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">JAVASCRIPT</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">ES6</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">API REST</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-            
-                        <li>
-                            <span class="text">AJAX / ASYNC</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">VUE</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                    </ul>
-            
-                    <ul class="skillsList cmsList">
-                        <li>
-                            <span class="text">WORDPRESS</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">PRESTASHOP</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                    </ul>
-            
-                    <ul class="skillsList uxList">
-                        <li>
-                            <span class="text">RWD</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">PIXEL PERFECT</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">UI / UX</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                    </ul>
-            
-                    <ul class="skillsList w3cList">
-                        <li>
-                            <span class="text">ACCESIBILITY</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>                
-                        </li>
-                        <li>
-                            <span class="text">W3C</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>                
-                        </li>
-                        <li>
-                            <span class="text">SEO</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>                
-                        </li>
-                    </ul>
-            
-                    <ul class="skillsList gitList">
-                        <li>
-                            <span class="text">GIT</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                    </ul>
-                    
-                    <ul class="skillsList graphicList">
-                        <li>
-                            <span class="text">PHOTOSHOP</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">PREMIERE</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">AFTER EFFECTS</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">FREEHAND</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="text">3D STUDIO</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>                
-                        </li>
-                        <li>
-                            <span class="text">SOLIDWORKS</span>
-                            <span class="mark">
-                                <span class="square"></span>
-                                <span class="square"></span>
-                            </span>                
-                        </li>
-                    </ul>    
+                <div class="homeSection__content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat hic molestias totam molestiae, dicta commodi quae harum iure, repellendus ipsa quisquam deserunt consequuntur numquam facere consequatur esse, asperiores eos?
+                    </p>
+                    <div class="skillsContainer">
+                        <ul class="skillsList frontList">
+                            <li>
+                                <span class="text">HTML5</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">CSS4</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">CSS3</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">LESS /SASS</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">STYLUS</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">FLEXBOX</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">GRID</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">BEM</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">POSTCSS</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                        </ul>
+                
+                        <ul class="skillsList jsList">
+                            <li>
+                                <span class="text">JQUERY</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">JAVASCRIPT</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">ES6</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">API REST</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                
+                            <li>
+                                <span class="text">AJAX / ASYNC</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">VUE</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                        </ul>
+                
+                        <ul class="skillsList cmsList">
+                            <li>
+                                <span class="text">WORDPRESS</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">PRESTASHOP</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                        </ul>
+                
+                        <ul class="skillsList uxList">
+                            <li>
+                                <span class="text">RWD</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">PIXEL PERFECT</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">UI / UX</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                        </ul>
+                
+                        <ul class="skillsList w3cList">
+                            <li>
+                                <span class="text">ACCESIBILITY</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>                
+                            </li>
+                            <li>
+                                <span class="text">W3C</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>                
+                            </li>
+                            <li>
+                                <span class="text">SEO</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>                
+                            </li>
+                        </ul>
+                
+                        <ul class="skillsList gitList">
+                            <li>
+                                <span class="text">GIT</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="skillsList graphicList">
+                            <li>
+                                <span class="text">PHOTOSHOP</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">PREMIERE</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">AFTER EFFECTS</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">FREEHAND</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="text">3D STUDIO</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>                
+                            </li>
+                            <li>
+                                <span class="text">SOLIDWORKS</span>
+                                <span class="mark">
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </span>                
+                            </li>
+                        </ul>    
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="homeSection workExperience wrapper" id="workExperience" >
-            <header class="homeSection__header">
-                <span class="homeSection__header__icon workExperience"></span>
-                <h2 class="homeSection__header__text">Work Experience</h2>
-            </header>
-            <div class="homeSection__content">
-                <p>I started working as a freelance developing static sites and customizing Wordpress templates.</p>
-                <p>I also was working as an internship in website companies in Spain after training courses.</p>
-                <p>In Malta I was working in some of the biggest betting companies in the world, such as Betsson or Plating Gaming.</p>
-                <p>I was working in other betting companies and also created a small company with some coleagues.</p>
-            
-                <div class="jobSelector">
-                    <!-- TODO: think about UTF-8 icons (especially for animating (crossing betwen) collapse/expand arrows) -->
-                    <ul class="jobSelector__controls">
-                        <li class="jobSelector__controls__item asc"><a href="#" class="asc" id="asc"></a></li>
-                        <li class="jobSelector__controls__item scrollV"><a href="#" class="scrollV" id="scrollV"></a></li>
-                        <li class="jobSelector__controls__item scrollV"><a href="#" class="scrollH" id="scrollH"></a></li>
-                        <li class="jobSelector__controls__item collapse"><a href="#" class="collapse" id="collapse"></a></li>
-                    </ul>
-                    <div class="jobSelector__trigger">
-                        <a href="#" class="settingsTrigger"></a>
-                        <span class="settingsTrigger--title">settings</span>
-                    </div>
-                </div>                        
+            <div class="container">
+                <header class="homeSection__header">
+                    <span class="homeSection__header__icon workExperience"></span>
+                    <h2 class="homeSection__header__text">Work Experience</h2>
+                </header>
+                <div class="homeSection__content">
+                    <p>I started working as a freelance developing static sites and customizing Wordpress templates.</p>
+                    <p>I also was working as an internship in website companies in Spain after training courses.</p>
+                    <p>In Malta I was working in some of the biggest betting companies in the world, such as Betsson or Plating Gaming.</p>
+                    <p>I was working in other betting companies and also created a small company with some coleagues.</p>
                 
-                <div class="jobsContainer asc">        
-                    <div class="jobsContainer__item spinola">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Spinola Gaming</p>
-                                <p><a href="https://www.spinolagaming.com/" target="_blank">www.spinolagaming.com</a></p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">March 2017 - June 2018</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Senior Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">Front-end development focus on Casino Games and Lotteries to be integrated in hundreds of worldwide online casinos. Front-End leader, UX responsibilities and web developer.</p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">SCSS</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">ES6</li>
-                                    <li class="techList__item">GIT</li>
-                                    <li class="techList__item">PHP</li>
-                                    <li class="techList__item">Laravel</li>
-                                </ul>
-                            </div>                
+                    <div class="jobSelector">
+                        <!-- TODO: think about UTF-8 icons (especially for animating (crossing betwen) collapse/expand arrows) -->
+                        <ul class="jobSelector__controls">
+                            <li class="jobSelector__controls__item asc"><a href="#" class="asc" id="asc"></a></li>
+                            <li class="jobSelector__controls__item scrollV"><a href="#" class="scrollV" id="scrollV"></a></li>
+                            <li class="jobSelector__controls__item scrollV"><a href="#" class="scrollH" id="scrollH"></a></li>
+                            <li class="jobSelector__controls__item collapse"><a href="#" class="collapse" id="collapse"></a></li>
+                        </ul>
+                        <div class="jobSelector__trigger">
+                            <a href="#" class="settingsTrigger"></a>
+                            <span class="settingsTrigger--title">settings</span>
                         </div>
-                    </div>        
-                    <div class="jobsContainer__item web360">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>360 WebStudio</p>
-                                <p><a href="#" class="offline">offline website</a></p>
+                    </div>                        
+                    
+                    <div class="jobsContainer asc">        
+                        <div class="jobsContainer__item spinola">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Spinola Gaming</p>
+                                    <p><a href="https://www.spinolagaming.com/" target="_blank">www.spinolagaming.com</a></p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">March 2017 - June 2018</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Senior Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">Front-end development focus on Casino Games and Lotteries to be integrated in hundreds of worldwide online casinos. Front-End leader, UX responsibilities and web developer.</p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">SCSS</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">ES6</li>
+                                        <li class="techList__item">GIT</li>
+                                        <li class="techList__item">PHP</li>
+                                        <li class="techList__item">Laravel</li>
+                                    </ul>
+                                </div>                
                             </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">December 2016 - March 2017</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Affiliate to the company</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">
-                                    Front-end development for an outsourcing company developing projects for betting companies.
-                                    Redesign of www.plexbet.it from scratch, and mobile app project about diet and fitness. Two different projects.
-                            </p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">SCSS</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">GIT</li>
-                                    <li class="techList__item">PHP</li>
-                                    <li class="techList__item">Laravel</li>
-                                    <li class="techList__item">Scrum</li>
-                                    <li class="techList__item">Angular 2</li>
-                                    <li class="techList__item">PhoneGap</li>
-                                </ul>
-                            </div>                
-                        </div>
-                    </div>        
-                    <div class="jobsContainer__item tipbet">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Tipbet / Plating Gaming</p>
-                                <p><a href="https://platingaming.com/en/" target="_blank">www.platingaming.com</a></p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">September 2016</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">Front-end development for one month project. CSS analyst and redesign the corporative website.</p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">SCSS</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                </ul>
-                            </div>                
-                        </div>
-                    </div>        
-                    <div class="jobsContainer__item zarpa">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Boutique Zarpa</p>
-                                <p><a href="http://boutique.zarpa.org/es/" target="_blank">www.boutique.zarpa.org</a></p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">June 2016</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">Front-end development of an online shop for an animal welfare in Spain.
-                                    Team project besides a back-end developer team in Spain and me as freelance in Malta.
-                                    Graphic design, UX and content improvements.</p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">Prestashop</li>
-                                    <li class="techList__item">PHP</li>
-                                </ul>
-                            </div>                
-                        </div>
-                    </div>        
-                    <div class="jobsContainer__item betsson">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Betsson Group</p>
-                                <p><a href="http://www.betson.com" target="_blank">www.betson.com</a></p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">March - May 2015</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">External consultant</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">Front-end development of content and layout mockups from the design department. Correct visual problems and errors found by the testers. Job in the development department updating the website of a very important betting company.</p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">SCSS</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">TFS</li>
-                                    <li class="techList__item">.net</li>
-                                    <li class="techList__item">SCRUM</li>
-                                </ul>
-                            </div>                
-                        </div>
-                    </div>        
-                    <div class="jobsContainer__item itea">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Itea Soluciones</p>
-                                <p>
-                                    <a href="https://www.iteasoluciones.es/" target="_blank">www.iteasoluciones.es</a>
+                        </div>        
+                        <div class="jobsContainer__item web360">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>360 WebStudio</p>
+                                    <p><a href="#" class="offline">offline website</a></p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">December 2016 - March 2017</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Affiliate to the company</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">
+                                        Front-end development for an outsourcing company developing projects for betting companies.
+                                        Redesign of www.plexbet.it from scratch, and mobile app project about diet and fitness. Two different projects.
                                 </p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">SCSS</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">GIT</li>
+                                        <li class="techList__item">PHP</li>
+                                        <li class="techList__item">Laravel</li>
+                                        <li class="techList__item">Scrum</li>
+                                        <li class="techList__item">Angular 2</li>
+                                        <li class="techList__item">PhoneGap</li>
+                                    </ul>
+                                </div>                
                             </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">April - June 2014</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Internship</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">Web 2.0 development adapted for running under company custom php CMS. Websites for local business and any kind of clients paying attention to SEO and accessibility.</p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">XHTML</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">PHP</li>
-                                    <li class="techList__item">mySQL</li>                            
-                                </ul>
-                            </div>                
+                        </div>        
+                        <div class="jobsContainer__item tipbet">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Tipbet / Plating Gaming</p>
+                                    <p><a href="https://platingaming.com/en/" target="_blank">www.platingaming.com</a></p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">September 2016</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">Front-end development for one month project. CSS analyst and redesign the corporative website.</p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">SCSS</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                    </ul>
+                                </div>                
+                            </div>
+                        </div>        
+                        <div class="jobsContainer__item zarpa">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Boutique Zarpa</p>
+                                    <p><a href="http://boutique.zarpa.org/es/" target="_blank">www.boutique.zarpa.org</a></p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">June 2016</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">Front-end development of an online shop for an animal welfare in Spain.
+                                        Team project besides a back-end developer team in Spain and me as freelance in Malta.
+                                        Graphic design, UX and content improvements.</p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">Prestashop</li>
+                                        <li class="techList__item">PHP</li>
+                                    </ul>
+                                </div>                
+                            </div>
+                        </div>        
+                        <div class="jobsContainer__item betsson">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Betsson Group</p>
+                                    <p><a href="http://www.betson.com" target="_blank">www.betson.com</a></p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">March - May 2015</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">External consultant</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">Front-end development of content and layout mockups from the design department. Correct visual problems and errors found by the testers. Job in the development department updating the website of a very important betting company.</p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">SCSS</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">TFS</li>
+                                        <li class="techList__item">.net</li>
+                                        <li class="techList__item">SCRUM</li>
+                                    </ul>
+                                </div>                
+                            </div>
+                        </div>        
+                        <div class="jobsContainer__item itea">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Itea Soluciones</p>
+                                    <p>
+                                        <a href="https://www.iteasoluciones.es/" target="_blank">www.iteasoluciones.es</a>
+                                    </p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">April - June 2014</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Internship</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">Web 2.0 development adapted for running under company custom php CMS. Websites for local business and any kind of clients paying attention to SEO and accessibility.</p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">XHTML</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">PHP</li>
+                                        <li class="techList__item">mySQL</li>                            
+                                    </ul>
+                                </div>                
+                            </div>
+                        </div>        
+                        <div class="jobsContainer__item ticmedia">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Tic Media</p>
+                                    <p>
+                                        <a href="https://www.ticmedia.es" target="_blank">www.ticmedia.es</a>
+                                    </p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">April - May 2013</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Internship</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">Create templates from Phtoshop and Fireworks to HTML5, CSS3, jQuery templates. 
+                                        Those templates were converted into Wordpress themes by the back-end department.</p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">Skeleton</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                    </ul>
+                                </div>                
+                            </div>
+                        </div>        
+                        <div class="jobsContainer__item footballfather">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Footballfather</p>
+                                    <p>
+                                        <a href="https://www.footballfather.es" target="_blank">www.footballfather.es</a>
+                                    </p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Webmaster</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">March 2013 - till today</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">Multilanguage website focus on SEO, built under W3C and accessibility standards.
+                                        In 2015 the entire website was redesigned to a full width responsive web. New graphic design, UX and content improvements. Using PHP, HTML5, CSS3, SASS, jQuery and W3C standards.</p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">SCSS</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">RWD</li>
+                                    </ul>
+                                </div>                
+                            </div>
+                        </div>        
+                        <div class="jobsContainer__item farmaciaveiga">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Farmaciaveiga</p>
+                                    <p>
+                                        <a href="https://www.farmaciaveiga.es" target="_blank">www.farmaciaveiga.es</a>
+                                    </p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Webmaster</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">January 2013 - till today</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">Website for promoting and publishing different services of a pharmacy in Asturias, Spain. </p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">SCSS</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">PHP</li>
+                                        <li class="techList__item">RWD</li>
+                                    </ul>
+                                </div>                
+                            </div>
+                        </div>        
+                        <div class="jobsContainer__item laquintar">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>La Quinta R</p>
+                                    <p>
+                                        <a href="#" class="offline">offline website</a>
+                                    </p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">September - October 2012</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">WordPress website for an engineering company in Navarra, Spain. The client publishes projects, videos, news, etc. </p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">WORDPRESS</li>
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">PHP</li>
+                                        <li class="techList__item">RWD</li>
+                                    </ul>
+                                </div>                
+                            </div>
                         </div>
+                        <div class="jobsContainer__item adagiodanza">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Adagio Danza</p>
+                                    <p>
+                                        <a href="#" class="offline">offline website</a>
+                                    </p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">June - August 2012</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">WordPress website for a dance academy. News, blog, pictures, forms, etc. Currently offline. </p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">WORDPRESS</li>
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">PHP</li>
+                                        <li class="techList__item">RWD</li>
+                                    </ul>
+                                </div>                
+                            </div>
+                        </div>        
+                        <div class="jobsContainer__item sleepngo">
+                            <div class="jobsContainer__item__content grid">                
+                                <p class="jobsContainer__item__content__item logo"></p>
+                                <div class="jobsContainer__item__content__item companyName">
+                                    <p>Sleep&Go / FNSrooms</p>
+                                    <p>
+                                        <a href="https://www.fnsrooms.com/es/" target="_blank">www.fnsrooms.com</a>
+                                    </p>
+                                </div>
+                                <p class="jobsContainer__item__content__item roleT">Role:</p>
+                                <p class="jobsContainer__item__content__item roleD">Graphic Designer & Creative</p>
+                                <p class="jobsContainer__item__content__item perT">Work period:</p>
+                                <p class="jobsContainer__item__content__item perD">November 2011 - Febraury 2012</p>
+                                <p class="jobsContainer__item__content__item typeC">Contract type:</p>
+                                <p class="jobsContainer__item__content__item contract">Internship - Dual Formation</p>
+                                <p class="jobsContainer__item__content__item functionsT">Functions:</p>
+                                <p class="jobsContainer__item__content__item functionsD">WordPress website for a dance academy. News, blog, pictures, forms, etc. Currently offline. </p>
+                                <p class="jobsContainer__item__content__item techT">Technologies:</p>
+                                <div class="jobsContainer__item__content__item techD">
+                                    <ul class="techList">
+                                        <li class="techList__item">WORDPRESS</li>
+                                        <li class="techList__item">HTML5</li>
+                                        <li class="techList__item">CSS3</li>
+                                        <li class="techList__item">javaScript</li>
+                                        <li class="techList__item">jQuery</li>
+                                        <li class="techList__item">PHP</li>
+                                        <li class="techList__item">RWD</li>
+                                    </ul>
+                                </div>                
+                            </div>
+                        </div>         
                     </div>        
-                    <div class="jobsContainer__item ticmedia">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Tic Media</p>
-                                <p>
-                                    <a href="https://www.ticmedia.es" target="_blank">www.ticmedia.es</a>
-                                </p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">April - May 2013</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Internship</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">Create templates from Phtoshop and Fireworks to HTML5, CSS3, jQuery templates. 
-                                    Those templates were converted into Wordpress themes by the back-end department.</p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">Skeleton</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                </ul>
-                            </div>                
-                        </div>
+                    <div class="expandBar">
+                        <a href="#" id="expand">Expand</a>
                     </div>        
-                    <div class="jobsContainer__item footballfather">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Footballfather</p>
-                                <p>
-                                    <a href="https://www.footballfather.es" target="_blank">www.footballfather.es</a>
-                                </p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Webmaster</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">March 2013 - till today</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">Multilanguage website focus on SEO, built under W3C and accessibility standards.
-                                    In 2015 the entire website was redesigned to a full width responsive web. New graphic design, UX and content improvements. Using PHP, HTML5, CSS3, SASS, jQuery and W3C standards.</p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">SCSS</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">RWD</li>
-                                </ul>
-                            </div>                
-                        </div>
-                    </div>        
-                    <div class="jobsContainer__item farmaciaveiga">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Farmaciaveiga</p>
-                                <p>
-                                    <a href="https://www.farmaciaveiga.es" target="_blank">www.farmaciaveiga.es</a>
-                                </p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Webmaster</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">January 2013 - till today</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">Website for promoting and publishing different services of a pharmacy in Asturias, Spain. </p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">SCSS</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">PHP</li>
-                                    <li class="techList__item">RWD</li>
-                                </ul>
-                            </div>                
-                        </div>
-                    </div>        
-                    <div class="jobsContainer__item laquintar">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>La Quinta R</p>
-                                <p>
-                                    <a href="#" class="offline">offline website</a>
-                                </p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">September - October 2012</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">WordPress website for an engineering company in Navarra, Spain. The client publishes projects, videos, news, etc. </p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">WORDPRESS</li>
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">PHP</li>
-                                    <li class="techList__item">RWD</li>
-                                </ul>
-                            </div>                
-                        </div>
+                    <div class="downloadCV">
+                            <p>You can <a href="#">download the CV in <span class="pdfIcon"></span> PDF</a></p>
                     </div>
-                    <div class="jobsContainer__item adagiodanza">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Adagio Danza</p>
-                                <p>
-                                    <a href="#" class="offline">offline website</a>
-                                </p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">June - August 2012</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Freelance Front-End Developer</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">WordPress website for a dance academy. News, blog, pictures, forms, etc. Currently offline. </p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">WORDPRESS</li>
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">PHP</li>
-                                    <li class="techList__item">RWD</li>
-                                </ul>
-                            </div>                
-                        </div>
-                    </div>        
-                    <div class="jobsContainer__item sleepngo">
-                        <div class="jobsContainer__item__content grid">                
-                            <p class="jobsContainer__item__content__item logo"></p>
-                            <div class="jobsContainer__item__content__item companyName">
-                                <p>Sleep&Go / FNSrooms</p>
-                                <p>
-                                    <a href="https://www.fnsrooms.com/es/" target="_blank">www.fnsrooms.com</a>
-                                </p>
-                            </div>
-                            <p class="jobsContainer__item__content__item roleT">Role:</p>
-                            <p class="jobsContainer__item__content__item roleD">Graphic Designer & Creative</p>
-                            <p class="jobsContainer__item__content__item perT">Work period:</p>
-                            <p class="jobsContainer__item__content__item perD">November 2011 - Febraury 2012</p>
-                            <p class="jobsContainer__item__content__item typeC">Contract type:</p>
-                            <p class="jobsContainer__item__content__item contract">Internship - Dual Formation</p>
-                            <p class="jobsContainer__item__content__item functionsT">Functions:</p>
-                            <p class="jobsContainer__item__content__item functionsD">WordPress website for a dance academy. News, blog, pictures, forms, etc. Currently offline. </p>
-                            <p class="jobsContainer__item__content__item techT">Technologies:</p>
-                            <div class="jobsContainer__item__content__item techD">
-                                <ul class="techList">
-                                    <li class="techList__item">WORDPRESS</li>
-                                    <li class="techList__item">HTML5</li>
-                                    <li class="techList__item">CSS3</li>
-                                    <li class="techList__item">javaScript</li>
-                                    <li class="techList__item">jQuery</li>
-                                    <li class="techList__item">PHP</li>
-                                    <li class="techList__item">RWD</li>
-                                </ul>
-                            </div>                
-                        </div>
-                    </div>         
-                </div>        
-                <div class="expandBar">
-                    <a href="#" id="expand">Expand</a>
-                </div>        
-                <div class="downloadCV">
-                        <p>You can <a href="#">download the CV in <span class="pdfIcon"></span> PDF</a></p>
                 </div>
             </div>
         </section>
 
 
-        <div class="testSection2" style="background-color: green; height: 100vh;">
+        <div class="testSection2" style="background-color: #23738a;">
+
+            <div class="container">
+                <div class="wrapper homeSectionContainer">
+                    <section class="homeSection contact" id="contact" >
+                        <header class="homeSection__header">
+                            <span class="homeSection__header__icon contact"></span>
+                            <h2 class="homeSection__header__text">Contact</h2>
+                        </header>
+                        <div class="homeSection__content">
+                            <p>If you wish you can get in touch with me.</p>
+
+                            <p>Send me a <span class="whatsappIcon"></span> Whatsapp message.</p>
+                            <p>Add me to <span class="skypeIcon"></span> Skype.</p>
+                            <p>Send me an <span class="email"></span> email.</p>
+                            <p>Or you can fill the following contact form:</p>
+                        
+                            <form action="form.php" method="POST" id="form" class="contactForm">
+                                <div class="formContainer">
+                                    <label class="nameLabel" for="name">Name:</label>
+                                    <input class="name" type="text" name="name" id="name">
+                                    <label class="emailLabel" for="name">email:</label>
+                                    <input class="email" type="email" name="email" id="email">
+                                    <label class="messageLabel" for="msg">Message:</label>
+                                    <textarea class="message" name="msg" id="msg" ></textarea>
+                                </div> 
+                                <input type="submit" value="Send" class="send">
+                            </form>
+                        </div>
+                    </section>    
+                </div>      
 
 
-        <div class="wrapper homeSectionContainer">
-            <section class="homeSection contact" id="contact" >
-                <header class="homeSection__header">
-                    <span class="homeSection__header__icon contact"></span>
-                    <h2 class="homeSection__header__text">Contact</h2>
-                </header>
-                <div class="homeSection__content">
-                    <p>If you wish you can get in touch with me.</p>
-
-                    <p>Send me a <span class="whatsappIcon"></span> Whatsapp message.</p>
-                    <p>Add me to <span class="skypeIcon"></span> Skype.</p>
-                    <p>Send me an <span class="email"></span> email.</p>
-                    <p>Or you can fill the following contact form:</p>
-                
-                    <form action="form.php" method="POST" id="form" class="contactForm">
-                        <div class="formContainer">
-                            <label class="nameLabel" for="name">Name:</label>
-                            <input class="name" type="text" name="name" id="name">
-                            <label class="emailLabel" for="name">email:</label>
-                            <input class="email" type="email" name="email" id="email">
-                            <label class="messageLabel" for="msg">Message:</label>
-                            <textarea class="message" name="msg" id="msg" ></textarea>
-                        </div> 
-                        <input type="submit" value="Send" class="send">
-                    </form>
-                </div>
-            </section>    
-        </div>      
-
-
-
+            </div>
 
 
 
@@ -977,6 +1000,7 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="js/functions.js"></script>
+    <!-- <script src="js/ninja.js"></script> -->
 
     <script>
         // PARAMETRIZAR RUTAS AL FINAL
@@ -1024,9 +1048,6 @@
 
 
 
-
-
-
     </script>
 
 
@@ -1037,14 +1058,59 @@
     // --> think about quiting that scroll, and important: filter by vp 
     // --> if stays, make it with es6
 $(function() {
-			$(".scrolledH").mousewheel(function(event, delta) {
-				this.scrollLeft -= (delta * 30);
-				event.preventDefault();
-			});
-        });
+	$(".scrolledH").mousewheel(function(event, delta) {
+		this.scrollLeft -= (delta * 30);
+		event.preventDefault();
+	});
+});
 
 
-        $(".temporal").fadeOut(30000);
+$(".temporal").fadeOut(30000);
+
+
+
+
+    $(".ninja").click(function(e){
+        e.preventDefault();
+        // GRABAR POSICION EN LOCALSTORAGE, PARA PERMANECER EN LA MISMA TRAS REFRESCAR
+        $(".mainHeader").toggleClass("animated01");
+        $(".mainHeader__bar").toggleClass("barAnimated");
+    })
+
+
+// PLUGIN PARA MENU:
+/*
+    Pilla estas variables:
+    {
+    Option1: "valor",
+    Option2: "valor",
+    Option_url_imagenes: "../pics/",    // Hacerlo opcional
+    Elementos: [
+            {
+                Orden: 1,
+                Titulo: "titulo 1",
+                Ruta Imagen: "",
+                Subtitulo: "esto es un lorem ipsum",
+                Shape: "egg"    // OPCIONAL (crear clases)
+            },
+            {
+                Orden: 2,
+                Titulo: "titulo 2",
+                Ruta Imagen: "",
+                Subtitulo: "esto es otro lorem ipsum"
+            },
+            {}
+        ]
+    }
+    // en el futuro hacer opciones para colores, y :hover, y personalizar colores en cada elemento
+
+    Lo renderiza:
+    1º.- En el main menu (aunque no esté visible hasta que le den click al ninja o hagan scroll)    
+    2º.- En la sección de la home
+    3º.- En el menú movil
+
+*/
+
 </script>
 
 </body>

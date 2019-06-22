@@ -157,9 +157,16 @@
 }
 
 
-@keyframes headerHR {}
-
-
+@keyframes headerHR {
+  0%  {
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+  }
+  100% {
+      transform-origin: 0 0;
+      transform: rotate(90deg);
+  }
+}
 
 // PACMAN ANIMATION
 

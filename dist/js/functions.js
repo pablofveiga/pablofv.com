@@ -6,75 +6,75 @@ $(document).ready(function(){
 	// }
 	// setTimeout(hideHeaders,2800);
 
-	function flipNinja() {	
-		$(".ninja:not(.pos01)").click(function(){
+	// function flipNinja() {	
+	// 	$(".ninja:not(.pos01)").click(function(){
 
-			// $(".mainHeader").toggleClass("animated01");
-			$(".mainHeader").addClass("animated01");
-			$(".ninja").addClass("pos01");
-		})
-		$("h3").click(function(){
-			$(".mainHeader").addClass("reverse");
-			console.log("cacaa");
-		});
+	// 		// $(".mainHeader").toggleClass("animated01");
+	// 		$(".mainHeader").addClass("animated01");
+	// 		$(".ninja").addClass("pos01");
+	// 	})
+	// 	$("h3").click(function(){
+	// 		$(".mainHeader").addClass("reverse");
+	// 		console.log("cacaa");
+	// 	});
 
-		// $(".ninja.pos01").click(function(){
-		// 	$(".mainHeader").addClass("reverse");
-		// 	 	console.log("cacaa");
-		// 	 	alert("cacaa");
-		// })
+	// 	// $(".ninja.pos01").click(function(){
+	// 	// 	$(".mainHeader").addClass("reverse");
+	// 	// 	 	console.log("cacaa");
+	// 	// 	 	alert("cacaa");
+	// 	// })
 
-		var content = $('.mainHeader');
+	// 	var content = $('.mainHeader');
 
-		// var trigger = $(".ninja").live('click', function() {
-		// 	content.removeClass('reverse').addClass('running');
-		// }, function() {
-		// 	content.removeClass('running').addClass('reverse');
-		// }).trigger('click');
+	// 	// var trigger = $(".ninja").live('click', function() {
+	// 	// 	content.removeClass('reverse').addClass('running');
+	// 	// }, function() {
+	// 	// 	content.removeClass('running').addClass('reverse');
+	// 	// }).trigger('click');
 
 
-		$(".ninja").click(function(){			
+	// 	$(".ninja").click(function(){			
 
-			if( !($(".mainHeader").hasClass("running") || $(".mainHeader").hasClass("reverse"))   ) {
-				$(".mainHeader").addClass("running");
-				console.log("nerea")
+	// 		if( !($(".mainHeader").hasClass("running") || $(".mainHeader").hasClass("reverse"))   ) {
+	// 			$(".mainHeader").addClass("running");
+	// 			console.log("nerea")
 
-			} else {
-				console.log("Caca333")
-				$('.mainHeader').toggleClass("running reverse");
-			}
+	// 		} else {
+	// 			console.log("Caca333")
+	// 			$('.mainHeader').toggleClass("running reverse");
+	// 		}
 
-			// content.removeClass('reverse').addClass('running');
-			// content.removeClass('running').addClass('reverse');
-		})
+	// 		// content.removeClass('reverse').addClass('running');
+	// 		// content.removeClass('running').addClass('reverse');
+	// 	})
 
-		// $(".lobby__item").mouseenter(function(){
-		// 	console.log ("tetsas")
-		// 	$(".mrPacMan").removeClass("hungry");
-		// });
+	// 	// $(".lobby__item").mouseenter(function(){
+	// 	// 	console.log ("tetsas")
+	// 	// 	$(".mrPacMan").removeClass("hungry");
+	// 	// });
 		
-		// $(".lobby__item").mouseleave(function(){
-		// 	console.log ("tetsas")
-		// 	$(".mrPacMan").addClass("hungry").fadeOut(600);
-		// });
+	// 	// $(".lobby__item").mouseleave(function(){
+	// 	// 	console.log ("tetsas")
+	// 	// 	$(".mrPacMan").addClass("hungry").fadeOut(600);
+	// 	// });
 
-		// $('#trigger').live('click', function() {
-		// 	$(this).toggle(function() {
-		// 		$(this).text('hide follow!');
-		// 		content.removeClass('reverse').addClass('running');
-		// 	}, function() {
-		// 		$(this).text('follow me!');
-		// 		content.removeClass('running').addClass('reverse');
-		// 	}).trigger('click');
-		// });
+	// 	// $('#trigger').live('click', function() {
+	// 	// 	$(this).toggle(function() {
+	// 	// 		$(this).text('hide follow!');
+	// 	// 		content.removeClass('reverse').addClass('running');
+	// 	// 	}, function() {
+	// 	// 		$(this).text('follow me!');
+	// 	// 		content.removeClass('running').addClass('reverse');
+	// 	// 	}).trigger('click');
+	// 	// });
 
-		// $("#trigger").click(function(){
-		// 	content.toggleClass("reverse running");
-		// })
+	// 	// $("#trigger").click(function(){
+	// 	// 	content.toggleClass("reverse running");
+	// 	// })
 
-	}
+	// }
 
-	flipNinja();
+	// flipNinja();
 
 
 
