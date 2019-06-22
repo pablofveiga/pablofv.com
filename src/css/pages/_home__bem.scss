@@ -203,7 +203,7 @@
 					top: 6px;
 					opacity: 1;
 					color: #fff;
-					font-size: 0.8em;
+					font-size: 0.9em;
 					line-height: 1.22em;
 				}
 
@@ -239,6 +239,14 @@
 
 		&.notHovered {
 			opacity: 0.1;
+		}
+
+		&.portfolio:hover {
+			.lobbySection__introText {
+				font-size: 0.8em;
+			}
+
+
 		}
 
 

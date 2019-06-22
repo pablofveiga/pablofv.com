@@ -71,8 +71,8 @@
     <!-- BODY -->
     <main>
 
-        <div style="height: calc(100vh - 70px)"> <!-- TODO! : Create class for "Full Height Container (100vh - $headerHeight)  " -->
-            <section class="wrapper introSection">
+        <section style="height: calc(100vh - 70px)"        > <!-- TODO! : Create class for "Full Height Container (100vh - $headerHeight)  " -->
+            <div class="wrapper introSection">
                 <header class="introSection__header">
                     <h2>Welcome to my website!</h2>
                 </header>
@@ -80,7 +80,7 @@
                     <p>I am a Front-End developer guy focus on UX, graphics and crafting accesible and nice websites.</p>
                     <p>Feel free to navigate and find out about me.</p>
                 </div>
-            </section>
+            </div>
 
 
 
@@ -185,33 +185,9 @@
             
 
 
-            <div class="wrapper temporal" style="color: tan;">
-                <p style="color: gold;">
-                    Important notice:
-                </p>
-                <p>This website is under construction and most of functionality and design are not concluded.</p>
-                <p>You can check the spa version <a style="color:blueviolet" href="spa/index.html">here</a></p>
-                <p>Sorry for the inconvenience.</p>
-                <p>You can follow this project in <a style="color:blueviolet" href="https://github.com/pablofveiga/pablofv.com" target="_blank">github</a></p>
-                <br class="iHate-Br">
-                <div style="font-family: monospace">
-                    <pre>Last update: 2018-12-14</pre>
-                    <br>
-                    <p>Mising:</p>
-                    <ul>
-                        <li>header</li>
-                        <li>header animations</li>
-                        <li>header mobile (quit?)</li>
-                        <li>white vector pics for w.i.a (graphic content)</li>
-                        <li>a lot of functionality</li>
-                        <li>Clean the code</li>
-                        <li>...</li>
-                        <li>watch <a href="https://trello.com/b/tIDH86OY/pablofvcom"> Trello</a> for a complete list</li>
-                    </ul>
-                </div>
-            </div>
 
-        </div>
+
+        </section>
 
         <div class="testSection" style="background-color: tan; height: 100vh;">
             <h2>SECTION 2</h2>
@@ -227,15 +203,42 @@
 
 
         <div class="testSection2" style="background-color: green; height: 100vh;">
-            <h2>SECTION 3</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+
+
+        <div class="wrapper homeSectionContainer">
+            <section class="homeSection contact" id="contact" >
+                <header class="homeSection__header">
+                    <span class="homeSection__header__icon contact"></span>
+                    <h2 class="homeSection__header__text">Contact</h2>
+                </header>
+                <div class="homeSection__content">
+                    <p>If you wish you can get in touch with me.</p>
+
+                    <p>Send me a <span class="whatsappIcon"></span> Whatsapp message.</p>
+                    <p>Add me to <span class="skypeIcon"></span> Skype.</p>
+                    <p>Send me an <span class="email"></span> email.</p>
+                    <p>Or you can fill the following contact form:</p>
+                
+                    <form action="form.php" method="POST" id="form" class="contactForm">
+                        <div class="formContainer">
+                            <label class="nameLabel" for="name">Name:</label>
+                            <input class="name" type="text" name="name" id="name">
+                            <label class="emailLabel" for="name">email:</label>
+                            <input class="email" type="email" name="email" id="email">
+                            <label class="messageLabel" for="msg">Message:</label>
+                            <textarea class="message" name="msg" id="msg" ></textarea>
+                        </div> 
+                        <input type="submit" value="Send" class="send">
+                    </form>
+                </div>
+            </section>    
+        </div>      
+
+
+
+
+
+
         </div>
 
     </main>
