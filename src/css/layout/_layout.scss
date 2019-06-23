@@ -59,6 +59,10 @@ main {
 
 // #############################
 // ###	SECTIONS LAYOUT
+// NUEVO LAYOUT 2019
+.homeSection {
+	min-height: 100vh;
+}
 section {
 	padding: 70px 2em 0;
 }
@@ -113,8 +117,10 @@ svg {
 	font-style: cursive;
 	font-style: italic;
 }
+
 // color classes
 .red { color: $red; }
+// crear clase para $accentColor
 
 
 

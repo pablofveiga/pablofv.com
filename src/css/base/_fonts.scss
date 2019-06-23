@@ -29,14 +29,11 @@
   font-weight: normal;
   font-style: normal;
 }
-
 $font-lighter: 'MuseoSans-100';
 $font-light: 'MuseoSans-300';
 $font-regular: 'MuseoSans-500';
 $font-bold: 'MuseoSans-700';
-
-$main_font: $font-regular;
-
+$mainFont: $font-regular;
 body {
-  font-family: $main_font;
+  font-family: $mainFont;
 }

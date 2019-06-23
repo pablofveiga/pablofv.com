@@ -59,7 +59,7 @@
 
                 h5 {
                     a {
-                        color: $red;
+                        color: $accentColor;
                         font-size: 0.75em;
                         line-height: 1.2em;
                         padding-top: 0.25em;
@@ -124,7 +124,7 @@
                     }
 
                     a {
-                        color: $red;
+                        color: $accentColor;
                         font-size: 0.75em;
                         line-height: 1.2em;
                         padding-top: 0.25em;
@@ -397,13 +397,13 @@
             height: 24px;
             border: 1px solid $blue;
             background-color: #212121;
-            background: url(../pics/settingsred.png) center center/contain no-repeat $bg-color;
+            background: url(../pics/settingsred.png) center center/contain no-repeat transparent;
             overflow: hidden;
             transition: all 0.5s ease-in-out;
 
             &.active {
-                background: url(../pics/settings.png) center center/contain no-repeat $bg-color;
-                border-color: $red;
+                background: url(../pics/settings.png) center center/contain no-repeat transparent;
+                border-color: $accentColor;
 
                 &+ .settingsTrigger--title {
                     display: none;
@@ -465,30 +465,30 @@
 
                 // it's better to avoid id's
                 &#asc {
-                    background: url(../pics/asc.png) center center/contain no-repeat $bg-color;
+                    background: url(../pics/asc.png) center center/contain no-repeat transparent;
                 
                     &.active {
-                        background: url(../pics/desc.png) center center/contain no-repeat $bg-color;
+                        background: url(../pics/desc.png) center center/contain no-repeat transparent;
                     }
                 }
                 &.collapse {
-                    background: url(../pics/collapse.png) center center/contain no-repeat $bg-color;
+                    background: url(../pics/collapse.png) center center/contain no-repeat transparent;
                 
                     &.active {
-                        background: url(../pics/expand.png) center center/contain no-repeat $bg-color;
+                        background: url(../pics/expand.png) center center/contain no-repeat transparent;
                         // border-color: $blue;
                     }
                 }
                 &#scrollV {
-                    background: url(../pics/scrollv.png) center center/contain no-repeat $bg-color;
+                    background: url(../pics/scrollv.png) center center/contain no-repeat transparent;
                 }
                 &#scrollH {
-                    background: url(../pics/scrollh.png) center center/contain no-repeat $bg-color;
+                    background: url(../pics/scrollh.png) center center/contain no-repeat transparent;
                 }
 
                 &.active,
                 &:hover {
-                    border-color: $red;
+                    border-color: $accentColor;
                 }
 
             }
@@ -528,7 +528,7 @@
         transition: all 1s ease;
         display: block;
         height: auto;
-        color: $red;
+        color: $accentColor;
         border: 1px solid #ccc;
         text-align: center;
         padding: 0.25em;

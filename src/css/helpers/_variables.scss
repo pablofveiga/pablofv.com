@@ -1,6 +1,16 @@
-// LAYOUT
-$bg-color: #212121;
-
-$red: #f13433;
-$darkBlue: #24344b;
+// COLORS TO ADD IN VARIABLES
 $blue: #00b0eb;
+$red: #f13433;
+$darkGrey: #212121;
+// $darkBlue: #24344b; // not used
+// **added variables
+$white: #fff;
+
+// LAYOUT
+$bgColor: $darkGrey;
+$accentColor: $red;
+$textFrontColor: $white;	// not used yet
+$thirdColor: $blue;		// not used yet
+$linkColor: #fabada;	// NOT APPLIED
+$linkHoverColor: #fabada;	// NOT APPLIED
+

@@ -40,6 +40,10 @@ $(document).ready(function(){
 		stickyNav();
 	});
 
+	// V2
+	// let _header = document.getElementsByClassName("mainHeader");
+	// let _headerHeight = _header.getBoundingClientRect().top + window.scrollY
+
 
 	// RESPONSIVE MENU
 	var lastScrollTop = 0;
