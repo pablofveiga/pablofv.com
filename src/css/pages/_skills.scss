@@ -18,6 +18,7 @@ ul.skillsList {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 4px;
 
     li {        
         margin: 20px 0;
@@ -73,6 +74,7 @@ ul.skillsList {
 
 .skillsContainer {
     display: grid;
+    grid-gap: 0 6px;
 
     // GRID AREAS DELCARATION
     @at-root .frontList {
@@ -126,6 +128,32 @@ ul.skillsList {
         // grid-template-rows: repeat(9, 53px);
     }
 
+    // COLORS
+    .skillsList {
+        padding-left: 1em;
+
+        &:nth-child(1) {
+            background-color: #464646;
+        }
+        &:nth-child(2) {
+            background-color: #353535;
+        }
+        &:nth-child(3) {
+            background-color: #6b6b6b;
+        }
+        &:nth-child(4) {
+            background-color: #6b6b6b;
+        }
+        &:nth-child(5) {
+            background-color: #464646;
+        }        
+        &:nth-child(6) {
+            background-color: #353535;
+        }        
+        &:nth-child(7) {
+            background-color: #353535;
+        }
+    }
 }
 
 

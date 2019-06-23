@@ -1,128 +1,44 @@
 $(document).ready(function(){
 
-
-	// function hideHeaders() {
-	// 	$("#main-header h2, #main-header hr, #main-header h1").addClass("hidden");		
-	// }
-	// setTimeout(hideHeaders,2800);
-
-	// function flipNinja() {	
-	// 	$(".ninja:not(.pos01)").click(function(){
-
-	// 		// $(".mainHeader").toggleClass("animated01");
-	// 		$(".mainHeader").addClass("animated01");
-	// 		$(".ninja").addClass("pos01");
-	// 	})
-	// 	$("h3").click(function(){
-	// 		$(".mainHeader").addClass("reverse");
-	// 		console.log("cacaa");
-	// 	});
-
-	// 	// $(".ninja.pos01").click(function(){
-	// 	// 	$(".mainHeader").addClass("reverse");
-	// 	// 	 	console.log("cacaa");
-	// 	// 	 	alert("cacaa");
-	// 	// })
-
-	// 	var content = $('.mainHeader');
-
-	// 	// var trigger = $(".ninja").live('click', function() {
-	// 	// 	content.removeClass('reverse').addClass('running');
-	// 	// }, function() {
-	// 	// 	content.removeClass('running').addClass('reverse');
-	// 	// }).trigger('click');
-
-
-	// 	$(".ninja").click(function(){			
-
-	// 		if( !($(".mainHeader").hasClass("running") || $(".mainHeader").hasClass("reverse"))   ) {
-	// 			$(".mainHeader").addClass("running");
-	// 			console.log("nerea")
-
-	// 		} else {
-	// 			console.log("Caca333")
-	// 			$('.mainHeader').toggleClass("running reverse");
-	// 		}
-
-	// 		// content.removeClass('reverse').addClass('running');
-	// 		// content.removeClass('running').addClass('reverse');
-	// 	})
-
-	// 	// $(".lobby__item").mouseenter(function(){
-	// 	// 	console.log ("tetsas")
-	// 	// 	$(".mrPacMan").removeClass("hungry");
-	// 	// });
-		
-	// 	// $(".lobby__item").mouseleave(function(){
-	// 	// 	console.log ("tetsas")
-	// 	// 	$(".mrPacMan").addClass("hungry").fadeOut(600);
-	// 	// });
-
-	// 	// $('#trigger').live('click', function() {
-	// 	// 	$(this).toggle(function() {
-	// 	// 		$(this).text('hide follow!');
-	// 	// 		content.removeClass('reverse').addClass('running');
-	// 	// 	}, function() {
-	// 	// 		$(this).text('follow me!');
-	// 	// 		content.removeClass('running').addClass('reverse');
-	// 	// 	}).trigger('click');
-	// 	// });
-
-	// 	// $("#trigger").click(function(){
-	// 	// 	content.toggleClass("reverse running");
-	// 	// })
-
-	// }
-
-	// flipNinja();
-
-
-
-
-
-// function typeEffect(element, speed) {
-// 	var text = $(element).text();
-// 	$(element).html('');
-	
-// 	var i = 0;
-// 	var timer = setInterval(function() {
-// 					if (i < text.length) {
-// 						$(element).append(text.charAt(i));
-// 						i++;
-// 					} else {
-// 						clearInterval(timer);
-// 					}
-// 				}, speed);
-// }
-
-//   var speed = 25;
-//   var delay = $('#whoIam h2').text().length * speed + speed;
-//   typeEffect($('#whoIam h2'), speed);
-//   setTimeout(function(){
-//     $('#whoIam p').css('display', 'inline-block');
-//     typeEffect($('#whoIam p:first-child'), speed);
-//     typeEffect($('#whoIam p:nth-child(2)'), speed);
-//   }, delay);
-
 	// __________________________________________
 	// ##########################################|
 	// ############# NEW FUNCTIONS ##############|
 	// ##########################################|
 
+
+
+
+
+	// ANIMACION HEADER (DESKTOP)
+    let cn = 0;
+    $(".ninja").click(function(e){
+        e.preventDefault();
+        $(".mainHeader").toggleClass("animated01");
+        $(".mainHeader__bar").toggleClass("barAnimated");
+       // $(".mainHeader__menu").toggleClass("animated01");
+        // GRABAR POSICION EN LOCALSTORAGE, PARA PERMANECER EN LA MISMA TRAS REFRESCAR
+        cn++;
+        console.log(cn);
+        return cn;
+        // al incrementar por 1, podemos incluso filtrar por pares (/2)
+    })
+
+
+
     // STICKY HEADER
-    // var stickyNavTop = $('.headerContainer').offset().top;   	
-   	// var stickyNav = function(){
-	//     var scrollTop = $(window).scrollTop();
-	//     if (scrollTop > stickyNavTop) { 
-	//         $('.headerContainer').addClass('sticky');
-	//     } else {
-	//         $('.headerContainer').removeClass('sticky'); 
-	//     }
-	// };
-	// stickyNav();
-	// $(window).scroll(function() {
-	// 	stickyNav();
-	// });
+    var stickyNavTop = $('.mainHeader').offset().top;   	
+   	var stickyNav = function(){
+	    var scrollTop = $(window).scrollTop();
+	    if (scrollTop > stickyNavTop) { 
+	        $('.mainHeader').addClass('sticky');
+	    } else {
+	        $('.mainHeader').removeClass('sticky'); 
+	    }
+	};
+	stickyNav();
+	$(window).scroll(function() {
+		stickyNav();
+	});
 
 
 	// RESPONSIVE MENU
@@ -143,7 +59,6 @@ $(document).ready(function(){
 	}
 	lastScrollTop = st;
 	});
-
 	$(".mobileMenu").click(function(){
 		$(".mobileMenuOverlay").toggleClass("opened");
 		$(".mobileMenu__trigger").toggleClass("cross");
@@ -151,19 +66,104 @@ $(document).ready(function(){
 	})
 
 
+	// ######### FUNCIONES PARA IMPLEMENTAR
+				// PLUGIN PARA MENU:
+				/*
+				    Pilla estas variables:
+				    {
+				    Option1: "valor",
+				    Option2: "valor",
+				    Option_url_imagenes: "../pics/",    // Hacerlo opcional
+				    Elementos: [
+				            {
+				                Orden: 1,
+				                Titulo: "titulo 1",
+				                Ruta Imagen: "",
+				                Subtitulo: "esto es un lorem ipsum",
+				                Shape: "egg"    // OPCIONAL (crear clases)
+				            },
+				            {
+				                Orden: 2,
+				                Titulo: "titulo 2",
+				                Ruta Imagen: "",
+				                Subtitulo: "esto es otro lorem ipsum"
+				            },
+				            {}
+				        ]
+				    }
+				    // en el futuro hacer opciones para colores, y :hover, y personalizar colores en cada elemento
 
-	// TEMP FUNCTIONS
+				    Lo renderiza:
+				    1º.- En el main menu (aunque no esté visible hasta que le den click al ninja o hagan scroll)    
+				    2º.- En la sección de la home
+				    3º.- En el menú movil
 
-	// delete when finishing routing:
-	$(".mainHeader__circle").click(function(){
+				*/
 
-		if(!(window.location.host == "localhost")) {
-			window.location.href = "http://dev.pablofv.com/";
-		} else {
-			console.warn("start working on routes and quit this shit!!");
-		}
 
-		
-	})
 
+});
+
+
+// FUNCIONES QUE HAY QUE CAMBIAR A ES6
+
+
+// FUNCION PARA CREAR CLASES Y ESTILOS EN EL LOBBY
+function focusCard() {
+    // let _sections = document.getElementsByClassName("lobbySection");
+    $(".lobbySection").removeClass("hovered");
+    // $(".lobbySection").addClass("notHovered");
+    $(".lobbySection").mouseenter(function(){
+        $(".lobbySection").addClass("notHovered");
+        $(this).removeClass("notHovered");
+        $(this).addClass("hovered");
+    })
+    $(".lobbySection").mouseleave(function(){
+        $(".lobbySection").removeClass("notHovered");
+        $(this).removeClass("hovered");
+    })
+}
+focusCard();
+
+
+// NAVEGACIÓN DEL LOBBY
+let triggers = $(".lobbyContainer>section");
+triggers.click(function(event) {
+    // Figure out element to scroll to
+    // var target = $(this).attr("data-link");
+    var _id = $(this).attr("data-link");
+    // var target = document.querySelector(_id)
+    var target = $(_id);
+    // Does a scroll target exist?
+    if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+        	// quit 70 from the sticky header (create filter)
+            scrollTop: (target.offset().top - 70)
+        }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+            } else {
+                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+            };
+        });
+    }
+});
+
+
+// PARALLAX
+$("document").ready(function(){
+	$(window).scroll(function(){
+		let barra = $(window).scrollTop();
+		let position = barra * 0.20;	
+		$(".workExperience").css({
+			"background-position": "0 "+ position + "px"
+		});
+	});
 });

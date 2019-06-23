@@ -8,12 +8,26 @@ $header_main_color: $hmc;
     right: 0;
     margin: auto;
     height: 70px;
-    overflow: hidden;
+    // Not neccessary overflow with new design;
+    // overflow: hidden;
+	
 	text-align: center;
     background-color: $bg-color;
     z-index: 1000;
     // min-height: 90px;    
     transition: all 0.5s ease-in;
+
+
+
+
+	.mainHeader__frontSection {
+		transform: rotateX(0);
+		transform-origin: 0 0;
+		height: auto;
+		transition: all 0.5s ease-in;
+	}
+
+
 
 	&__bar {
 		background-color: $hmc;
@@ -77,7 +91,7 @@ $header_main_color: $hmc;
         border-radius: 50%;      
         border: 3px solid $blue;
         cursor: pointer;
-        transition: all 0.3s ease-in;
+        transition: all 0.5s ease-in;
 
         // QUITAR E IMPLEMENTAR NUEVO MENU MOVIL
         // &.openMenu {
@@ -92,8 +106,6 @@ $header_main_color: $hmc;
         // }
     }
 
-
-
     // MERGING!!
     &__menu {
 		position: absolute;
@@ -102,15 +114,23 @@ $header_main_color: $hmc;
 		width: 100%;
 		z-index: 1000;
 
+
+	    transform: rotateX(90deg);
+	    transform-origin: 0 0;
+
+
 		$menu_text_color: #fff;
 		box-sizing: border-box;
 		padding: 0 3em;
-		border-top: 1px solid $hmc;
-		border-bottom: 1px solid $hmc;
-		opacity: 0;
 
-		// transform: rotateX(90deg);
-        // // animation: rotation 0.5s ease-in 2s alternate 1 forwards;        
+
+
+		height: 0;
+
+		transition: all 0.5s ease-in;
+		
+
+		// opacity: 0;        
         
 		ul {
 			display: flex;
@@ -257,31 +277,68 @@ $header_main_color: $hmc;
 
     }
 	&.animated01 {
+		// overflow: hidden;
 
-		hr, h2, h1 {
+		.mainHeader__frontSection {
+			transform: rotateX(90deg);
+			height: 0;
+			transition: all 0.5s ease-in;
+		}
+
+
+		// hr, 
+		h2, 
+		h1 {
 			// animation: destruction 0.5s ease-in 1s 1 forwards;
 			animation: destruction 0.5s ease-in 1 forwards;
 			animation-direction: normal;
 		}
 
+		h1 {
+
+		}
+		h2 {}
+
 		.mainHeader__circle {
-			// animation: moveCircle 1s ease-in 1s 1 forwards;
-			animation: moveCircle 1s ease-in 1 forwards;
-            animation-direction: normal;
+			
+			// animation: moveCircle 1s ease-in 1 forwards;
+   //          animation-direction: normal;
+
+    transform: rotateY(180deg);
+    background: #f13433;
+    width: 113px;
+    height: 113px;
+    left: -50px;
+    top: -50px;
+    		transition: all 0.5s ease-in;
+
+    		// NEW SHAPE
+    		background: transparent;
+    		border-radius: 0;
+    		left: 0;
+    		top: 0;
+    		height: 68px;
+    		width: 68px;
+
 		}
 
 		.mainHeader__menu {
-
+			height: auto;
+			transform-origin: 0 0;
+			transform: rotateX(0);
+			transition: all 0.5s ease-in;
 			// animation: rotation 0.5s ease-in 2s 1 forwards;
-			animation: rotation 0.5s ease-in  1 forwards;
-			animation-direction: normal;
+			// animation: rotation 0.5s ease-in  1 forwards;
+			// animation-direction: normal;
+
+
 		}
 
 		.mainHeader__ninjaArea {
-			top: 12px;
-			right: 12px;
-			transition: all 1s cubic-bezier(.39,.76,.82,.21);
-			transition-delay: 1.5s;
+			// top: 12px;
+			// right: 12px;
+			// transition: all 1s cubic-bezier(.39,.76,.82,.21);
+			// transition-delay: 1.5s;
 		}
 
 		&.reverse {
@@ -348,7 +405,21 @@ $header_main_color: $hmc;
 
 
     @media (min-width: 1200px) {
-        width: 1200px;
+        // width: 1200px;
         margin: auto;
+    }
+
+    &.sticky {
+    	position: fixed;
+
+    	transform: rotateY(0);
+    	transition: all 0.5s ease-in;
+
+    	&.animated01 {
+			border-top: 1px solid $hmc;
+			border-bottom: 1px solid $hmc;
+    		transition: all 0.5s ease-in;
+    	}
+
     }
 }
