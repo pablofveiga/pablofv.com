@@ -54,7 +54,10 @@ $hederHeight: 70px;
 	padding-top: 70px; // altura del sticky header
 }
 main {
-	padding-top: $hederHeight;
+	@media(min-width: 769px) {
+		padding-top: $hederHeight;
+	}
+
 }
 
 // #############################

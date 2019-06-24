@@ -113,52 +113,58 @@ $(document).ready(function(){
 
 
 // FUNCION PARA CREAR CLASES Y ESTILOS EN EL LOBBY
-function focusCard() {
-    // let _sections = document.getElementsByClassName("lobbySection");
-    $(".lobbySection").removeClass("hovered");
-    // $(".lobbySection").addClass("notHovered");
-    $(".lobbySection").mouseenter(function(){
-        $(".lobbySection").addClass("notHovered");
-        $(this).removeClass("notHovered");
-        $(this).addClass("hovered");
-    })
-    $(".lobbySection").mouseleave(function(){
-        $(".lobbySection").removeClass("notHovered");
-        $(this).removeClass("hovered");
-    })
+if ($(window).width()>768) {
+	function focusCard() {
+	    // let _sections = document.getElementsByClassName("lobbySection");
+	    $(".lobbySection").removeClass("hovered");
+	    // $(".lobbySection").addClass("notHovered");
+	    $(".lobbySection").mouseenter(function(){
+	        $(".lobbySection").addClass("notHovered");
+	        $(this).removeClass("notHovered");
+	        $(this).addClass("hovered");
+	    })
+	    $(".lobbySection").mouseleave(function(){
+	        $(".lobbySection").removeClass("notHovered");
+	        $(this).removeClass("hovered");
+	    })
+	}
+	focusCard();
 }
-focusCard();
-
 
 // NAVEGACIÓN DEL LOBBY
-let triggers = $(".lobbyContainer>section");
-triggers.click(function(event) {
-    // Figure out element to scroll to
-    // var target = $(this).attr("data-link");
-    var _id = $(this).attr("data-link");
-    // var target = document.querySelector(_id)
-    var target = $(_id);
-    // Does a scroll target exist?
-    if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-        	// quit 70 from the sticky header (create filter)
-            scrollTop: (target.offset().top - 70)
-        }, 1000, function() {
-            // Callback after animation
-            // Must change focus!
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(":focus")) { // Checking if the target was focused
-                return false;
-            } else {
-                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                $target.focus(); // Set focus again
-            };
-        });
-    }
-});
+if ($(window).width()>768) {
+	let triggers = $(".lobbyContainer>section");
+	triggers.click(function(event) {
+	    // Figure out element to scroll to
+	    // var target = $(this).attr("data-link");
+	    var _id = $(this).attr("data-link");
+	    // var target = document.querySelector(_id)
+	    var target = $(_id);
+	    // Does a scroll target exist?
+	    if (target.length) {
+	        // Only prevent default if animation is actually gonna happen
+	        event.preventDefault();
+	        $('html, body').animate({
+	        	// quit 70 from the sticky header (create filter)
+	            scrollTop: (target.offset().top - 70)
+	        }, 1000, function() {
+	            // Callback after animation
+	            // Must change focus!
+	            var $target = $(target);
+	            $target.focus();
+	            if ($target.is(":focus")) { // Checking if the target was focused
+	                return false;
+	            } else {
+	                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+	                $target.focus(); // Set focus again
+	            };
+	        });
+	    }
+	});
+}
+
+
+
 
 
 // PARALLAX
