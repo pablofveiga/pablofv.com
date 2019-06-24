@@ -113,7 +113,7 @@ $(document).ready(function(){
 
 
 // FUNCION PARA CREAR CLASES Y ESTILOS EN EL LOBBY
-if ($(window).width()>768) {
+// if ($(window).width()>768) {
 	function focusCard() {
 	    // let _sections = document.getElementsByClassName("lobbySection");
 	    $(".lobbySection").removeClass("hovered");
@@ -129,7 +129,7 @@ if ($(window).width()>768) {
 	    })
 	}
 	focusCard();
-}
+// }
 
 // NAVEGACIÓN DEL LOBBY
 if ($(window).width()>768) {

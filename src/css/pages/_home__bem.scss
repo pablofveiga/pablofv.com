@@ -14,12 +14,18 @@
 
 	&__header {
 		text-align: center;
-		padding: 2em 0;
+		padding: 1.5em 0;
+
+		h2 {
+			font-size: 1.3em;
+			color: $accentColor;
+		}
 
 		p {
 			font-family: $font-lighter;
 			font-size: 0.9em;
     		padding-top: .5em;
+    		color: $thirdColor;
 		}
 	}
 
@@ -317,8 +323,9 @@
 
 
 
-// TABLET & PC
+// PC
 @media(min-width: 769px) {
+	
 	.lobbyContainer {		
 		// display: flex;
 		// flex-direction: row;

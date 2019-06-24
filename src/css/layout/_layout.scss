@@ -68,6 +68,10 @@ main {
 }
 section {
 	padding: 70px 2em 0;
+
+	@media (max-width: 768px) {
+		padding: 70px 0 0;
+	}
 }
 .section-header {
 	h2 {
