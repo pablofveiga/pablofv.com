@@ -3,7 +3,12 @@ section.whoIam {
 	.container {
 		display: flex;
 		flex-direction: column;
-		height: 100vh;
+
+		// FIX THIS
+		@media (max-width: 768px) {
+			height: 100vh;
+		}
+
 
 		.homeSection__content {
 			// margin: auto;
