@@ -26,19 +26,21 @@ $(document).ready(function(){
 
 
     // STICKY HEADER
-    var stickyNavTop = $('.mainHeader').offset().top;   	
-   	var stickyNav = function(){
-	    var scrollTop = $(window).scrollTop();
-	    if (scrollTop > stickyNavTop) { 
-	        $('.mainHeader').addClass('sticky');
-	    } else {
-	        $('.mainHeader').removeClass('sticky'); 
-	    }
-	};
-	stickyNav();
-	$(window).scroll(function() {
+    if ($(window).width()>768) {
+	    var stickyNavTop = $('.mainHeader').offset().top;   	
+	   	var stickyNav = function(){
+		    var scrollTop = $(window).scrollTop();
+		    if (scrollTop > stickyNavTop) { 
+		        $('.mainHeader').addClass('sticky');
+		    } else {
+		        $('.mainHeader').removeClass('sticky'); 
+		    }
+		};
 		stickyNav();
-	});
+		$(window).scroll(function() {
+			stickyNav();
+		});
+	}
 
 	// V2
 	// let _header = document.getElementsByClassName("mainHeader");
@@ -132,7 +134,7 @@ $(document).ready(function(){
 // }
 
 // NAVEGACIÓN DEL LOBBY
-if ($(window).width()>768) {
+// if ($(window).width()>768) {
 	let triggers = $(".lobbyContainer>section");
 	triggers.click(function(event) {
 	    // Figure out element to scroll to
@@ -146,7 +148,8 @@ if ($(window).width()>768) {
 	        event.preventDefault();
 	        $('html, body').animate({
 	        	// quit 70 from the sticky header (create filter)
-	            scrollTop: (target.offset().top - 70)
+	            // scrollTop: (target.offset().top - 70)
+	            scrollTop: (target.offset().top)
 	        }, 1000, function() {
 	            // Callback after animation
 	            // Must change focus!
@@ -161,7 +164,7 @@ if ($(window).width()>768) {
 	        });
 	    }
 	});
-}
+// }
 
 
 
@@ -177,3 +180,10 @@ $("document").ready(function(){
 		});
 	});
 });
+
+
+// CAMBIAR A EVENTO DE ESTAR PULSADO, Y SI ESTÁ MÁS DE 3 SEGUNDOS, SE TIRA UN PEDO
+$(".centralItem").click(function(e){
+	e.preventDefault();
+	$(this).toggleClass("clicked");
+})

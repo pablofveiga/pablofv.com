@@ -25,6 +25,9 @@ body {
 		overflow: hidden;
 	}
 }
+
+
+// AJUSTAR REGLAS A MOBILE FIRST
 // .wrapper {
 .container {
 	box-sizing: border-box;
@@ -40,6 +43,14 @@ body {
 	
 	&.no-padding {
 		padding: 0;
+	}
+
+	@media (max-width: 768px) {
+		padding: 0 12px 12px;
+
+		header {
+			// padding-top: 70px;
+		}
 	}
 
 }
@@ -63,16 +74,25 @@ main {
 // #############################
 // ###	SECTIONS LAYOUT
 // NUEVO LAYOUT 2019
-.homeSection {
-	min-height: 100vh;
-}
-section {
-	padding: 70px 2em 0;
 
-	@media (max-width: 768px) {
-		padding: 70px 0 0;
+// section {
+// 	padding: 70px 2em 0;
+
+// 	@media (max-width: 768px) {
+// 		padding: 70px 0 0;
+// 	}
+// }
+
+@media (min-width: 769px) {
+	section {
+		padding: 70px 2em 0;
+	}
+	.homeSection {
+		min-height: 100vh;
 	}
 }
+
+
 .section-header {
 	h2 {
 		font-size: 1.8em;
@@ -80,7 +100,7 @@ section {
 }
 .section-content {
 	p {
-		font-size: 1.4em;
+		// font-size: 1.4em;
 		font-family: $font-lighter;
 	}
 }
@@ -145,7 +165,7 @@ svg {
 .homeSection {
 
 	&__header {
-		padding: 0.5em 0;
+		padding: 0 0 0.5em;
 		display: flex;
 		align-items: center;
 
@@ -185,9 +205,9 @@ svg {
 
 		p {
 			font-family: $font-lighter;
-			font-size: 1.15em;
-			line-height: 1.15em;
-			margin: 0.45em 0;
+			// font-size: 1.15em;
+			// line-height: 1.15em;
+			// margin: 0.45em 0;
 		}
 	}
 }

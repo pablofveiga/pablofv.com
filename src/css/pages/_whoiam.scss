@@ -1,0 +1,140 @@
+section.whoIam {
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+
+		.homeSection__content {
+			// margin: auto;
+			padding-top: 1.5em;
+		}
+
+	}
+
+}
+
+.aboutMe {
+	padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "international . creative"
+        ". centralArea ."
+        "origins . futureplans";
+
+
+
+
+
+    @at-root .internationalItem {
+        grid-area: international;
+    }
+
+    @at-root .creativeItem {
+        grid-area: creative;
+    	justify-self: end;
+
+    	header {
+    		text-align: right;
+    	}
+
+    	figure {
+    		transform: rotateY(-33deg) rotateZ(5deg);
+    	}
+
+    	.spiral {    		
+		    display: flex;
+		    width: 100%;
+		    height: 100%;
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		    background: url("../pics/fondo3.png") center;
+		    z-index: 10;
+		    transition: all 1s ease-in;
+    	}
+    }
+
+    @at-root .originsItem {
+        grid-area: origins;
+        align-self: end;
+    }
+
+    @at-root .futureplansItem {
+        grid-area: futureplans;
+        justify-self: end;
+    	align-self: end;
+
+    	header {
+    		text-align: right;
+    	}    	
+    }
+
+    @at-root .centralItem {
+        grid-area: centralArea;
+        transition: all 100ms ease-in;
+        position: relative;
+
+        header {
+		    position: absolute;
+		    color: $bgColor;
+		    bottom: 10px;
+		    left: 0;
+		    text-align: center;
+		    width: 100%;
+		    font-weight: bolder;
+		    transition: all 100ms ease-in;
+        }
+
+        &.clicked {
+        	transition: all 100ms ease-in;
+        	padding: 1em;
+        	border: 1px solid;
+        	border-radius: 50%;
+        	
+        	header {
+	        	bottom: 21px;
+	        	font-size: 0.75em;       
+	        	transition: all 100ms ease-in; 		
+        	}
+
+        }
+    }
+
+    &__item {
+    	display: flex;
+    	flex-direction: column;
+
+        &__header {
+            h3 {
+            	font-size: 0.85em;
+            	padding: 0.45em 0;
+            }
+        }
+
+        &__picture {
+        	position: relative;
+        	z-index: 100;
+        	overflow: hidden;
+
+            img {
+	        	position: relative;
+        		z-index: 100;
+            }
+        }
+
+        &.originsItem {
+        	header {
+        		order: 2;
+        	}
+        }
+        &.futureplansItem {
+        	header {
+        		order: 2;
+        	}
+        }
+    }
+
+}

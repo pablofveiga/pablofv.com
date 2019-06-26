@@ -1,27 +1,27 @@
 // DEFINIR UN ROOT DE WORKEXPERIENCE
 // .introsection ESTÁ REPETIDO, HAY Q REFERENCIARLO POR DETRÁS
 
-.introSection {
-    // padding: 2em 0;
+// .introSection {
+//     // padding: 2em 0;
 
-    &__header {
+//     &__header {
 
-        h2 {
-            font-size: 1.7em;
-            font-family: $font-light;
-        }
-    }
+//         h2 {
+//             font-size: 1.7em;
+//             font-family: $font-light;
+//         }
+//     }
 
-    &__content {
-        padding-top: 0.2em;
+//     &__content {
+//         padding-top: 0.2em;
 
-        p {
-            font-family: $font-lighter;
-            font-size: 0.9em;
-            margin: 2px 0;
-        }
-    }
-}
+//         p {
+//             font-family: $font-lighter;
+//             font-size: 0.9em;
+//             margin: 2px 0;
+//         }
+//     }
+// }
 
 .jobsContainer {
     transition: all 0.6s ease-in-out;
