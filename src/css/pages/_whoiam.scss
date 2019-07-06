@@ -18,3 +18,54 @@ section.whoIam {
 	}
 
 }
+
+.peibolTinder {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid;
+    // padding: 10px;
+    border-radius: 2px;
+
+	&__header {
+		display: flex;
+	    justify-content: space-between;
+        padding: 5px;
+    	border-bottom: 1px solid;
+
+		.settingsIcon {
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: url("../pics/settingspinder.png") center no-repeat transparent;
+			background-size: contain;
+		}
+
+		.pinderTitle {
+			color: $accentColor;
+		}
+
+		.chatIcon {
+			display: block;
+			width: 40px;
+			height: 32px;
+			background: url("../pics/chaticon.png") center no-repeat transparent;
+			background-size: contain;
+		}
+	}
+
+	&__picture {
+
+		figure {
+			padding: 10px;
+		    border: 1px solid;
+		    width: 90%;
+		    margin: 10px auto 40px;
+		    border-radius: 11px;		
+
+		    img {
+		    	display: block;
+		    }
+		}
+	}
+}
