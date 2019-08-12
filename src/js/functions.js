@@ -175,7 +175,7 @@ $("document").ready(function(){
 	$(window).scroll(function(){
 		let barra = $(window).scrollTop();
 		let position = barra * 0.20;	
-		$(".workExperience").css({
+		$("#workExperience").css({
 			"background-position": "0 "+ position + "px"
 		});
 	});
