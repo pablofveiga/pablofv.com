@@ -1,0 +1,20 @@
+html {
+	/*--maxWidth: 1284px;*/
+	scrollbar-color: linear-gradient(to bottom, #ff8a00, #da1b60);
+	scrollbar-width: 20px;
+}
+html::-webkit-scrollbar {
+	width: 20px;
+	height: 20px
+}
+html::-webkit-scrollbar-thumb {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f13433), to(#b73433));
+    background: linear-gradient(to bottom, #f13433, #b73433);
+    border-radius: 8px;
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255,255,255,0.25), inset -2px -2px 2px rgba(0,0,0,0.25);
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.25), inset -2px -2px 2px rgba(0,0,0,0.25);
+}
+html::-webkit-scrollbar-track {
+/*background: linear-gradient(to right, #201c29, #201c29 1px, #100e17 1px, #100e17)*/
+	background: linear-gradient(to right, #636363, #4c4b4c 1px, #292929 1px, #333333);
+}
