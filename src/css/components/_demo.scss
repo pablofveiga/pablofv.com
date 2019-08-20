@@ -47,7 +47,7 @@ $green: #B1DA96;
     position: relative;
     // width: $cardW;
     // height: $cardH;
-    height: 20em;
+    height: 24.5em;
     margin: 0 auto 5rem;
     color: $accentColor;
   }
@@ -88,8 +88,10 @@ $green: #B1DA96;
     }
     
     &__top {
-      height: $cardTopH;
-      padding-top: 4rem;
+      // height: $cardTopH;
+      height: 24.5rem;
+      // padding-top: 4rem;
+      padding-top: 1rem;
       
       &.purple {
         background: $purple;
@@ -113,13 +115,41 @@ $green: #B1DA96;
     
     &__img {
       overflow: hidden;
-      width: $imgSize;
-      height: $imgSize;
+      // width: $imgSize;
+      // height: $imgSize;
+      width: 18rem;
+      height: 18rem;
       margin: 0 auto 1.5rem;
       border-radius: 50%;
       border: 0.5rem solid #ffffff;
-      background-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg');
-      background-size: cover;
+      // background-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg');
+      // background-image: url('../pics/creative2.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+
+      &.creative {
+        background-image: url('../pics/creative2.png');
+      }
+      &.international {
+        background-image: url('../pics/international2.png');
+      }
+      &.openminded {
+        background-image: url('../pics/openminded.png');
+      }
+      &.hardworker {
+        background-image: url('../pics/hardworker.png');
+      }
+      &.spiritual {
+        background-image: url('../pics/spiritual.svg');
+      }
+      &.foreveryoung {
+        background-image: url('../pics/foreveryoung.png');
+      }
+
+
+
     }
     
     &__name {
