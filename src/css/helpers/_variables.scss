@@ -6,6 +6,8 @@ $darkGrey: #212121;
 // **added variables
 $white: #fff;
 
+$pink: pink;
+
 // LAYOUT
 $bgColor: $darkGrey;
 $accentColor: $red;
@@ -14,3 +16,7 @@ $thirdColor: $blue;		// not used yet
 $linkColor: #fabada;	// NOT APPLIED
 $linkHoverColor: #fabada;	// NOT APPLIED
 
+
+.pink {
+	color: $pink;
+}
