@@ -36,6 +36,14 @@ $green: #B1DA96;
     background: #002942;
     width: 80%;
     margin: auto;
+
+      h4 {       
+        padding-left: 0.5em;
+        display: flex;
+        font-size: 1.3em;
+        height: 100%;
+        align-items: center; 
+      }
   }
   
   &__content {
@@ -245,6 +253,20 @@ $green: #B1DA96;
   &__tip {
     text-align: center;
     font-size: 1rem;
+
+    &__icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 34px;
+      height: 30px;
+      background: url(../pics/swipeiconwhite.png) 0 0 no-repeat transparent;
+      background-size: contain;
+      margin: 0 5px 0 0;
+    }
+    &__text {
+      display: inline-block;
+      vertical-align: middle;
+    }    
   }
 }
 

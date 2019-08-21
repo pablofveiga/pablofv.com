@@ -39,13 +39,22 @@ ul.skillsList {
             display: inline-flex;
             margin-left: 10px;
 
-            .square {
-                width: 15px;
-                height: 15px;
-                border: 1px solid #fff;
-                margin-right: 5px;
+            @at-root .square {
+                // width: 15px;
+                // height: 15px;
+                // border: 1px solid #fff;
+                // margin-right: 5px;
+                // margin-right: 3px;
+                margin-right: 1px;
                 background-color: transparent;
                 transition: all 0.4s ease-in-out;
+
+                &:after {                    
+                    display: inline-block;
+                    content: "\2606";
+                    vertical-align: middle;
+                    font-size: 1.25em;
+                }
             }
         }
         .mobileText {
@@ -59,8 +68,9 @@ ul.skillsList {
             color: #0bb10b;
 
             .square {
-                background-color: #095009;
-                border-color: #0bb10b;
+                // background-color: #095009;
+                // border-color: #0bb10b;
+                color: #0bb10b;
                 transition: all 0.2s ease-in-out;
             }
 
@@ -204,10 +214,10 @@ ul.skillsList {
             margin-left: 10px;
 
             .square {
-                width: 8px;
-                height: 8px;
-                border: 1px solid #fff;
-                margin-right: 5px;
+                // width: 8px;
+                // height: 8px;
+                // border: 1px solid #fff;
+                // margin-right: 5px;
                 background-color: transparent;
                 transition: all 0.4s ease-in-out;
             }
@@ -223,8 +233,8 @@ ul.skillsList {
             color: #0bb10b;
 
             .square {
-                background-color: #095009;
-                border-color: #0bb10b;
+                // background-color: #095009;
+                // border-color: #0bb10b;
                 transition: all 0.2s ease-in-out;
             }
 
@@ -313,3 +323,38 @@ ul.skillsList {
 
     }
 }    
+
+.skills__legend {
+    margin: 1em 0;
+    padding: 0.125em;
+    box-shadow: 0 0 2px;
+
+    &__item {
+        align-items: center;
+        display: inline-flex;
+        padding: 4px;
+        margin: 2px 1px;
+        border: 1px dotted;
+
+        &__content {
+            display: inline-flex;
+
+            .square {
+                font-size: 0.65em;
+                margin: 0;
+
+                &:after {                                    
+                    // display: inline-block;
+                    // content: "\2606";
+                    // vertical-align: middle;
+                    // font-size: 1.25em;
+                }
+            }
+        }
+        &__title {
+            font-size: 0.7em;
+            display: block;
+            margin-left: 5px;
+        }
+    }
+}
