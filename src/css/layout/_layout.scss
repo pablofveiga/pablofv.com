@@ -321,6 +321,7 @@ svg {
 
 .form {
 
+
 	p {
 
 		label {
@@ -347,10 +348,19 @@ svg {
 	// padding: 1.5em;
 	padding: 1em;
 	margin: 1em auto 2em;
+	background: url(../pics/stamp.png) 5px 26px/48px no-repeat transparent;
 	
 	.send {
-		margin: 1.5em auto 0;
+		margin: 1em auto 0;
 		display: block;
+		color: #fff;
+		outline: 0;
+		border: 1px solid #3e3e3e;
+		border-radius: 3px;
+		font-size: 0.75em;
+		padding: 4px 20px;
+		background-color: #469611;
+		text-transform: uppercase;
 	}
 }
 
@@ -358,14 +368,17 @@ svg {
 	display: flex;
 	flex-direction: column;
 
+
 	>div {
 		display: grid;
 		margin: 0.5em 0;
 		grid-template-columns: 25% auto;
+		padding-left: 2em;
 
 		&.message {
 			display: flex;
 			flex-direction: column;
+			padding-left: 0;
 
 			label {
 			    align-self: flex-start;
@@ -383,7 +396,7 @@ svg {
 	}
 
 	textarea {
-		min-height: 12.5em;
+		min-height: 10.5em;
 	}
 
 	@media (min-width: 769px) {
