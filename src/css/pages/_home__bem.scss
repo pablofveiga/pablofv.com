@@ -1,10 +1,11 @@
 // HOME WELCOME SECTION
 .introSection {
 	position: relative;
-	// padding-top: 0;
-	z-index: 10000;
+	// padding-top: 0;	
 	padding: 0;
 	height: 100vh;
+	
+    z-index: 10000;
 
 	>.container {
 		display: flex;
@@ -33,6 +34,10 @@
 		bottom: 8px;
 		left: 12px;
 		font-size: 0.65em;
+	}
+
+	@media (min-width: 769px) {
+		z-index: 10000;
 	}
 }
 

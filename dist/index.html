@@ -657,7 +657,7 @@
                     <p>I also was working as an internship in website companies in Spain after training courses.</p>
                     <p>In Malta I was working in some of the biggest betting companies in the world, such as Betsson or Plating Gaming.</p>
                     <p>I was working in other betting companies and also created a small company with some coleagues.</p>
-                    <p>Nowadays I am the CTO at <a href="https://www.secretcasinotips.com" class="pink" target="_blank">secretcasinotips</a> where I control and develope the front-end of an affiliates network platform.</p>
+                    <p>Nowadays I am the CTO in <a href="https://www.secretcasinotips.com" class="pink" target="_blank">secretcasinotips</a> where I control and develope the front-end of an affiliates network platform.</p>
                     <div class="jobSelector">
                         <!-- TODO: think about UTF-8 icons (especially for animating (crossing betwen) collapse/expand arrows) -->
                         <ul class="jobSelector__controls">
@@ -671,6 +671,24 @@
                             <span class="settingsTrigger--title">settings</span>
                         </div>
                     </div>
+
+<!-- TODO!!
+
+
+    Sacar el logo y el company name del grid
+
+    hacer sections o articles
+
+    le header será lo que hemos sacado
+
+    el contenido es el grid, con nuevo layout
+
+    quitar sombras para vistas de tablet y desktop
+
+
+-->
+
+
                     <div class="jobsContainer asc">
                         <div class="jobsContainer__item secretcasinotips">
                             <div class="jobsContainer__item__content grid">
@@ -1091,24 +1109,44 @@
                             <h2 class="homeSection__header__text">Contact</h2>
                         </header>
                         <div class="homeSection__content">
-                            <p>If you wish you can get in touch with me.</p>
-                            <p>Send me a <span class="whatsappIcon"></span> Whatsapp message.</p>
-                            <p>Add me to <span class="skypeIcon"></span> Skype.</p>
-                            <p>Send me an <span class="email"></span> email.</p>
-                            <p>Or you can fill the following contact form:</p>
+                            <p>
+                                You can send me a message from the following contact form.
+                            </p>
+
                             <form action="form.php" method="POST" id="form" class="contactForm">
                                 <div class="formContainer">
-                                    <label class="nameLabel" for="name">Name:</label>
-                                    <input class="name" type="text" name="name" id="name">
-                                    <label class="emailLabel" for="name">email:</label>
-                                    <input class="email" type="email" name="email" id="email">
-                                    <label class="messageLabel" for="msg">Message:</label>
-                                    <textarea class="message" name="msg" id="msg"></textarea>
+                                    <div>
+                                        <label class="nameLabel" for="name">Name:</label>
+                                        <input class="name" type="text" name="name" id="name">
+                                    </div>
+                                    <div>
+                                        <label class="emailLabel" for="name">email:</label>
+                                        <input class="email" type="email" name="email" id="email">
+                                    </div>
+                                    <div class="message">
+                                        <label class="messageLabel" for="msg">Message:</label>
+                                        <textarea class="message" name="msg" id="msg"></textarea>
+                                    </div>
                                 </div>
                                 <input type="submit" value="Send" class="send">
                             </form>
+
+                            <p>
+                                You can also keep in touch with me by those options:
+                            </p>
+
+                            <div class="contactIcons">                                
+                                <a href="#" class="linkedin"></a>
+                                <a href="#" class="email"></a>
+                                <a href="#" class="skype"></a>
+                                <a href="#" class="batsign"></a>
+                            </div>
                         </div>
-<p style="
+
+
+
+
+<!-- <p style="
     padding-top: 3em;
     color: tan;
 ">
@@ -1116,7 +1154,7 @@
     color: red;
     text-decoration: underline;
 ">Git Repositori</a>.
-                        </p>
+                        </p> -->
                     </section>
                 </div>
 

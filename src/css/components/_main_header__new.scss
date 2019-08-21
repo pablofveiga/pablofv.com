@@ -1,4 +1,6 @@
 $hmc: $red;
+
+
 $header_main_color: $hmc;
 
 // delete test after merge
@@ -13,12 +15,14 @@ $header_main_color: $hmc;
 	
 	text-align: center;
     background-color: $bgColor;
-    background-color: #040404;	// ADD VARIABLE
+    // background-color: blue;	// testing ADD VARIABLE
     z-index: 1000;
     // min-height: 90px;    
     transition: all 0.5s ease-in;
 
-
+    >.container {
+    	background-color: $bgColor; // testing
+    }
 
 
 	.mainHeader__frontSection {
@@ -303,14 +307,14 @@ $header_main_color: $hmc;
 		.mainHeader__circle {
 			
 			// animation: moveCircle 1s ease-in 1 forwards;
-   //          animation-direction: normal;
+   			//          animation-direction: normal;
 
-    transform: rotateY(180deg);
-    background: #f13433;
-    width: 113px;
-    height: 113px;
-    left: -50px;
-    top: -50px;
+		    transform: rotateY(180deg);
+		    background: #f13433;
+		    width: 113px;
+		    height: 113px;
+		    left: -50px;
+		    top: -50px;
     		transition: all 0.5s ease-in;
 
     		// NEW SHAPE
@@ -422,11 +426,58 @@ $header_main_color: $hmc;
     		transition: all 0.5s ease-in;
     	}
 
+    	&.rotated {
+			transform: rotateX(90deg);
+			transform-origin: 0 0;
+			transition: all 0.5s ease-in;    		
+    	} 
+
     }
 
-    @media(max-width: 769px) {
+    @media(max-width: 768px) {
     	overflow: hidden;
     	box-shadow: 0px 2px 4px 0px rgba(241, 52, 52, 0.5);
     	position: fixed;
+    }
+
+
+    // PUT AS MOVIL FIRST
+    @media (max-width: 768px) {
+	    height: 35px;
+
+	    >.container {
+    	    background-color: #3e3e3e;
+	    }
+
+	    .mainHeader__frontSection {
+		    align-items: center;
+		    display: flex;
+		    justify-content: space-around;
+
+		    h2.mainHeader__subtitle {					    	
+			    flex-basis: 50%;
+			    letter-spacing: 0.5px;
+		    }
+
+		    h1.cursive.mainHeader__title {
+			    flex-basis: 50%;
+			    font-size: 0.8em;
+			    text-align: right;
+			    font-style: normal;
+			    font-weight: 100;		    	
+		    }
+	    }
+	    
+	    .mainHeader__circle {		    	
+		    top: -19px;
+		    left: -24px;
+	    }
+
+	    .mainHeader__ninjaArea {
+	    	display: none;
+	    }
+
+
+
     }
 }

@@ -34,6 +34,8 @@ $green: #B1DA96;
     // height: $headerH;
     height: 4em;
     background: #002942;
+    width: 80%;
+    margin: auto;
   }
   
   &__content {
@@ -48,18 +50,23 @@ $green: #B1DA96;
     position: relative;
     // width: $cardW;
     // height: $cardH;
-    height: 24.5em;
-    margin: 0 auto 5rem;
+    
+    // height: 24.5em;
+
+    height: 350px;
+
+    margin: 0 auto 4rem;
     color: $accentColor;
   }
   
   &__card {
     z-index: 2;
     position: absolute;
-    left: 0;
+    left: 10%;
     top: 0;
-    width: 100%;
+    width: 80%;
     height: 100%;
+    max-height: 350px;
     transform-origin: 50% 100%;
     
     &.reset {
@@ -90,7 +97,9 @@ $green: #B1DA96;
     
     &__top {
       // height: $cardTopH;
-      height: 24.5rem;
+      // height: 24.5rem;
+      max-height: 350px;
+      height: 350px;
       // padding-top: 4rem;
       padding-top: 4rem;
       
@@ -235,7 +244,7 @@ $green: #B1DA96;
   
   &__tip {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 1rem;
   }
 }
 
