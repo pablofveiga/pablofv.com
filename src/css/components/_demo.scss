@@ -8,16 +8,7 @@ $cardTopH: 20.5rem;
 $cardBtmH: $cardH - $cardTopH;
 $imgSize: 10rem;
 
-$purple: #7132B9;
-$blue: #248CB6;
-$indigo: #303F9F;
-$cyan: #26C6DA;
-$lime: #AFB42B;
-// $brown: #795548;
-$brown: #ea4b11;
-
-$orange: #FF945A;
-$green: #B1DA96;
+$altura: 350px;
 
 .demo {
   // position: absolute;
@@ -33,7 +24,7 @@ $green: #B1DA96;
   &__header {
     // height: $headerH;
     height: 4em;
-    background: #002942;
+    background: $blue;
     width: 80%;
     margin: auto;
 
@@ -61,7 +52,7 @@ $green: #B1DA96;
     
     // height: 24.5em;
 
-    height: 350px;
+    height: $altura;
 
     margin: 0 auto 4rem;
     color: $accentColor;
@@ -74,7 +65,7 @@ $green: #B1DA96;
     top: 0;
     width: 80%;
     height: 100%;
-    max-height: 350px;
+    max-height: $altura;
     transform-origin: 50% 100%;
     
     &.reset {
@@ -106,16 +97,28 @@ $green: #B1DA96;
     &__top {
       // height: $cardTopH;
       // height: 24.5rem;
-      max-height: 350px;
-      height: 350px;
+      max-height: $altura;
+      height: $altura;
       // padding-top: 4rem;
       padding-top: 4rem;
       
+      $purple: #8859bd;
+      $blue2: #24b666;
+      $indigo: #244fce;
+      $cyan: #26C6DA;
+      $lime: #667f6a;
+      // $brown: #795548;
+      $brown: #ea4b11;
+
+      $orange: #FF945A;
+      $green: #B1DA96;
+
+
       &.purple {
         background: $purple;
       }
       &.blue {
-        background: $blue;
+        background: $blue2;
       }
       &.indigo {
         background: $indigo;
@@ -188,6 +191,7 @@ $green: #B1DA96;
     
     &__we {
       text-align: center;
+      color: $blue;
       // font-size: 2.2rem;
       // line-height: $cardBtmH;
     }
@@ -228,7 +232,7 @@ $green: #B1DA96;
       }
       
       &.m--reject {
-        background: $orange;
+        background: #FF945A;
       }
       &.m--like {
         background: $green;
@@ -268,5 +272,51 @@ $green: #B1DA96;
       vertical-align: middle;
     }    
   }
+
+}
+
+@media (min-width: 769px) {
+  $altura: 260px;
+ 
+  .demo {
+    &__header {
+      margin: 8px 0;
+      width: 100%;
+      background-color: transparent;
+
+    }
+    
+    &__content {
+
+    }
+    
+    &__card-cont {
+      display: flex;
+      justify-content: space-around;
+      max-height: $altura;
+      height: $altura;
+    }
+
+    &__card {
+      // width: 178px;
+      width: 16%;
+      flex-basis: 16%;
+      position: relative;
+      left: 0;
+      max-height: $altura;
+      height: $altura;
+
+      &__top {
+        max-height: $altura;
+        height: $altura;
+      }
+
+      &__img {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+  }
+
 }
 

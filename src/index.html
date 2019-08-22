@@ -7,6 +7,14 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="theme-color" content="#3e3e3e">
+    <!-- ADDING SLICK -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+
 </head>
 
 <body id="spa">
@@ -90,7 +98,7 @@
                             </figure>
                             <!-- <span class="lobbySection__image"></span> -->
                             <div class="lobbySection__introText">
-                                <p>A small briefcase about myself.</p>
+                                <p>A little game about myself.</p>
                             </div>
                         </section>
                         <section class="lobbySection skills" data-link="#skills">
@@ -201,7 +209,7 @@
             </div>
         </section>
 
-        
+
         <section class="homeSection whoIam wrapper" id="whoIam" style="background-color: tan; ">
             <div class="container">
                 <header class="homeSection__header">
@@ -1191,18 +1199,50 @@
         <h3>pablofv.com</h3>
         <nav>
             <ul>
-                <li><a href="#"><span class="mobIcon home"></span> Home</a></li>
-                <li><a href="#"><span class="mobIcon whoIam"></span> Who I am?</a></li>
-                <li><a href="#"><span class="mobIcon skills"></span> Skills</a></li>
-                <li><a href="#"><span class="mobIcon workExperience"></span> Work Experience</a></li>
-                <li><a href="#"><span class="mobIcon contact"></span> Contact</a></li>
+                <li><a href="#">
+                    <span class="mobIcon home"></span>
+                    <span class="mobText">Home</span>
+                    </a>
+                </li>
+                <li><a href="#whoIam">
+                    <span class="mobIcon whoIam"></span>
+                    <span class="mobText">Who I am?</span>
+                    </a>
+                </li>
+                <li><a href="#skills">
+                    <span class="mobIcon skills"></span>
+                    <span class="mobText">Skills</span>
+                    </a>
+                </li>
+                <li><a href="#workExperience">
+                    <span class="mobIcon workExperience"></span>
+                    <span class="mobText">Work Experience</span>
+                    </a>
+                </li>
+                <li><a href="#contact">
+                    <span class="mobIcon contact"></span>
+                    <span class="mobText">Contact</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <p>
-            <a href="#"><span class="pdfIcon"></span> Download CV</a>
-        </p>
+            <a href="#">    
+                <span class="pdfIcon"></span>
+                <span>Download CV</span>
+            </a>
+        </p>        
         <p>
-            <a href="#">Send me a <span class="whatsapp"></span> whatsapp</a>
+            <a href="#">
+                <span class="linkeinIcon"></span>
+                <span>Add to Linkedin</span>
+            </a>
+        </p>       
+        <p class="themeSwitcher">
+            <a href="#">
+                <span class="switchIcon"></span>
+                <span>Change to "Light Theme"</span>
+            </a>
         </p>
     </div>
     <!--     
@@ -1234,6 +1274,23 @@
 
 
     <script type="text/javascript" src="js/tinder.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        
+        $('.jobsContainer').slick({
+            dots: true
+        });
+
+        $(".mobileMenuOverlay a").click(function(e){
+            $(".mainHeader").addClass("rotated");
+            $(".mobileMenuOverlay").removeClass("opened");
+            $(".mobileMenu__trigger").removeClass("cross");
+            $("body").removeClass("blocked");
+        })
+
+    </script>
+
 </body>
 
 </html>
