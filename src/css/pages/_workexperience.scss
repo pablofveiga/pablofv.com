@@ -369,6 +369,7 @@
         box-shadow: 0 0 2px;
 
         &__item {
+            box-shadow: none;
 
             &::before {
                 content: "";
@@ -471,6 +472,8 @@
         width: 1160px;
         top: 0;
         left: 0;
+        right: 0;
+        margin: auto;
         padding-right: 5px;
         padding-top: 70px;
 
@@ -500,25 +503,63 @@
 
                 // it's better to avoid id's
                 &#asc {
-                    background: url(../pics/asc.png) center center/contain no-repeat transparent;
-                
+                    // background: url(../pics/asc.png) center center/contain no-repeat transparent;
+                    color: #fff;
+                    font-size: 11px;
+                    line-height: 24px;
+                    text-align: center;
+                    border-color: $blue;
+
+                    &:after {
+                        content: "Des";
+                        display: block;
+                    }
+
+
                     &.active {
-                        background: url(../pics/desc.png) center center/contain no-repeat transparent;
+                        // background: url(../pics/desc.png) center center/contain no-repeat transparent;
+                        &:after {
+                            content: "Asc";
+                            display: block;
+                            // color: $red;
+                        }
+                    }
+
+                    &:hover {
+                        color: $red;
+                        border-color: $red;
                     }
                 }
                 &.collapse {
-                    background: url(../pics/collapse.png) center center/contain no-repeat transparent;
-                
+                    // background: url(../pics/collapse.png) center center/contain no-repeat transparent;
+                    background: url(../pics/minimize-icon.png) center center/contain no-repeat transparent;
+                    background-size: 18px;
+
                     &.active {
-                        background: url(../pics/expand.png) center center/contain no-repeat transparent;
+                        // background: url(../pics/expand.png) center center/contain no-repeat transparent;
+                        background: url(../pics/maximize-icon.png) center center/contain no-repeat transparent;
+                        background-size: 18px;
                         // border-color: $blue;
                     }
                 }
                 &#scrollV {
-                    background: url(../pics/scrollv.png) center center/contain no-repeat transparent;
+                    // background: url(../pics/scrollv.png) center center/contain no-repeat transparent;
+                    background: url(../pics/collapse.png) center center/contain no-repeat transparent;
+                
+                    &.active {
+                        background: url(../pics/expand.png) center center/contain no-repeat transparent;
+                        background-size: 18px;
+                    }
+
                 }
                 &#scrollH {
-                    background: url(../pics/scrollh.png) center center/contain no-repeat transparent;
+                    // background: url(../pics/scrollh.png) center center/contain no-repeat transparent;
+                    background: url(../pics/slidericon.svg) center center/contain no-repeat transparent;
+                    background-size: 18px;
+                }
+                &#pin {
+                    background: url(../pics/pin.svg) center center/contain no-repeat transparent;
+                    background-size: 18px;                    
                 }
 
                 &.active,
