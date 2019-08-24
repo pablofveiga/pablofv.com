@@ -56,13 +56,49 @@
     // ASCENDENTE o desc
     $("#asc").click(function(e){
         e.preventDefault();
-        for (i=0; i<_jobs.length; i++) {
-            let _or = _total+1 - _jobs[i].getAttribute("data-order");
-            _jobs[i].setAttribute("data-order", _or);
-            _jobs[i].style.order = _or;
+
+        try {
+            $('.jobsContainer').slick("destroy");
+        } catch(e) {}
+
+        function invertOrder() {
+            for (i=0; i<_jobs.length; i++) {
+                let _or = _total+1 - _jobs[i].getAttribute("data-order");
+                _jobs[i].setAttribute("data-order", _or);
+                _jobs[i].style.order = _or;
+            }            
+        }
+        function inverdOrderDOM() {
+            _cont = $(".jobsContainer");
+            _cont.children().each(function(i,div){
+                _cont.prepend(div)
+            })
         }
         $(this).toggleClass("active");
-        $(".jobsContainer").toggleClass("asc desc");
+        // $(".jobsContainer").toggleClass("asc desc");
+
+
+        if ($(".jobsContainer").hasClass("slick-slider")) {
+            console.log("pepepepe");
+
+        } else {
+            console.log("Cacaca");
+
+
+            $('.jobsContainer').slick("destroy");
+            $(".jobsContainer").toggleClass("asc desc");
+            // invertOrder();
+            inverdOrderDOM();
+            $('.jobsContainer').slick({
+                dots: true
+            }); 
+
+
+            // invertOrder();
+            // $(".jobsContainer").toggleClass("asc desc");
+        }
+
+
     });
 
 
@@ -85,6 +121,8 @@
 
         $(this).toggleClass("active");
         $(".jobsContainer").toggleClass("scrolledV");
+        
+            $('.jobsContainer').slick("destroy");
     });
 
 

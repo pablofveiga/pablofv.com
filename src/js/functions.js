@@ -187,3 +187,11 @@ $(".centralItem").click(function(e){
 	e.preventDefault();
 	$(this).toggleClass("clicked");
 })
+
+
+
+// TEMP : in construction
+$(".closeConstruction").click(function(){
+	$(".inConstruction").hide();
+})
+$(".inConstruction").fadeOut(10000);

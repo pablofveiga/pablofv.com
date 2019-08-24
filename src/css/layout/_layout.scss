@@ -316,8 +316,12 @@ svg {
 	position: relative;
 
 	header {
-		padding-top: 2em;
+		padding-top: 5em;
 		position: relative;
+
+		@media (min-width: 769px) {
+			padding-top: 2em;
+		}
 	}
 }
 
@@ -482,6 +486,12 @@ svg {
 	    height: 9em;
 	    width: 100%;
     }
+
+
+    @media (max-width: 768px) {
+    	display: none;
+    }
+
 }
 
 

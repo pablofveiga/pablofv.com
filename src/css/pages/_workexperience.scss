@@ -343,6 +343,8 @@
     }
 
     // SLICK COSAS
+
+
     .slick-prev {
         top: -13px;
         left: 0;
@@ -352,6 +354,15 @@
         right: auto;
         left: 48px;
     }    
+    .slick-dots {
+        display: flex;        
+        justify-content: space-around;        
+    }
+    .slick-dots li button {
+        border: 1px solid #fff;        
+    }
+
+
     .slick-dots li.slick-active button:before {
         opacity: .75;
         color: white;
@@ -533,29 +544,24 @@
                     }
                 }
                 &.collapse {
-                    // background: url(../pics/collapse.png) center center/contain no-repeat transparent;
                     background: url(../pics/minimize-icon.png) center center/contain no-repeat transparent;
                     background-size: 18px;
 
                     &.active {
-                        // background: url(../pics/expand.png) center center/contain no-repeat transparent;
                         background: url(../pics/maximize-icon.png) center center/contain no-repeat transparent;
                         background-size: 18px;
-                        // border-color: $blue;
                     }
                 }
                 &#scrollV {
-                    // background: url(../pics/scrollv.png) center center/contain no-repeat transparent;
-                    background: url(../pics/collapse.png) center center/contain no-repeat transparent;
+                    background: url(../pics/expand.png) center center/contain no-repeat transparent;
                 
                     &.active {
-                        background: url(../pics/expand.png) center center/contain no-repeat transparent;
+                        background: url(../pics/collapse.png) center center/contain no-repeat transparent;
                         background-size: 18px;
                     }
 
                 }
                 &#scrollH {
-                    // background: url(../pics/scrollh.png) center center/contain no-repeat transparent;
                     background: url(../pics/slidericon.svg) center center/contain no-repeat transparent;
                     background-size: 18px;
                 }
