@@ -709,11 +709,23 @@
                     <div class="jobSelector">
                         <!-- TODO: think about UTF-8 icons (especially for animating (crossing betwen) collapse/expand arrows) -->
                         <ul class="jobSelector__controls">
-                            <li class="jobSelector__controls__item asc"><a href="#" class="asc" id="asc"></a></li>
-                            <li class="jobSelector__controls__item scrollV"><a href="#" class="scrollV" id="scrollV"></a></li>
-                            <li class="jobSelector__controls__item scrollH"><a href="#" class="scrollH" id="scrollH"></a></li>
-                            <li class="jobSelector__controls__item pin"><a href="#" class="pin" id="pin"></a></li>
-                            <li class="jobSelector__controls__item collapse"><a href="#" class="collapse" id="collapse"></a></li>
+                            <li class="jobSelector__controls__item asc">
+                                <a href="#" class="asc" id="asc"></a>
+                            </li>
+                            <li class="jobSelector__controls__item">
+                                <a href="#" class="scrollV expand" id="scrollV"></a>
+                            </li>
+                            <!--
+                            <li class="jobSelector__controls__item scrollH slide">
+                                <a href="#" class="scrollH" id="scrollH"></a>
+                            </li>
+                            <li class="jobSelector__controls__item pin">
+                                <a href="#" class="pin" id="pin"></a>
+                            </li> 
+                            -->
+                            <li class="jobSelector__controls__item">
+                                <a href="#" class="collapse" id="collapse"></a>
+                            </li>
                         </ul>
                         <div class="jobSelector__trigger">
                             <a href="#" class="settingsTrigger"></a>
@@ -1302,9 +1314,9 @@
 
 
     <script type="text/javascript" src="js/tinder.js"></script>
-
+<!-- 
     <script type="text/javascript" src="js/filtertools.js"></script>
-
+ -->
     <script type="text/javascript">
         if ($(window).width()<768) {
             $('.jobsContainer').slick({
