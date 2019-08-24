@@ -313,9 +313,11 @@ svg {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 
 	header {
-		padding-top: 3em;
+		padding-top: 2em;
+		position: relative;
 	}
 }
 
@@ -400,40 +402,40 @@ svg {
 	}
 
 	@media (min-width: 769px) {
-		display: grid;
-	    grid-template-columns: 25% auto;
-	    grid-template-rows: 3em 1.5em 3em 1.5em;
-	    grid-template-areas: "nameLabel messageLabel" "name message" "emailLabel message" "email message";
-		column-gap: 2em;
-		align-items: end;	
+		// display: grid;
+	 //    grid-template-columns: 25% auto;
+	 //    grid-template-rows: 3em 1.5em 3em 1.5em;
+	 //    grid-template-areas: "nameLabel messageLabel" "name message" "emailLabel message" "email message";
+		// column-gap: 2em;
+		// align-items: end;	
 
 
-		.nameLabel { 
-			grid-area: nameLabel; 
-			// align-self: self-end;
-			padding-bottom: 0.25em;
-		}
+		// .nameLabel { 
+		// 	grid-area: nameLabel; 
+		// 	// align-self: self-end;
+		// 	padding-bottom: 0.25em;
+		// }
 	  
-		.name { grid-area: name; }
+		// .name { grid-area: name; }
 	  
-		.emailLabel {
-			grid-area: emailLabel;
-			// align-self: self-end;
-			padding-bottom: 0.25em;
-	  	}
+		// .emailLabel {
+		// 	grid-area: emailLabel;
+		// 	// align-self: self-end;
+		// 	padding-bottom: 0.25em;
+	 //  	}
 	  
-		.email { grid-area: email; }
+		// .email { grid-area: email; }
 	  
-	  	.messageLabel { 
-			grid-area: messageLabel; 
-			// align-self: self-end;
-			padding-bottom: 0.25em;
-		}
+	 //  	.messageLabel { 
+		// 	grid-area: messageLabel; 
+		// 	// align-self: self-end;
+		// 	padding-bottom: 0.25em;
+		// }
 	  
-		.message { 
-			grid-area: message; 
-			align-self: normal;
-		}
+		// .message { 
+		// 	grid-area: message; 
+		// 	align-self: normal;
+		// }
 
 	}
 
@@ -466,6 +468,25 @@ svg {
 		}
 	}
 }
+
+.shapeContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 9em;
+
+    svg {
+    	display: block;
+	    height: 9em;
+	    width: 100%;
+    }
+}
+
+
+
+
 
 // MOBILE MENU
 .mobileMenu {

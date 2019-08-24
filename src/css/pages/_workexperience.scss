@@ -468,7 +468,9 @@
     }
 
     &.sticky {
-        position: fixed;
+        // position: fixed;
+        position: -webkit-sticky;
+        position: sticky;
         width: 1160px;
         top: 0;
         left: 0;
