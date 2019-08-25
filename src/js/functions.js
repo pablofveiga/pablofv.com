@@ -348,3 +348,10 @@ $(".inConstruction").fadeOut(10000);
     $(".settingsTrigger:not(.active)").hover(function(){
         $(this).toggleClass("hovered");
     });
+
+
+
+// SKILL LIST
+$(".skillsList li").click(function(){
+	$(this).toggleClass("clicked");
+})
