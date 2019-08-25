@@ -23,6 +23,11 @@
 //     }
 // }
 
+.workExperience {
+    background-color: #34353a;
+    padding: 0 0 2em;    
+}
+
 .jobsContainer {
     transition: all 0.6s ease-in-out;
     display: flex;
@@ -357,6 +362,7 @@
     .slick-dots {
         display: flex;        
         justify-content: space-around;        
+        justify-content: space-evenly;
     }
     .slick-dots li button {
         border: 1px solid #fff;        

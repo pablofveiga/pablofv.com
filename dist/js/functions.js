@@ -193,26 +193,10 @@ $(".inConstruction").fadeOut(10000);
 
 // FILTER TOOLS 3.0
 
-    // sticky filter bar for jobs
- //    var selectBar = $('.jobSelector').offset().top;   	
- //   	var stickySelect = function(){
-	//     var scrollTop = $(window).scrollTop();
-	//     if (scrollTop > selectBar) { 
-	//         $('.jobSelector').addClass('sticky');
-	//     } else {
-	//         $('.jobSelector').removeClass('sticky'); 
-	//     }
-	// };
-	// stickySelect();
-	// $(window).scroll(function() {
-	// 	stickySelect();
-	// });
-
-    $("#pin").click(function(e){
-        e.preventDefault();
-        $('.jobSelector').toggleClass('sticky'); 
-    })
-
+// $("#pin").click(function(e){
+//     e.preventDefault();
+//     $('.jobSelector').toggleClass('sticky'); 
+// })
 
     $("#collapse").click(function(e){
         e.preventDefault();

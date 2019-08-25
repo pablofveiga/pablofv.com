@@ -33,7 +33,7 @@ body {
 	box-sizing: border-box;
 	width: 1200px;
 	margin: auto;
-	background-color: $inside_color;
+	// background-color: $inside_color;
 	position: relative;
 	padding: 0 20px;
 
@@ -85,7 +85,7 @@ main {
 
 @media (min-width: 769px) {
 	section {
-		padding: 70px 2em 0;
+		padding: 0 2em 0;
 	}
 	.homeSection {
 		min-height: 100vh;
@@ -113,7 +113,9 @@ img {
 svg {
 	max-width: 100%;
 }
-
+a {
+	color: $red;
+}
 // #############################
 // ###	UX LAYOUT DEFINITION
 // avoid user select:
@@ -165,7 +167,7 @@ svg {
 .homeSection {
 
 	&__header {
-		padding: 0 0 0.5em;
+		padding: 70px 0 0.5em;
 		display: flex;
 		align-items: center;
 
@@ -323,6 +325,10 @@ svg {
 			padding-top: 2em;
 		}
 	}
+
+	p {
+		margin: 1.2em 0;
+	}
 }
 
 .form {
@@ -381,6 +387,10 @@ svg {
 		grid-template-columns: 25% auto;
 		padding-left: 2em;
 
+		@media (min-width: 769px) {
+			grid-template-columns: 100px auto;
+		}
+
 		&.message {
 			display: flex;
 			flex-direction: column;
@@ -390,6 +400,13 @@ svg {
 			    align-self: flex-start;
 			    padding-bottom: 0.4em;
 			}
+		}
+
+		input {
+			padding: 0.3em;
+		}
+		textarea {
+			padding: 0.3em;	
 		}
 	}
 	
@@ -406,6 +423,23 @@ svg {
 	}
 
 	@media (min-width: 769px) {
+		
+
+
+		// label {
+		// 	font-size: 1.25em;
+		// }
+
+		// input {
+		// 	font-size: 1.25em;	
+		// }
+		
+		// textarea {
+		// 	font-size: 1.2em;
+		// }
+
+
+
 		// display: grid;
 	 //    grid-template-columns: 25% auto;
 	 //    grid-template-rows: 3em 1.5em 3em 1.5em;
@@ -444,10 +478,34 @@ svg {
 	}
 
 }
+
+// .formPicture {
+// 	display: none;
+// }
+// @media (min-width: 769px) {
+// 	.contactForm {
+// 		display: inline-block;
+// 		vertical-align: middle;
+// 		width: 74%;			
+// 	}
+
+// 	.formPicture {
+// 	    display: inline-block;
+// 	    width: 24%;
+// 	    background: url(../pics/mensajebotella.png) right 0 no-repeat transparent;
+// 	    min-height: 146px;
+// 	    background-size: contain;	
+// 	}
+// }
+
 .contactIcons {
-	display: flex;
-	justify-content: space-around;
-	margin: 1em 0;
+	margin: 3em 0 4em;
+
+	&__list {
+		display: flex;
+		justify-content: space-around;
+		justify-content: space-evenly;		
+	}
 
 	a {
 		display: block;
@@ -475,11 +533,24 @@ svg {
 
 .shapeContainer {
     position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    background-color: white;
-    height: 9em;
+
+    display: none;
+    
+    &.upper {
+	    left: 0;
+	    top: 0;
+	    background-color: white;
+	    height: 9em;    	
+    }
+
+    &.bottom {
+	    left: 0;
+	    bottom: 0;
+	    background-color: #212121;
+	    height: 9em;    	
+    }    
+
 
     svg {
     	display: block;
@@ -491,8 +562,32 @@ svg {
     @media (max-width: 768px) {
     	display: none;
     }
-
 }
+
+
+.peaks::before,
+.peaks::after {
+	    background-size: 25px 100%;
+	    display: block;
+	    height: 90px;
+	    left: 0;
+	    right: 0;
+	    z-index: 10;	
+	    content: "";	
+	}
+
+
+	.peaks::before {
+		background-image: linear-gradient(315deg, #7D552F 25%, rgba(0, 0, 0, 0) 25%), linear-gradient(45deg, #CC962C 25%, rgba(0, 0, 0, 0) 25%);
+		background-position: 50% center;
+		top: -90px;		
+	}
+	.peaks::after {
+	    background-image: linear-gradient(135deg, #506b08 25%, rgba(0, 0, 0, 0) 25%), linear-gradient(225deg, #9baf70 25%, rgba(0, 0, 0, 0) 25%);
+	    background-position: 50% center;
+	    top: 100%;
+	}
+
 
 
 

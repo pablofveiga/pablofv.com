@@ -74,6 +74,8 @@
     </header>
     <!-- BODY -->
     <main>
+
+
         <section class="wrapper introSection homeSection">
             <!-- TODO! : Create class for "Full Height Container (100vh - $headerHeight)  " -->
             <div class="container">
@@ -126,6 +128,8 @@
                                 <p>Summary table of skills and abilities</p>
                             </div>
                         </section>
+
+
                         <section class="lobbySection work" data-link="#workExperience">
                             <header class="lobbySection__header">
                                 <h3 class="lobbySection__header__title">Work Experience</h3>
@@ -163,6 +167,8 @@
                                 <p>A resume of my professional career</p>
                             </div>
                         </section>
+
+
                         <section class="lobbySection contact" data-link="#contact">
                             <header class="lobbySection__header">
                                 <h3 class="lobbySection__header__title">CV. & Contact</h3>
@@ -201,9 +207,12 @@
                         </section>
                     </div>                    
                 </div>
-<!--                 <footer class="introSection__footer">
+
+                <!--            
+                 <footer class="introSection__footer">
                     <p>Feel free to navigate and find out about my personal and professional career.</p>
-                </footer> -->
+                </footer> 
+                -->
 
                 <p class="introSection__updateCheck">Last Update: <span class="date">24th June, 2019</span></p>
 
@@ -694,7 +703,7 @@
         </section>
 
 
-        <section class="homeSection workExperience wrapper" id="workExperience" style="background: url(pics/buildingpattern02.png); background-attachment: fixed;">
+        <section class="homeSection workExperience wrapper" id="workExperience">
             <div class="container">
                 <header class="homeSection__header">
                     <span class="homeSection__header__icon workExperience"></span>
@@ -715,10 +724,13 @@
                             <li class="jobSelector__controls__item">
                                 <a href="#" class="scrollV expand" id="scrollV"></a>
                             </li>
-                            <!--
+                            
                             <li class="jobSelector__controls__item scrollH slide">
                                 <a href="#" class="scrollH" id="scrollH"></a>
                             </li>
+
+
+                            <!--
                             <li class="jobSelector__controls__item pin">
                                 <a href="#" class="pin" id="pin"></a>
                             </li> 
@@ -1137,20 +1149,17 @@
                     <div class="expandBar">
                         <a href="#" id="expand">Expand</a>
                     </div>
-                    <div class="downloadCV">
-                        <p>You can <a href="#">download the CV in <span class="pdfIcon"></span> PDF</a></p>
-                    </div>
                 </div>
             </div>
         </section>
 
 
-        <div class="testSection2" style="background-color: #23738a;" id="contact">
+        <div class="testSection2"  id="contact">
             <div class="container">
                 <div class="wrapper homeSectionContainer">
                     <section class="homeSection contact" id="contact2">
 
-                        <div class="shapeContainer">
+                        <div class="shapeContainer upper">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
                             <circle fill="#212121" cx="0" cy="100" r="100" />
                             <circle fill="#212121" cx="200" cy="100" r="100" />
@@ -1184,30 +1193,45 @@
                                 <input type="submit" value="Send" class="send">
                             </form>
 
-                            <p>
-                                You can also keep in touch with me by those options:
-                            </p>
+                            <p>You can download my cv in those link: <a class="cursive" href="#" title="CV in english">pablofv_cv_en.docx</a>, <a class="cursive" href="#" title="CV in spanish">pablofv_cv_es.docx</a> </p>
 
-                            <div class="contactIcons">                                
-                                <a href="#" class="linkedin"></a>
-                                <a href="#" class="email"></a>
-                                <a href="#" class="skype"></a>
-                                <a href="#" class="batsign"></a>
+
+                            <div class="contactIcons">     
+                                <p>
+                                    You can also keep in touch with me by those options:
+                                </p>
+                                <div class="contactIcons__list">
+                                    <a href="#" class="linkedin"></a>
+                                    <a href="#" class="email"></a>
+                                    <a href="#" class="skype"></a>
+                                    <a href="#" class="batsign"></a>                                    
+                                </div>                           
                             </div>
+
+                            <p>Thank you very much for your time.</p>
+
+                            <p>Have a nice day! :)</p>
                         </div>
 
+                        <div class="shapeContainer bottom">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
+                            <circle fill="#fff" cx="0" cy="100" r="100" />
+                            <circle fill="#fff" cx="200" cy="100" r="100" />
+                          </svg>
+                        </div>   
 
 
-
-<!-- <p style="
-    padding-top: 3em;
-    color: tan;
-">
+                        <!-- 
+                        <p style="
+                            padding-top: 3em;
+                            color: tan;
+                        ">
                             Sorry, this website is under construction (mobile first). If you want to follow the updates, you can check the <a href="https://github.com/pablofveiga/pablofv.com" target="_blank" style="
-    color: red;
-    text-decoration: underline;
-">Git Repositori</a>.
-                        </p> -->
+                            color: red;
+                            text-decoration: underline;
+                        ">Git Repositori</a>.
+                            </p> 
+                        -->
                     </section>
                 </div>
 
