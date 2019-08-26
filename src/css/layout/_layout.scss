@@ -524,6 +524,46 @@ a {
 // }
 
 
+// ULTIMA HORA
+.inputError {
+    position: absolute;
+    right: 50%;
+    color: $red;
+    line-height: 1.65em;
+
+    &.msgError {
+    	padding-top: 5%;
+    }
+
+    @media (max-width: 768px) {    	
+	    font-size: 0.86em;
+	    line-height: 2em;
+	    right: 3em;
+    }
+}
+
+#contact2 div.sentMsg {
+	opacity: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	transition: all 0.5s ease-in;
+
+	&.visible {
+		opacity: 1;
+		width: auto;
+		height: auto;	
+		transition: all 0.5s ease-in;	
+	}
+}
+
+#contact2 div.sentMsg p {
+    margin: 0.25em 0!important;
+    color: green;
+    font-size: 1.2em;
+}
+
+
 .pdfIcon {
 	display: inline-block;
 	background: url(../pics/pdficon.svg) center/100% no-repeat transparent;
@@ -727,6 +767,7 @@ a {
 			li {
 			    box-shadow: 0px 2px 4px 0px $shadowColor;
 			    padding: 5px 0;
+			    height: 40px;
 				a {
 					font-size: 0;
 					color: #212121;
