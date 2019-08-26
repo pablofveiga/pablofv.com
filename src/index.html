@@ -1084,12 +1084,7 @@
                 <div class="wrapper homeSectionContainer">
                     <section class="homeSection contact" id="contact2">
 
-                        <div class="shapeContainer upper">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
-                            <circle fill="#212121" cx="0" cy="100" r="100" />
-                            <circle fill="#212121" cx="200" cy="100" r="100" />
-                          </svg>
-                        </div>                        
+           
 
                         <header class="homeSection__header">
                             <span class="homeSection__header__icon contact"></span>
@@ -1100,28 +1095,32 @@
                                 You can send me a message from the following contact form.
                             </p>
 
-                            <form method="POST" class="contactForm" id="form" action="contact.php" >
+                            <form method="post" class="contactForm contacto" id="form" >
                                 <div class="formContainer">
                                     <div>
-                                        <label class="nameLabel" for="name">Name:</label>
-                                        <input class="name" type="text" name="name" id="name" required="true">
+                                        <label class="nameLabel" for="nombre">Name:</label>
+                                        <input class="name nombre" type="text" name="nombre" id="nombre" required="true">
                                     </div>
                                     <div>
-                                        <label class="emailLabel" for="name">email:</label>
+                                        <label class="emailLabel" for="email">email:</label>
                                         <input class="email" type="email" name="email" id="email" required="true">
                                     </div>
                                     <div class="message">
-                                        <label class="messageLabel" for="msg">Message:</label>
-                                        <textarea class="message" name="msg" id="msg" required="true"></textarea>
+                                        <label class="messageLabel" for="mensaje">Message:</label>
+                                        <textarea class="message mensaje" name="mensaje" id="mensaje" required="true"></textarea>
                                     </div>
                                 </div>
-                                <input  id="submit" name="submit" type="submit"  value="Send" class="send">
+                                <input  id="submit" name="send" type="submit"  value="Send" class="send boton_envio">
+                            
+                                <div class="ultimo" id="contactResponse">
+                                    <img src="ajax.gif" class="ajaxgif hide" />
+                                    <div class="msg"></div>
+                                </div>
                             </form>
-                            <span id="sucessMessage"> </span>
 
                             <p>
                                 <span class="desktopOnly">You can download my cv in this link: </span>
-                                <a class="cursive" href="#" title="CV in english">pablofv_cv_en.docx</a>
+                                <a class="cursive" href="#" title="CV in english"><span class="pdfIcon"></span>  pablofv_cv_en.docx</a>
                             </p>
                             <!-- , <a class="cursive" href="#" title="CV in spanish">pablofv_cv_es.docx</a>  -->
                             <div class="contactIcons">     
@@ -1203,11 +1202,7 @@
             </a>
         </p>
     </div>
-    <!--     
-            this is for a game, it's like the movie "The Net" (1995); I will try to make the same xD
-        <div style="height:500px;"></div>
-        <span class="copycat">&pi;</span> 
-        -->
+
     <!-- <span class="copycat">&pi;</span> -->
     
     <!-- <script src="js/ninja.js"></script> -->
@@ -1233,14 +1228,15 @@
     <script type="text/javascript" src="js/tinder.js"></script>
 <!-- 
     <script type="text/javascript" src="js/filtertools.js"></script>
+
+    TODO:  merge the rest of scripts and stuff
  -->
     <script type="text/javascript">
         if ($(window).width()<768) {
             $('.jobsContainer').slick({
                 dots: true
             });            
-        }
-        
+        }       
 
         $(".mobileMenuOverlay a").click(function(e){
             $(".mainHeader").addClass("rotated");
@@ -1251,28 +1247,9 @@
 
     </script>
 
-<script type="text/javascript">
 
-$('#form').on('submit', function(event) {
- event.preventDefault(); //stops form on submit
-  var formData = {};
-  $.each($("#form").serializeArray(), function (i, field) {
-    formData[field.name] = field.value;
-  });
-  $.ajax({
-  url: 'contact.php',
-  data: formData,
-  method:'POST',
-  success: function(response) { 
-  // $(this).hide(); //sets css display:none to form
-   var message = "Thank you!";  
-   $('#sucessMessage').html(message);
-   console.log("todo ok");
-   }
-});    
 
-});
-</script>
+
 
 </body>
 
