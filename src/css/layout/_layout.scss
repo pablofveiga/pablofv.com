@@ -146,6 +146,13 @@ a {
 	font-style: cursive;
 	font-style: italic;
 }
+.desktopOnly {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+
 
 // color classes
 .red { color: $red; }
@@ -375,8 +382,15 @@ a {
 		border-radius: 3px;
 		font-size: 0.75em;
 		padding: 4px 20px;
-		background-color: #469611;
+		background-color: $blue;
 		text-transform: uppercase;
+		transition: all 0.2s ease-in;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #469611;
+			transition: all 0.2s ease-in;
+		}
 	}
 }
 

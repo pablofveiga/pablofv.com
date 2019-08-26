@@ -165,15 +165,15 @@ $(document).ready(function(){
 
 
 // PARALLAX
-$("document").ready(function(){
-	$(window).scroll(function(){
-		let barra = $(window).scrollTop();
-		let position = barra * 0.20;	
-		$("#workExperience").css({
-			"background-position": "0 "+ position + "px"
-		});
-	});
-});
+// $("document").ready(function(){
+// 	$(window).scroll(function(){
+// 		let barra = $(window).scrollTop();
+// 		let position = barra * 0.20;	
+// 		$("#workExperience").css({
+// 			"background-position": "0 "+ position + "px"
+// 		});
+// 	});
+// });
 
 
 // CAMBIAR A EVENTO DE ESTAR PULSADO, Y SI ESTÁ MÁS DE 3 SEGUNDOS, SE TIRA UN PEDO
@@ -235,9 +235,9 @@ $(".inConstruction").fadeOut(10000);
     $("#asc").click(function(e){
         e.preventDefault();
 
-        try {
-            $('.jobsContainer').slick("destroy");
-        } catch(e) {}
+        // try {
+        //     $('.jobsContainer').slick("destroy");
+        // } catch(e) {}
 
         function invertOrder() {
             for (i=0; i<_jobs.length; i++) {
@@ -258,18 +258,25 @@ $(".inConstruction").fadeOut(10000);
 
         if ($(".jobsContainer").hasClass("slick-slider")) {
             console.log("pepepepe");
+            $('.jobsContainer').slick("destroy");
+
+            $(".jobsContainer").toggleClass("asc desc");
+            inverdOrderDOM();
+            $('.jobsContainer').slick({
+                dots: true
+            }); 
 
         } else {
             console.log("Cacaca");
 
 
-            $('.jobsContainer').slick("destroy");
+            // $('.jobsContainer').slick("destroy");
             $(".jobsContainer").toggleClass("asc desc");
             // invertOrder();
             inverdOrderDOM();
-            $('.jobsContainer').slick({
-                dots: true
-            }); 
+            // $('.jobsContainer').slick({
+            //     dots: true
+            // }); 
 
 
             // invertOrder();
@@ -350,8 +357,7 @@ $(".inConstruction").fadeOut(10000);
     });
 
 
-
 // SKILL LIST
-$(".skillsList li").click(function(){
+$(".skillsList li").dblclick(function(){
 	$(this).toggleClass("clicked");
 })
