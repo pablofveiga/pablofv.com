@@ -408,6 +408,7 @@
             div:first-child {
                 &::before {
                     width: 100%;
+                    border-top: 0;
                 }
             }
             div:last-child {
@@ -415,6 +416,12 @@
                     width: 0;
                 }
             }                    
+        }
+
+        &.slick-slider {
+            .jobsContainer__item::before {
+                border-top: 0;
+            }
         }
 
     }
@@ -457,6 +464,8 @@
             &.active {
                 background: url(../pics/settings.png) center center/contain no-repeat transparent;
                 border-color: $accentColor;
+                border-radius: 50%;
+                transition: all 0.5s ease-in-out;
 
                 &+ .settingsTrigger--title {
                     display: none;
@@ -516,7 +525,7 @@
                 $d: 24px;
                 display: block;
                 border: 1px solid $blue;
-                background-color: #212121;
+                // background-color: #212121;
                 width: $d;
                 height: $d;
 
@@ -558,27 +567,38 @@
                         background-size: 18px;
                     }
                 }
+
+                // SCROLLING
                 &#scrollV {
-                    background: url(../pics/expand.png) center center/contain no-repeat transparent;
+                    // background: url(../pics/expand.png) center center/contain no-repeat transparent;
+                    background: url(../pics/scrolled.png) center center/contain no-repeat transparent;
+                    background-size: 18px;
                 
-                    &.active {
-                        background: url(../pics/collapse.png) center center/contain no-repeat transparent;
-                        background-size: 18px;
-                    }
+                    // &.active {
+                    //     background: url(../pics/expand.png) center center/contain no-repeat transparent;
+                    //     background-size: 18px;
+                    // }
 
                 }
+
+                // SLIDER                
                 &#scrollH {
                     background: url(../pics/slidericon.svg) center center/contain no-repeat transparent;
                     background-size: 18px;
                 }
-                &#pin {
-                    background: url(../pics/pin.svg) center center/contain no-repeat transparent;
+
+                &#expand {
+                    background: url(../pics/expand.svg) center center/contain no-repeat transparent;
                     background-size: 18px;                    
                 }
 
-                &.active,
                 &:hover {
-                    border-color: $accentColor;
+                    border-color: $red;
+                }
+                
+                &.active {
+                    border-color: #2e8469;
+                    filter: invert(57%) sepia(85%) saturate(4911%) hue-rotate(350deg) brightness(108%) contrast(89%);
                 }
 
             }
