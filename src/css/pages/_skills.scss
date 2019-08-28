@@ -169,6 +169,17 @@ ul.skillsList {
     }
 
 
+    @media (max-width: 321px) {
+        .skillsList li .text {
+            min-width: 75px!important;
+            font-size: 0.65em!important;
+        }
+        .skillsList li .mark .square {
+            font-size: 0.8em!important;    
+        }
+    }
+
+
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr 1fr;
@@ -192,67 +203,67 @@ ul.skillsList {
             grid-gap: 4px;
 
 
-            .skillsList {
-                // width: 48%;
-                font-size: 0.8em;
-                border: 0;
-                display: inline-grid!important;
-            
-
-
-// COPIADO DE ARRIBA - ARREGLAR WHEN MOBILE FIRST
-    li {        
-        margin: 20px 0;
-        width: auto;
-        text-align: center;
-        display: flex;
-        align-items: center;        
+        .skillsList {
+            // width: 48%;
+            font-size: 0.8em;
+            border: 0;
+            display: inline-grid!important;
         
-        .text {
-            padding: 4px 0;
-            border: 1px solid #fff;
-            display: inline-flex;
-            min-width: 80px;
-            justify-content: center;            
-            font-size: 0.8em;
+
+
+            // COPIADO DE ARRIBA - ARREGLAR WHEN MOBILE FIRST
+            li {        
+                margin: 20px 0;
+                width: auto;
+                text-align: center;
+                display: flex;
+                align-items: center;        
+                
+                .text {
+                    padding: 4px 0;
+                    border: 1px solid #fff;
+                    display: inline-flex;
+                    min-width: 80px;
+                    justify-content: center;            
+                    font-size: 0.8em;
+                }
+                .mark {
+                    display: inline-flex;
+                    margin-left: 6px;
+
+                    .square {
+                        // width: 8px;
+                        // height: 8px;
+                        // border: 1px solid #fff;
+                        // margin-right: 5px;
+                        background-color: transparent;
+                        transition: all 0.4s ease-in-out;
+                    }
+                }
+                .mobileText {
+                    font-size: 0.8em;
+                    padding-left: 1em;
+                    opacity: 0;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                &:hover {
+                    color: #0bb10b;
+
+                    .square {
+                        // background-color: #095009;
+                        // border-color: #0bb10b;
+                        transition: all 0.2s ease-in-out;
+                    }
+
+                    .mobileText {
+                        opacity: 1;
+                        transition: all 0.4s ease-in-out;
+                    }
+                }
+            }   
+
         }
-        .mark {
-            display: inline-flex;
-            margin-left: 6px;
-
-            .square {
-                // width: 8px;
-                // height: 8px;
-                // border: 1px solid #fff;
-                // margin-right: 5px;
-                background-color: transparent;
-                transition: all 0.4s ease-in-out;
-            }
-        }
-        .mobileText {
-            font-size: 0.8em;
-            padding-left: 1em;
-            opacity: 0;
-            transition: all 0.4s ease-in-out;
-        }
-
-        &:hover {
-            color: #0bb10b;
-
-            .square {
-                // background-color: #095009;
-                // border-color: #0bb10b;
-                transition: all 0.2s ease-in-out;
-            }
-
-            .mobileText {
-                opacity: 1;
-                transition: all 0.4s ease-in-out;
-            }
-        }
-    }   
-
-            }
     }
 
 }
