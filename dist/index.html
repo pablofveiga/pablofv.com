@@ -4,29 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Pablofv.com - Front-End Developer</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="theme-color" content="#3e3e3e">
-    <!-- ADDING SLICK -->
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37442851-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-37442851-1');
-</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37442851-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-37442851-1');
+    </script>
 </head>
 
 <body id="spa">
-    <!-- HEADER -->
     <!-- <header class="mainHeader static" id="main-header"> -->
     <header class="mainHeader" id="main-header" >
         <div class="container">
@@ -80,15 +75,12 @@
         </div>
         <hr class="mainHeader__bar">
     </header>
-    <!-- BODY -->
     <main>
-
-
         <section class="wrapper introSection homeSection">
             <div class="container">
                 <header class="introSection__header">
                     <h2>Welcome to my website!</h2>
-                    <!--                     <p>I am a Front-End developer guy focus on UX, graphics and crafting accesible and nice websites.</p> --><p>Feel free to navigate and find out about my personal and professional career.</p>                    
+                    <p>Feel free to navigate and find out about my personal and professional career.</p>
                 </header>
                 <div class="introSection__content">
                     <div class="wrapper lobbyContainer">
@@ -97,7 +89,7 @@
                                 <h3 class="lobbySection__header__title">Who I am?</h3>
                             </header>
                             <figure class="lobbySection__image">
-                                <img src="pics/whoiam.svg">
+                                <img src="pics/whoiam.svg" alt="Who I am">
                             </figure>
                             <div class="lobbySection__introText">
                                 <p>A little game about myself.</p>
@@ -108,43 +100,29 @@
                                 <h3 class="lobbySection__header__title">Skills</h3>
                             </header>
                             <figure class="lobbySection__image">
-                                <img src="pics/ninja2.svg">
+                                <img src="pics/ninja2.svg" alt="Skills">
                             </figure>
                             <div class="lobbySection__introText">
                                 <p>Summary table of skills and abilities</p>
                             </div>
                         </section>
-
-
                         <section class="lobbySection work animation01" data-link="#workExperience">
                             <header class="lobbySection__header">
                                 <h3 class="lobbySection__header__title">Work Experience</h3>
                             </header>
                             <figure class="lobbySection__image">
-                                <img src="pics/espartan.svg">
+                                <img src="pics/espartan.svg" alt="Work Experience">
                             </figure>
                             <div class="lobbySection__introText">
                                 <p>A resume of my professional career</p>
                             </div>
                         </section>
-
-
                         <section class="lobbySection contact animation01" data-link="#contact">
                             <header class="lobbySection__header">
                                 <h3 class="lobbySection__header__title">CV. & Contact</h3>
                             </header>
                             <figure class="lobbySection__image">
-                                <!-- <img src="../pics/contacto2.svg" alt=""> -->
-                                <svg clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 530 540" xmlns="http://www.w3.org/2000/svg">
-                                    <g fill="#fff">
-                                        <path d="m48 348c26 0 46-16 64-31l23-22c20-20 19-18 19-39 0-15-26-43-37-46 0-12 4-19 8-27 6-11 24-28 35-36 4-3 7-5 10-8 20-15 57-37 80-45 33-11 32-5 51-3 1 15 6 30 13 40 3 5 7 10 13 13 20 12 28 7 53-3 20-8 41-17 58-31 9-8 19-17 19-29s-13-32-19-39c-15-17-28-27-49-38-10-5-6-5-23-4-61 5-123 29-177 56-7 3-13 7-19 10-19 10-59 43-74 57-3 2-5 5-7 7-10 10-19 19-29 29-3 3-4 5-7 8-19 19-34 46-48 68-3 5-4 4-2 11 5 29-1 35 17 71 4 8 19 29 30 29z" />
-                                        <path d="m211 473c-19 0-19-17-19-29 0-16 11-29 27-29 15 0 17-3 14 16-1 7-1 12-2 19-2 11-7 22-20 22zm-91-22c0 82 76 100 132 82 4-1 8-3 12-4v-23c-4 0-7 2-11 4-27 9-66 11-87-9-6-6-9-10-13-18-8-18-8-50 1-67 6-14 12-22 24-31 19-13 49-16 71-7 8 3 13 7 19 13l10 14c7 16 9 47-1 62-6 9-15 8-17-3-1-6 2-49 2-63-4 0-5-1-8-2s-5-1-9-2c-28-5-61-2-75 26-6 12-5 19-5 32 0 37 45 52 70 33 4-3 3-4 7-5 6 21 67 22 67-48 0-120-190-111-190 17z" />
-                                        <path d="m167 344c7-2 13-7 22-7 1-6 4-14 6-20l12-41 6-21 25-84c3 2 12 4 17 5 51 14 103 31 153 45 12 3 23 6 34 10l69 20c-1 6-12 42-15 52l-45 154-93-27c-10-3-21-7-32-9v19l111 33c18 5 27 5 33-18 2-8 4-15 7-23 5-17 52-174 52-181 0-14-11-17-20-20-10-3-21-6-32-9l-159-47c-10-3-21-6-32-9s-20-6-31-9c-11-4-22-8-31 0-4 3-6 8-7 13-2 5-3 10-5 16l-37 127c-3 10-7 21-9 32z" />
-                                        <path d="m340 344 70-32c3-2 6-3 10-5s6-3 10-4l50-23c8-4 23-10 14-20-7-8-13-1-23 4-26 11-64 31-87 41-6 3-11 5-17 8-6 2-12 7-18 8l-58-83c-2-3-3-5-5-8l-27-37c-7-6-22 0-11 16 5 7 9 13 13 20l14 20c3 3 4 6 6 10l61 88z" />
-                                        <path d="m388 350c0 5 36 74 42 86 9 18 21 6 20-1 0-3-30-59-35-70-2-5-5-9-7-14-10-20-21-5-21-1z" />
-                                        <path d="m238 332v2c8 0 14 2 21 4 7 3 14-4 25-10 3-2 6-3 8-6 4-7-3-19-15-12l-40 22z" />
-                                    </g>
-                                </svg>
+                                <img src="pics/contact.svg" alt="Contact">
                             </figure>
                             <div class="lobbySection__introText">
                                 <p>Get my CV and keep in touch with me</p>
@@ -163,7 +141,6 @@
                         </section>
                     </div>                    
                 </div>
-
                 <p class="introSection__updateCheck">Last Update: <span class="date">24th June, 2019</span></p>
 
                 <div class="inConstruction">
@@ -1097,21 +1074,21 @@
                                 <div class="formContainer">
                                     <div>
                                         <label class="nameLabel" for="nombre">Name:</label>
-                                        <input class="name nombre" type="text" name="nombre" id="nombre" required="true">
+                                        <input class="name nombre" type="text" name="nombre" id="nombre" required>
                                     </div>
                                     <div>
                                         <label class="emailLabel" for="email">email:</label>
-                                        <input class="email" type="email" name="email" id="email" required="true">
+                                        <input class="email" type="email" name="email" id="email" required>
                                     </div>
                                     <div class="message">
                                         <label class="messageLabel" for="mensaje">Message:</label>
-                                        <textarea class="message mensaje" name="mensaje" id="mensaje" required="true"></textarea>
+                                        <textarea class="message mensaje" name="mensaje" id="mensaje" required></textarea>
                                     </div>
                                 </div>
                                 <input  id="submit" name="send" type="submit"  value="Send" class="send boton_envio">
                             
                                 <div class="ultimo" id="contactResponse">
-                                    <img src="pics/ajax.gif" class="ajaxgif hide" />
+                                    <img src="pics/ajax.gif" class="ajaxgif hide" alt="Loading..." />
                                     <div class="msg"></div>
                                 </div>
                             </form>
@@ -1225,20 +1202,20 @@
     <script src='js/jquery.mousewheel.min.js'></script>
 
 
-    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
 
 
     <script src="js/functions.js"></script>
 
 
-    <script type="text/javascript" src="js/tinder.js"></script>
+    <script src="js/tinder.js"></script>
 <!-- 
-    <script type="text/javascript" src="js/filtertools2.js"></script>
+    <script src="js/filtertools2.js"></script>
 
     TODO:  merge the rest of scripts and stuff
  -->
-    <script type="text/javascript">
+    <script>
         if ($(window).width()<768) {
             $('.jobsContainer').slick({
                 dots: true
