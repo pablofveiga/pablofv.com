@@ -23,56 +23,6 @@ section.whoIam {
 
 }
 
-.peibolTinder {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border: 1px solid;
-    // padding: 10px;
-    border-radius: 2px;
-
-	&__header {
-		display: flex;
-	    justify-content: space-between;
-        padding: 5px;
-    	border-bottom: 1px solid;
-
-		.settingsIcon {
-			display: block;
-			width: 32px;
-			height: 32px;
-			background: url("../pics/settingspinder.png") center no-repeat transparent;
-			background-size: contain;
-		}
-
-		.pinderTitle {
-			color: $accentColor;
-		}
-
-		.chatIcon {
-			display: block;
-			width: 40px;
-			height: 32px;
-			background: url("../pics/chaticon.png") center no-repeat transparent;
-			background-size: contain;
-		}
-	}
-
-	&__picture {
-
-		figure {
-			padding: 10px;
-		    border: 1px solid;
-		    width: 90%;
-		    margin: 10px auto 40px;
-		    border-radius: 11px;		
-
-		    img {
-		    	display: block;
-		    }
-		}
-	}
-}
 
 .whoIam__tempText {
 	display: none;
@@ -84,3 +34,363 @@ section.whoIam {
 		color: red;
 	}
 }
+
+// TINDER LIKE
+.demo {
+  $w: 30.6rem;
+  $h: 54rem;
+  $headerH: 6rem;
+  $cardW: 24rem;
+  $cardH: 32rem;
+  $cardTopH: 20.5rem;
+  $cardBtmH: $cardH - $cardTopH;
+  $imgSize: 10rem;
+
+  $altura: 350px;
+
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // width: $w;
+  // height: $h;
+  // margin-left: $w/-2;
+  // margin-top: $h/-2;
+  // background: #F6F6F5;
+  // box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  
+  &__header {
+    // height: $headerH;
+    height: 4em;
+    background: $blue;
+    width: 80%;
+    margin: auto;
+
+      h4 {       
+        padding-left: 0.5em;
+        display: flex;
+        font-size: 1.3em;
+        height: 100%;
+        align-items: center; 
+      }
+  }
+  
+  &__content {
+    overflow: hidden;
+    position: relative;
+    // height: $h - $headerH;
+    // padding-top: 4.5rem;
+    user-select: none;
+  }
+  
+  &__card-cont {
+    position: relative;
+    // width: $cardW;
+    // height: $cardH;
+    
+    // height: 24.5em;
+
+    height: $altura;
+
+    margin: 0 auto 4rem;
+    color: $accentColor;
+  }
+  
+  &__card {
+    z-index: 2;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    max-height: $altura;
+    transform-origin: 50% 100%;
+    
+    &.reset {
+      transition: transform 0.3s;
+      transform: translateX(0) !important;
+      
+      .demo__card__choice {
+        transition: opacity 0.3s;
+        opacity: 0 !important;;
+      }
+    }
+    
+    &.inactive {
+      transition: transform 0.3s;
+    }
+    
+    &.to-left {
+      transform: translateX(-30rem) rotate(-30deg) !important;
+    }
+    
+    &.to-right {
+      transform: translate(30rem) rotate(30deg) !important;
+    }
+    
+    &.below {
+      z-index: 1;
+    }
+    
+    &__top {
+      // height: $cardTopH;
+      // height: 24.5rem;
+      max-height: $altura;
+      height: $altura;
+      // padding-top: 4rem;
+      padding-top: 4rem;
+      
+      $purple: #8859bd;
+      $blue2: #24b666;
+      $indigo: #244fce;
+      $cyan: #26C6DA;
+      $lime: #667f6a;
+      // $brown: #795548;
+      $brown: #ea4b11;
+
+      $orange: #FF945A;
+      $green: #B1DA96;
+
+
+      &.purple {
+        background: $purple;
+      }
+      &.blue {
+        background: $blue2;
+      }
+      &.indigo {
+        background: $indigo;
+      }
+      &.cyan {
+        background: $cyan;
+      }
+      &.lime {
+        background: $lime;
+      }
+      &.brown {
+        background: $brown;
+      }
+    }
+    
+    &__img {
+      overflow: hidden;
+      // width: $imgSize;
+      // height: $imgSize;
+      width: 14rem;
+      height: 14rem;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      border: 0.5rem solid #ffffff;
+      // background-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg');
+      // background-image: url('../pics/creative2.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+
+
+      &.creative {
+        background-image: url('../pics/creative3.svg');
+      }
+      &.international {
+        background-image: url('../pics/international.svg');
+      }
+      &.openminded {
+        background-image: url('../pics/openminded.svg');
+      }
+      &.hardworker {
+        background-image: url('../pics/hardworker2.svg');
+      }
+      &.spiritual {
+        background-image: url('../pics/spiritual.svg');
+      }
+      &.foreveryoung {
+        background-image: url('../pics/foreveryoung.svg');
+      }
+
+
+
+    }
+    
+    &__name {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    
+    &__btm {
+      // height: $cardBtmH;
+      height: 3em;
+      background: #FFFFFF;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+    }
+    
+    &__we {
+      text-align: center;
+      color: $blue;
+      // font-size: 2.2rem;
+      // line-height: $cardBtmH;
+    }
+    
+    &__choice {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 2rem;
+        height: 2rem;
+        margin-left: -1rem;
+        color: #fff;
+        border-radius: 50%;
+        box-shadow: -2rem -3rem #fff, 2rem -3rem #fff;
+      }
+      
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 4rem;
+        height: 1.5rem;
+        margin-left: -2rem;
+        border: 0.6rem solid #fff;
+        border-bottom: none;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+      }
+      
+      &.m--reject {
+        background: #FF945A;
+      }
+      &.m--like {
+        background: $green;
+        
+        &:after {
+          transform: scaleY(-1);
+        }
+      }
+    }
+    
+    &__drag {
+      z-index: 5;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      cursor: grab;
+    }
+  }
+  
+  &__tip {
+    text-align: center;
+    font-size: 1rem;
+
+    &__icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 34px;
+      height: 30px;
+      background: url(../pics/swipeiconwhite.png) 0 0 no-repeat transparent;
+      background-size: contain;
+      margin: 0 5px 0 0;
+    }
+    &__text {
+      display: inline-block;
+      vertical-align: middle;
+    }    
+  }
+
+}
+
+@media (min-width: 769px) {
+  $altura: 260px;
+ 
+  .demo {
+    &__header {
+      margin: 8px 0;
+      width: 100%;
+      background-color: transparent;
+
+    }
+    
+    &__content {
+
+    }
+    
+    &__card-cont {
+      display: flex;
+      justify-content: space-around;
+      max-height: $altura;
+      height: $altura;
+    }
+
+    &__card {
+      // width: 178px;
+      width: 16%;
+      flex-basis: 16%;
+      position: relative;
+      left: 0;
+      max-height: $altura;
+      height: $altura;
+
+      &__top {
+        max-height: $altura;
+        height: $altura;
+
+        position: relative;
+      }
+
+      &__reverse {
+      	    position: absolute;
+		    top: 0;
+		    left: 0;
+
+		    color: yellow; // temp;
+
+
+		    transform: rotateY(180deg);
+		    z-index: -1;
+		    padding: 1em;
+
+      }
+
+      &__img {
+        width: 7rem;
+        height: 7rem;
+      }
+
+      &:hover {
+      		transition: all 0.5s ease-in;
+
+      	    transform: rotateY(180deg);
+
+      	    .demo__card__img {
+      	    	opacity: 0;
+      	    }
+
+      	    .demo__card__reverse {
+      	    	z-index: 10;
+      	    }
+
+      	    .demo__card__name {
+  	    	    transform: rotateY(180deg);
+      	    }
+
+      }
+    }
+  }
+
+}
+
+
+// dESKTOP
