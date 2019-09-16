@@ -169,35 +169,3 @@
       transform: rotate(90deg);
   }
 }
-
-// PACMAN ANIMATION
-
-@keyframes spin1 {
-  0%  {transform: rotate(0deg);}
-  50%{transform: rotate(-35deg);}
-  
-}
-@keyframes spin2 {
-  0%  {transform: rotate(0deg);}
-  50%{transform: rotate(35deg);}  
-}
-
-@-moz-keyframes spin1 {
-  0%  {transform: rotate(0deg);}
-  50%{transform: rotate(-35deg);}
-  
-}
-@-moz-keyframes spin2 {
-  0%  {transform: rotate(0deg);}
-  50%{transform: rotate(35deg);}  
-}
-
-@-webkit-keyframes spin1 {
-  0%  {transform: rotate(0deg);}
-  50%{transform: rotate(-35deg);}
-  
-}
-@-webkit-keyframes spin2 {
-  0%  {transform: rotate(0deg);}
-  50%{transform: rotate(35deg);}  
-}

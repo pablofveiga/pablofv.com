@@ -9,10 +9,8 @@
 
 // // // ==== COMPONENTS ====
 @import "components/_main_header__new.scss";
-@import "components/_special_link.scss";
+@import "components/_responsiveMenu.scss";
 @import "components/_scrollbar.scss";
-
-@import "components/_pacman.scss";
 
 
 // // // ==== LAYOUT ====
@@ -22,6 +20,7 @@
 // // // ==== PAGES ====
 @import "pages/_home__bem.scss";
 @import "pages/_whoiam.scss";	// NUEVA Y BUENA
+@import "pages/_contact.scss";
 
 @import "pages/_skills.scss";
 @import "pages/_workexperience.scss";
@@ -30,9 +29,8 @@
 @import "vendors/_slick-theme.scss";
 @import "vendors/_slick.scss";
 
-.layer1 {
-	color: inherit;
-}
+
+@import "cleaning/_orphans.scss";
 
 .copycat {
 	color: green;
@@ -40,156 +38,6 @@
 	bottom: 0;
 	right: 0;
 }
-
-
-
-
-// TESTING AREA 51
-
-// test menu
-body#menu {
-	background-color: #212121;
-	color: #fff;
-	box-sizing: border-box;
-	font-size: 100%;
-
-	.topMenu {
-		position: relative;
-
-		// TRIGGER
-		&__trigger {
-			width: 90px;
-			height: 90px;
-			background-color: #a73434;
-			border-radius: 50%;
-			border: 3px solid #0e759a;
-			transition: all 0.3s ease-in;
-			position: absolute;
-			left: 0;
-			top: 0;
-
-			&.position2 {
-				top: -150px;
-				left: -150px;
-				width: 300px;
-				height: 300px;
-			}
-		}
-		// 	Items desplegables
-		&__list {
-			display: none;
-		}
-
-		&.extended {
-			transition: all 0.4s ease-in;
-			.topMenu__list {
-				display: flex;
-				position: relative;
-
-				&__item {
-					// position: absolute;
-					// left: 50%;
-					// top: 0;
-					// transform-origin: 0 0;
-
-					// a {
-					// 	display: block;
-					// }
-
-					// &:nth-child(1) {
-					// 	transform: rotate(12deg);
-					// 	top: 0;
-
-					// 	a {
-					// 		transform: rotate(-12deg);
-					// 		transform-origin: 0 0;
-					// 	}
-					// }
-					// &:nth-child(2) {
-					// 	transform: rotate(24deg);
-					// 	top: 12px;
-
-					// 	a {
-					// 		transform: rotate(-24deg);
-					// 		transform-origin: 0 0;
-					// 	}
-					// }
-					// &:nth-child(3) {
-					// 	transform: rotate(36deg);
-					// 	top: 24px;
-
-					// 	a {
-					// 		transform: rotate(-36deg);
-					// 		transform-origin: 0 0;
-					// 	}
-					// }
-					// &:nth-child(4) {
-					// 	transform: rotate(48deg);
-					// 	top: 36px;
-
-					// 	a {
-					// 		transform: rotate(-48deg);
-					// 		transform-origin: 0 0;
-					// 	}
-					// }
-					// &:nth-child(5) {
-					// 	transform: rotate(60deg);
-					// 	top: 48px;
-
-					// 	a {
-					// 		transform: rotate(-60deg);
-					// 		transform-origin: 0 0;
-					// 	}
-					// }
-					// &:nth-child(6) {
-					// 	transform: rotate(72deg);
-					// 	top: 60px;
-
-					// 	a {
-					// 		transform: rotate(-72deg);
-					// 		transform-origin: 0 0;
-					// 	}
-					// }
-				}
-			}
-		}
-	}
-}
-.topMenu__trigger {
-	width: 90px;
-	height: 90px;
-	background-color: #a73434;
-	border-radius: 50%;
-	border: 3px solid #0e759a;
-}
-
-
-
-
-
-// test02
-body#test {
-
-	.main-header__circle {
-		position: absolute;
-		top: 8px;
-		left: 8px;
-		width: 52px;
-		height: 52px;
-		background: url(../pics/ninjaboton.png) 0 0 no-repeat transparent;
-		z-index: 10000;
-
-		.circle_in {
-			display: none;
-		}
-	}
-
-	@media (max-width: 468px) {
-		overflow-x: hidden;
-	}
-
-}
-
 
 // TEMP
 .inConstruction {

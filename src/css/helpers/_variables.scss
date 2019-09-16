@@ -3,11 +3,9 @@ $blue: #00b0eb;
 $red: #f13433;
 $darkGrey: #212121;
 $green: #396f15;
-// $darkBlue: #24344b; // not used
-// **added variables
 $white: #fff;
-
 $pink: #ea20d3;
+
 
 // LAYOUT
 $bgColor: $darkGrey;
@@ -18,6 +16,5 @@ $linkColor: #fabada;	// NOT APPLIED
 $linkHoverColor: #fabada;	// NOT APPLIED
 
 
-.pink {
-	color: $pink;
-}
+.pink {	color: $pink;}
+.red { color: $red;}
