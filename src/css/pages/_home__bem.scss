@@ -1,11 +1,9 @@
 // HOME WELCOME SECTION
 .introSection {
 	position: relative;
-	// padding-top: 0;	
 	padding: 0;
 	height: 100vh;
-	background-color: #212121;
-	
+	background-color: #212121;	
     z-index: 10000;
 
 	>.container {
@@ -36,12 +34,7 @@
 		left: 12px;
 		font-size: 0.65em;
 	}
-
-	@media (min-width: 769px) {
-		z-index: 10000;
-	}
 }
-
 .lobbyContainer {
     display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -54,18 +47,15 @@
     
 	.lobbySection {
 		transition: all 1s ease;
-
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
-
 		overflow: hidden;
 		cursor: pointer;
 	    border: 1px dashed;
 	    width: 100%;
 	    height: 100%;
+	    padding: 1em 0 1.3em;
 
 		&__header {
 			order: 2;
@@ -75,27 +65,34 @@
 				font-size: 1.1em;
 			}
 		}
-
 		&__introText {
-			display: block;
+			display: none;
 			position: relative;
-
-
 			transition: all 1s ease;
 			padding: 0 5%;
 			font-size: 0.75em;
 			padding-top: 0.3em;
 			order: 3;
 		}
-
 		&__image {
-
-
 			width: 54px;
     		justify-self: center;
+    		transition: all 1s ease;
 		}
-
+	    &.whoIam {
+	    	grid-area: whoiam;
+		}	
+		&.work {
+			grid-area: workExperience;
+		}
+		&.skills {
+			grid-area: skills;
+		}
+		&.contact {
+			grid-area: cvContact;
+		}
 		&--circle {
+			grid-area: creativePills;
 		    display: grid;
 		    grid-template-rows: 100%;
 		    grid-template-columns: 80px auto auto;
@@ -104,12 +101,6 @@
 	        border: 1px dashed;
             align-items: center;
             opacity: 0.3;
-	        // border: 2px solid #fff;
-
-
-		    // height: 150px;
-		    // width: 150px;
-		    // align-self: center;	        
 
 			header {
 				margin-top: 0;
@@ -118,20 +109,15 @@
 					font-size: 0.8em;
 				}
 			}
-
 			figure {
-
 				img {
 					width: 45px;
 				}
 			}
-
-
 			>div {
 				padding-left: 1em;
 			}
 		}
-
 		&:hover {
 			transition: all 1s ease;
 			border-color: $accentColor;
@@ -139,32 +125,10 @@
 			.lobbySection {
 
 				&__introText {
-					// order: 3;
 					transition: all 1s ease;
-					// left: 0;
-					// height: auto;
-					// top: 6px;
-					// opacity: 1;
 					color: $thirdColor;
-					// font-size: 0.9em;
-					// line-height: 1.22em;
 				}
-
-				&__header {
-					// order: 2;
-
-					&__title {
-						// color: $accentColor;
-						// border-style: solid;
-						// border-color: #00b0eb;
-						// border-width: 1px 0 1px 0;
-						// padding: 2px 0;
-					}
-				}
-
 				&__image {
-					// width: 104px!important;
-					// height: 104px!important;
 					transition: all 1s ease;
 
 					svg>path {
@@ -176,181 +140,41 @@
 						transition: all 0.5s ease;
 					}
 				}
-
 			}
 		}
-
 		&.notHovered {
 			opacity: 0.1;
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-
-
-.lobbySection {
-	padding: 1em 0 1.3em;
-
-    &__header {
-        &__title {
-			font-size: 1.25em;	// no funciona
-        }
-    }
-
-    &__image {
-		// option 1
-		// float: left;
-		transition: all 1s ease;
-    }
-	&__introText {
-		display: none;
-	}
-
-    &.whoIam {
-    	grid-area: whoiam;
-
-        .lobbySection__image {
-            // background: url(../pics/whoami.svg) 0 4px no-repeat transparent;
-			// background-size: 100%;
-			// display: block;
-			// width: 100px;
-			// height: 100px;
-			// margin: 0 5px 0 0;
-        }
-
-	}
-	
-	&.work {
-		grid-area: workExperience;
-
-        .lobbySection__image {
-            // background: url(../pics/espartan.svg) 0 0 no-repeat transparent;
-			// background-size: 100%;
-			// display: block;
-			// width: 100px;
-			// height: 100px;
-			// margin: 0 5px 0 0;
-        }
-
-	}
-
-	&.skills {
-		grid-area: skills;
-
-		.lobbySection__image {
-            // background: url(../pics/ninja2.svg) 0 0 no-repeat transparent;
-			// background-size: 100%;
-			// display: block;
-			// width: 100px;
-			// height: 100px;
-			// margin: 8px 5px 6px 0;
-        }
-
-	}
-
-	&--circle {
-		grid-area: creativePills;
-		// border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-		border-radius: 50%;
-
-		.lobbySection__image {
-            // background: url(../pics/folder.svg) 0 0 no-repeat transparent;
-			// background-size: 100%;
-			// display: block;
-			// width: 100px;
-			// height: 90px;
-			// margin: 0 5px 0 0;
-			
-
-        }
-
-	}
-
-	&.contact {
-		grid-area: cvContact;
-
-        .lobbySection__image {
-            // background: url(../pics/contact.svg) 0 0 no-repeat transparent;
-			// background-size: 100%;
-			// display: block;
-			// width: 100px;
-			// height: 100px;
-			// margin: 4px 5px 0 0;
-        }
-
-	}
-}
-
-
-
-// PC
-@media(min-width: 769px) {
+// DESKTOP
+@media(min-width: $mobileBreakpoint) {
 
 	.introSection {
 		padding: 3em 0 1.5em;
 		font-family: $font-light;
+		z-index: 10000;
 
 		&__header {
-
 			h2 {
 				font-size: 2.7em!important;
 				line-height: 1.3em;
 			}
 		}
-
 		&__content {
 			p {
-				// font-size: 1.2em!important;
 				line-height: 1.3em;
 				margin: 0.2em 0!important;
 			}
 		}
 	}
-
-
 	.lobbyContainer {		
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
-		// height: calc(100vh - 71px);
 
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    // grid-template-rows: 1fr;
-    // grid-template-areas: "whoiam skills workExperience cvContact creativePills";
-
-	
 		.lobbySection {
 			transition: all 1s ease;
 			width: 18%;  // not useful in grid
@@ -373,8 +197,6 @@
 					font-size: 1.625em;
 				}
 			}
-
-
 			&__introText {
 				display: block;
 				position: relative;
@@ -386,14 +208,12 @@
 				transition: all 1s ease;
 				font-size: 1.3em;
 			}
-
 			&__image {
 				order: 2;
 				width: 130px;
 				height: 130px;
 				margin: 0;
 			}
-
 			&:hover {
 				transition: all 1s ease;
 				border-color: $accentColor;
@@ -442,18 +262,15 @@
 
 				}
 			}
-
 			&.notHovered {
 				opacity: 0.1;
 			}
-
 			&--circle {
 				transition: all 0.5s ease;
 				display: flex;
 				flex-direction: column;
 				border-radius: 50%;
 				justify-content: center;
-
 			    height: 150px;
 			    width: 150px;
 			    align-self: center;
@@ -465,7 +282,6 @@
 			    		font-size: 0.8em;
 			    	}
 			    }
-
 			    figure {
 			    	width: 80px;
 			    	height: 77px;
@@ -474,17 +290,10 @@
 			    		width: 100%;
 			    	}
 			    }
-
 			    &:hover {
 			    	transition: all 0.5s ease;
 			    	background-color: #00b0eb;
 			    }
-			}
-
-			&--circle:hover {
-				// .lobbySection__introText {
-				// 	font-size: 0.8em;
-				// }
 			}
 		}
 	}

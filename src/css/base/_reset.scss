@@ -44,3 +44,10 @@ table {
 a {
 	text-decoration: none;
 }
+// BOX SIZING DECLARATION (added to Meyer's reset)
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}

@@ -7,14 +7,18 @@
 @import "helpers/_mixins.scss";
 @import "helpers/_animations.scss";
 
-// // // ==== COMPONENTS ====
-@import "components/_main_header__new.scss";
-@import "components/_responsiveMenu.scss";
-@import "components/_scrollbar.scss";
 
 
 // // // ==== LAYOUT ====
 @import "layout/_layout.scss";
+
+
+
+// // // ==== COMPONENTS ====
+@import "components/_main_header__new.scss";
+@import "components/_responsiveMenu.scss";
+@import "components/_scrollbar.scss";
+@import "components/_avoidTextSelection.scss";	// move to mixins and create one
 
 
 // // // ==== PAGES ====

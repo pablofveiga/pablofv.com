@@ -1,37 +1,33 @@
 // #############################
 // ###	TEMPLATE COLORS
-// $outside_color: $darkBlue;
-$outside_color: #212121;
-$inside_color: #212121;
 $text-color: #fff;
 
+// LAYOUT
+$bgColor: $darkGrey;
+$accentColor: $red;
+$textFrontColor: $white;	// not used yet
+$thirdColor: $blue;		// not used yet
+$linkColor: #fabada;	// NOT APPLIED
+$linkHoverColor: #fabada;	// NOT APPLIED
+
+
 // #############################
-// ###	PAGE LAYOUT
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+// ###	PAGE COLORS & LAYOUT
 body {
-	background-color: $outside_color;
+	background-color: $bgColor;
 	color: $text-color;
-	box-sizing: border-box;
 	transition: all 0.5s ease-in;
-	// WHEN MOBILE MENU IS VISIBLE
+	// when mobile menu is visible	// ADD jquery class
 	&.blocked {
 		overflow: hidden;
 	}
 }
-
-
-
+// #############################
 // ###	PAGE DIMENSIONS AND PADDINGS
 $containerWidth: 1200px;
 $mobilePadding: 0 12px 12px;
 $desktopPadding: 0 20px;
 $mobileBreakpoint: 769px;
-
 .container {
 	padding: $mobilePadding;
 	position: relative;
@@ -103,30 +99,13 @@ $mobileBreakpoint: 769px;
 
 
 
+
+
 // #############################
 // ###	ELEMENTS LAYOUT
-img {
-	max-width: 100%;
-}
-svg {
-	max-width: 100%;
-}
-a {
-	color: $red;
-}
-// #############################
-// ###	UX LAYOUT DEFINITION
-// avoid user select:
-*, body {
-	-webkit-touch-callout: none; // iOS Safari 
-    -webkit-user-select: none;   // Chrome/Safari/Opera 
-    -khtml-user-select: none;    // Konqueror 
-    -moz-user-select: none;      // Firefox 
-    -ms-user-select: none;       // Internet Explorer/Edge 
-    user-select: none;           // Non-prefixed version, currently supported by any browser but < IE9 
-}
-
-
+img { max-width: 100%;}
+svg { max-width: 100%;}
+a { color: $red; }	// ERROR!!
 // #############################
 // ###	CUSTOM CLASSES
 .static { position: static; }
@@ -136,6 +115,7 @@ a {
 	font-style: cursive;
 	font-style: italic;
 }
+
 .desktopOnly {
 	@media (max-width: 768px) {
 		display: none;
