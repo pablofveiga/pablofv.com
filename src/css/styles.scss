@@ -17,7 +17,8 @@
 // // // ==== COMPONENTS ====
 @import "components/_main_header__new.scss";
 @import "components/_responsiveMenu.scss";
-@import "components/_scrollbar.scss";
+@import "components/_tabSystem.scss";
+@import "components/_scrollbar.scss";			// move to mixins and create one
 @import "components/_avoidTextSelection.scss";	// move to mixins and create one
 
 

@@ -68,14 +68,13 @@ $mobileBreakpoint: 769px;
 		}
 
 		&__text {
-
-		}
-
-		h2 {
 			font-family: $font-lighter;
 			font-size: 1.875em;
 			line-height: 1.15em;
 			border-bottom: 2px solid #fff;
+		}
+
+		h2 {
 		}
 	}
 	&__content {

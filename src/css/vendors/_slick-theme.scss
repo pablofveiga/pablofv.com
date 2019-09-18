@@ -1,8 +1,6 @@
-@charset 'UTF-8';
-//  Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
+    background: #fff url('../pics/ajax-loader.gif') center center no-repeat;
 }
 
 //  Icons */
@@ -12,8 +10,8 @@
     font-weight: normal;
     font-style: normal;
 
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+    src: url('../fonts/slick.eot');
+    src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
 //  Arrows */
 .slick-prev,
@@ -88,11 +86,11 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '\25C0';
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '\25B6';
 }
 
 .slick-next
@@ -106,11 +104,11 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '\25B6';
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: '\25C4';
 }
 
 //  Dots */
@@ -188,7 +186,7 @@
     width: 20px;
     height: 20px;
 
-    content: '•';
+    content: '\25C9';
     text-align: center;
 
     opacity: .25;
