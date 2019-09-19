@@ -25,6 +25,7 @@
   display: none;
   padding: 1rem;
   background: #2b2b2b;
+  margin-bottom: 1.5em;
 }
 
 .tabs input[type="radio"] {
@@ -60,6 +61,30 @@
   font-family: $font-light;
 }
 
-.certificatesTab {
-  margin-bottom: 1.5em;
+
+// REFACTOR TO BEM
+.tab {
+
+  &__header {
+
+    &__text {
+      font-size: 1.2em;
+    }
+
+    &__icon {      
+      display: inline-block;
+      height: 35px;
+      background-size: cover;
+      vertical-align: middle;      
+
+      &.skills {
+        background: url(../pics/skills_icon.svg) center/cover no-repeat transparent ;
+        width: 35px;
+      }
+      &.habilities {
+        background: url(../pics/habilities_icon.svg) center/cover no-repeat transparent ;
+        width: 30px;
+      }
+    }
+  }
 }
