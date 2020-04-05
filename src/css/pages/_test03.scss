@@ -284,162 +284,219 @@ section.whoIam {
 }
 
 // dESKTOP
+
+
+
+
+
 @media (min-width: $mobileBreakpoint) {
-    $altura: 260px;
-
-    // DESHECHANDO
-    .demo99999999 {
-        &__header {
-            margin: 8px 0;
-            width: 100%;
-            background-color: transparent;
-        }
-
-        &__card-cont {
-            display: flex;
-            justify-content: space-around;
-            max-height: $altura;
-            height: $altura;
-        }
-
-        &__card {
-            width: 16%;
-            flex-basis: 16%;
-            position: relative;
-            left: 0;
-            max-height: $altura;
-            height: $altura;
-
-            &__top {
-                max-height: $altura;
-                height: $altura;
-                position: relative;
-            }
-
-            &__reverse {
-                position: absolute;
-                top: 0;
-                left: 0;
-                color: yellow; // temp;
-                transform: rotateY(180deg);
-                z-index: -1;
-                padding: 1em;
-            }
-
-            &__img {
-                width: 7rem;
-                height: 7rem;
-            }
-
-            &:hover {
-                transition: all 0.5s ease-in;
-                transform: rotateY(180deg);
-
-                .demo__card__img {
-                    opacity: 0;
-                }
-
-                .demo__card__reverse {
-                    z-index: 10;
-                }
-
-                .demo__card__name {
-                    transform: rotateY(180deg);
-                }
-            }
-        }
-    }
-
-    // APLICANDO
     .demo {
         &__header {
-            margin: 8px 0;
-            width: 100%;
-            background-color: transparent;
+            display: none;
+        }
+
+        &__content {
+            overflow: visible;
         }
 
         &__card-cont {
-            overflow: visible;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-areas: ". . card01 . card02 . ." "card03 . . . . . card04" ". . card05 . card06 . .";
-
-            // display: flex;
-            // justify-content: space-around;
-            // max-height: $altura;
-            // height: $altura;
+            height: auto;
         }
 
         &__card {
-            // width: 16%;
-            // flex-basis: 16%;
-            position: relative;
-            // left: 0;
-            max-height: 0;
-            height: auto;
+            max-height: initial;
             width: auto;
+            left: 0;
 
             &__top {
-                padding-top: 0;
+                max-height: initial;
                 height: auto;
-                // max-height: $altura;
-                // height: $altura;
-                // position: relative;
-                background-color: transparent!important;
+                padding-top: 0;
+            }
+            @at-root #whoIam .demo__card__top {
+                background: none;
+            }
+            &__img {
+                max-width: 10rem;
+                max-height: 10rem;
+                margin: -16% auto 0;
+                border: 0;
+                transition: all 0.5s ease-in;
             }
 
             &__btm {
                 display: none;
             }
 
-            &__reverse {
-                // position: absolute;
-                // top: 0;
-                // left: 0;
-                // color: yellow; // temp;
-                // transform: rotateY(180deg);
-                // z-index: -1;
-                // padding: 1em;
-                display: none;
-            }
-
-            &__img {
-                width: 7rem;
-                height: 7rem;
-                margin-bottom: 0;
-            }
-
             &:hover {
-                // transition: all 0.5s ease-in;
-                // transform: rotateY(180deg);
-
-                // .demo__card__img {
-                //     opacity: 0;
-                // }
-
-                // .demo__card__reverse {
-                //     z-index: 10;
-                // }
-
-                // .demo__card__name {
-                //     transform: rotateY(180deg);
-                // }
+                .demo__card__img {
+                    width: 0;
+                    height: 0;
+                    transform: rotate(360deg);
+                    transition: all 0.5s ease-in;
+                }
             }
         }
     }
-
 }
 
 
-.card01 { grid-area: card01; }
 
-.card02 { grid-area: card02; }
+@media (min-width: $mobileBreakpoint) {
 
-.card03 { grid-area: card03; }
+$hexagon-width: 250px;
+$hexagon-height: $hexagon-width*.55;
+$hexagon-margin: 25px;
+$hexagon-title-color: #fff;
+$hexagon-border-color: #fff;
+$hexagon-border-color--hover: #72f88e;
+$hexagon-image-color: #3ea0eb;
+$honeycomb-max-width: 1200px;
+$viewport-thereshold: $hexagon-width + $hexagon-margin;
 
-.card04 { grid-area: card04; }
 
-.card05 { grid-area: card05; }
 
-.card06 { grid-area: card06; }
+.honeycomb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  max-width: $honeycomb-max-width;
+  margin: 0 auto;
+  padding: 0;
+  transform: translateY(#{$hexagon-height/4});
+
+  &__cell {
+    flex: 0 1 $hexagon-width;
+    max-width: $hexagon-width;
+    height: $hexagon-height;
+    margin: $hexagon-height/2.1 $hexagon-margin/2 $hexagon-margin;
+    position: relative;
+    padding: 0.5em;
+
+    text-align: center;
+    z-index: 1;
+
+
+    // &__title {
+    //   height: 100%;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   hyphens: auto;
+    //   word-break: break-word;
+    //   text-transform: uppercase;
+    //   color: #fff;
+    //   font-weight: 700;
+    //   font-size: 1.75em;
+    //   transition: opacity 350ms;
+      
+    //   > small {
+    //     font-weight: 300;
+    //     margin-top: 0.25em;
+    //   }
+    // }
+
+    // &__image {
+    //   object-fit: cover;
+    //   object-position: center;
+    // }
+    
+    &::before, &::after {
+      content: '';
+    }
+
+    &::before, &::after, &__image {
+      top: -50%;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      display: block;
+      position: absolute;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      z-index: -1;
+    }
+
+    &::before {
+      background: $hexagon-border-color;
+      transform: scale(1.055);
+    }
+
+    &::after {
+      background: $hexagon-image-color;
+      opacity: 0.5;
+      transition: opacity 350ms;
+    }
+
+    &:hover {
+      
+      .honeycomb__cell__title {
+        opacity: 0;
+      }
+      
+      &::before {
+        background: $hexagon-border-color--hover;
+      }
+
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__placeholder{
+    display:none;
+    opacity: 0;
+    width: $hexagon-width;
+    margin: 0 $hexagon-margin/2;
+  }
+}
+
+
+@media (max-width:#{2*$viewport-thereshold}){
+  .honeycomb__cell {
+    margin: #{$hexagon-margin/2 + $hexagon-height/2} $hexagon-margin;
+  }
+}
+
+@media (min-width: #{2*$viewport-thereshold}) and (max-width:#{3*$viewport-thereshold}){
+  .honeycomb__cell:nth-child(3n) {
+    margin-right: calc(50% - #{$hexagon-width/2});
+    margin-left: calc(50% - #{$hexagon-width/2});
+  }
+
+  .honeycomb__placeholder:nth-child(3n + 5) {
+    display:block;
+  }
+}
+
+@media (min-width: #{3*$viewport-thereshold}) and (max-width:#{4*$viewport-thereshold}) {
+  .honeycomb__cell:nth-child(5n + 4) {
+    margin-left: calc(50% - #{$hexagon-width + $hexagon-margin});
+  }
+
+  .honeycomb__cell:nth-child(5n + 5) {
+    margin-right: calc(50% - #{$hexagon-width + $hexagon-margin});
+  }
+
+  .honeycomb__placeholder:nth-child(5n), .honeycomb__placeholder:nth-child(5n + 3) {
+    display:block;
+  }
+}
+
+@media (min-width: #{4*$viewport-thereshold}) {
+  .honeycomb__cell:nth-child(7n + 5)  {
+    margin-left: calc(50% - #{$hexagon-width*1.5 + $hexagon-margin});
+  }
+
+  .honeycomb__cell:nth-child(7n + 7), .honeycomb__cell:nth-child(7n + 5):nth-last-child(2) {
+    margin-right: calc(50% - #{$hexagon-width*1.5 + $hexagon-margin});
+  }
+
+  .honeycomb__placeholder:nth-child(7n + 7), .honeycomb__placeholder:nth-child(7n + 9), .honeycomb__placeholder:nth-child(7n + 11){
+    display:block;
+  }
+}
+
+}

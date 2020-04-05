@@ -8,10 +8,8 @@
 @import "helpers/_animations.scss";
 
 
-
 // // // ==== LAYOUT ====
 @import "layout/_layout.scss";
-
 
 
 // // // ==== COMPONENTS ====
@@ -19,12 +17,13 @@
 @import "components/_responsiveMenu.scss";
 @import "components/_tabSystem.scss";
 @import "components/_scrollbar.scss";			// move to mixins and create one
-@import "components/_avoidTextSelection.scss";	// move to mixins and create one
+// @import "components/_avoidTextSelection.scss";	// move to mixins and create one
 
 
 // // // ==== PAGES ====
 @import "pages/_home__bem.scss";
-@import "pages/_whoiam.scss";	// NUEVA Y BUENA
+// @import "pages/_whoiam.scss";	// NUEVA Y BUENA
+@import "pages/_test04.scss";	// NUEVA Y BUENA
 @import "pages/_contact.scss";
 
 @import "pages/_skills.scss";

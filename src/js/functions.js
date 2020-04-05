@@ -5,21 +5,9 @@ $(document).ready(function(){
 	// ############# NEW FUNCTIONS ##############|
 	// ##########################################|
 
-	// ANIMACION HEADER (DESKTOP)
-    // let cn = 0;
-    // $(".ninja").click(function(e){
-    //     e.preventDefault();
-    //     $(".mainHeader").toggleClass("animated01");
-    //     $(".mainHeader__bar").toggleClass("barAnimated");
-    //    // $(".mainHeader__menu").toggleClass("animated01");
-    //     // GRABAR POSICION EN LOCALSTORAGE, PARA PERMANECER EN LA MISMA TRAS REFRESCAR
-    //     cn++;
-    //     console.log(cn);
-    //     return cn;
-    //     // al incrementar por 1, podemos incluso filtrar por pares (/2)
-    // })
 
-    // STICKY HEADER
+
+    // STICKY header -> TODO: Convert to IIFE
     if ($(window).width()>768) {
 	    var stickyNavTop = $('.mainHeader').offset().top;   	
 	   	var stickyNav = function(){
@@ -36,71 +24,30 @@ $(document).ready(function(){
 		});
 	}
 
-	// V2
-	// let _header = document.getElementsByClassName("mainHeader");
-	// let _headerHeight = _header.getBoundingClientRect().top + window.scrollY
-
 
 	// RESPONSIVE MENU
 	var lastScrollTop = 0;
 	$(window).scroll(function(event){
-	var st = $(this).scrollTop();
-	if (st > lastScrollTop){
-		// downscroll code
-		$(".mainHeader").addClass("rotated");		
-		if( $(".mobileMenuOverlay").hasClass("opened")  ) {			
+		var st = $(this).scrollTop();
+		if (st > lastScrollTop){
+			// downscroll code
+			$(".mainHeader").addClass("rotated");		
+			if( $(".mobileMenuOverlay").hasClass("opened")  ) {			
+			} else {
+				$(".mobileMenu").removeClass("visible");
+			}		
 		} else {
-			$(".mobileMenu").removeClass("visible");
-		}		
-	} else {
-		// upscroll code
-		$(".mobileMenu").addClass("visible");
-		$(".mainHeader").removeClass("rotated");
-	}
-	lastScrollTop = st;
+			// upscroll code
+			$(".mobileMenu").addClass("visible");
+			$(".mainHeader").removeClass("rotated");
+		}
+		lastScrollTop = st;
 	});
 	$(".mobileMenu").click(function(){
 		$(".mobileMenuOverlay").toggleClass("opened");
 		$(".mobileMenu__trigger").toggleClass("cross");
 		$("body").toggleClass("blocked");
 	})
-
-
-	// ######### FUNCIONES PARA IMPLEMENTAR
-				// PLUGIN PARA MENU:
-				/*
-				    Pilla estas variables:
-				    {
-				    Option1: "valor",
-				    Option2: "valor",
-				    Option_url_imagenes: "../pics/",    // Hacerlo opcional
-				    Elementos: [
-				            {
-				                Orden: 1,
-				                Titulo: "titulo 1",
-				                Ruta Imagen: "",
-				                Subtitulo: "esto es un lorem ipsum",
-				                Shape: "egg"    // OPCIONAL (crear clases)
-				            },
-				            {
-				                Orden: 2,
-				                Titulo: "titulo 2",
-				                Ruta Imagen: "",
-				                Subtitulo: "esto es otro lorem ipsum"
-				            },
-				            {}
-				        ]
-				    }
-				    // en el futuro hacer opciones para colores, y :hover, y personalizar colores en cada elemento
-
-				    Lo renderiza:
-				    1º.- En el main menu (aunque no esté visible hasta que le den click al ninja o hagan scroll)    
-				    2º.- En la sección de la home
-				    3º.- En el menú movil
-
-				*/
-
-
 
 });
 
@@ -172,23 +119,6 @@ $(document).ready(function(){
 
 
 
-// PARALLAX
-// $("document").ready(function(){
-// 	$(window).scroll(function(){
-// 		let barra = $(window).scrollTop();
-// 		let position = barra * 0.20;	
-// 		$("#workExperience").css({
-// 			"background-position": "0 "+ position + "px"
-// 		});
-// 	});
-// });
-
-
-// CAMBIAR A EVENTO DE ESTAR PULSADO, Y SI ESTÁ MÁS DE 3 SEGUNDOS, SE TIRA UN PEDO
-$(".centralItem").click(function(e){
-	e.preventDefault();
-	$(this).toggleClass("clicked");
-})
 
 
 
@@ -342,13 +272,103 @@ $(".boton_envio").click(function(e) {
 
 
 
+// INVERT "WHO I AM" ITEMS ORDER
+function invertItemsWhoIam(){
+    card_inv = $(".whoIamGame__item-cont");
+    card_inv.children().each(function(i, div) {
+        card_inv.prepend(div)
+    })
+}
 
+
+// ## MOBILE ONLY FUNCTIONS - functions list
+function peibolTinder() {
+    var animating = false;
+    var cardsCounter = 0;
+    var numOfCards = 7;
+    var decisionVal = 80;
+    var pullDeltaX = 0;
+    var deg = 0;
+    var $card, $cardReject, $cardLike;
+
+    function pullChange() {
+        animating = true;
+        deg = pullDeltaX / 10;
+        $card.css("transform", "translateX(" + pullDeltaX + "px) rotate(" + deg + "deg)");
+
+        var opacity = pullDeltaX / 100;
+        var rejectOpacity = (opacity >= 0) ? 0 : Math.abs(opacity);
+        var likeOpacity = (opacity <= 0) ? 0 : opacity;
+        $cardReject.css("opacity", rejectOpacity);
+        $cardLike.css("opacity", likeOpacity);
+    };
+
+    function release() {      
+
+        if (pullDeltaX >= decisionVal) {
+            $card.addClass("to-right");
+        } else if (pullDeltaX <= -decisionVal) {
+            $card.addClass("to-left");
+        }
+
+        if (Math.abs(pullDeltaX) >= decisionVal) {
+            $card.addClass("inactive");
+
+            setTimeout(function() {
+                $card.addClass("below").removeClass("inactive to-left to-right");
+                cardsCounter++;
+                if (cardsCounter === numOfCards) {
+                    cardsCounter = 0;
+                    $(".whoIamGame__item").removeClass("below");
+                }
+            }, 300);
+        }
+
+        if (Math.abs(pullDeltaX) < decisionVal) {
+            $card.addClass("reset");
+        }
+
+        setTimeout(function() {
+            $card.attr("style", "").removeClass("reset")
+                .find(".whoIamGame__item__choice").attr("style", "");
+
+            pullDeltaX = 0;
+            animating = false;
+        }, 300);
+    };
+
+    $(document).on("mousedown touchstart", ".whoIamGame__item:not(.inactive)", function(e) {
+        if (animating) return;
+
+        $card = $(this);
+        $cardReject = $(".whoIamGame__item__choice.m--reject", $card);
+        $cardLike = $(".whoIamGame__item__choice.m--like", $card);
+        var startX = e.pageX || e.originalEvent.touches[0].pageX;
+
+        $(document).on("mousemove touchmove", function(e) {
+            var x = e.pageX || e.originalEvent.touches[0].pageX;
+            pullDeltaX = (x - startX);
+            if (!pullDeltaX) return;
+            pullChange();
+        });
+
+        $(document).on("mouseup touchend", function() {
+            $(document).off("mousemove touchmove mouseup touchend");
+            if (!pullDeltaX) return; // prevents from rapid click events
+            release();
+        });
+    });
+}
+
+// ## MOBILE ONLY FUNCTIONS - LAUNCHER
+$(document).ready(function() {
+    if ($(window).width() < 768) {
+        peibolTinder()
+
+    }
+});
+
+// DESKTOP ONLY FUNCTIONS
 if ($(window).width()>768) {
-
-        card_inv = $(".demo__card-cont");
-        card_inv.children().each(function(i, div) {
-            card_inv.prepend(div)
-        })
-
-
+	invertItemsWhoIam();
 }
