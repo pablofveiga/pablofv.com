@@ -1,3 +1,12 @@
+/*
+    This file is a total disaster, as result of newest and newest versions
+    of the website, and not having much time for work on it
+
+    As soon as I can I will be updating the functions
+
+*/
+
+
 $(document).ready(function(){
 
 	// __________________________________________
@@ -116,17 +125,6 @@ $(document).ready(function(){
 // }
 
 
-
-
-
-
-
-
-// TEMP : in construction
-$(".closeConstruction").click(function(){
-	$(".inConstruction").hide();
-})
-$(".inConstruction").fadeOut(10000);
 
 
 // // FILTER TOOLS 3.0
@@ -368,7 +366,14 @@ $(document).ready(function() {
     }
 });
 
-// DESKTOP ONLY FUNCTIONS
+// DESKTOP ONLY FUNCTIONS - functions list
+function beeCursor() {
+    $(".honeycomb__cell").on("mousedown mouseup", function(e) {
+    	$(this).toggleClass("clicked");
+	});
+}
+// DESKTOP ONLY FUNCTIONS - LAUNCHER
 if ($(window).width()>768) {
 	invertItemsWhoIam();
+	beeCursor();
 }

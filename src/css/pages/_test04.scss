@@ -145,10 +145,6 @@ section.whoIam {
             background-size: 70%;
 
             &.creative {
-                // background-image: url('../pics/creative3.svg');
-                // background-image: url('../pics/creative00.svg');
-                // background-image: url('../pics/creative04.svg');
-                background-image: url('../pics/creative044.svg');
                 background-image: url('../pics/creative06.svg');
             }
 
@@ -167,18 +163,15 @@ section.whoIam {
             }
 
             &.spiritual {
-                // background-image: url('../pics/spiritual.svg');
                 background-image: url('../pics/espiritualalfa.svg');
                 background-size: 100%;
             }
 
             &.foreveryoung {
-                // background-image: url('../pics/foreveryoung.svg');
                 background-image: url('../pics/vampire01.svg');
                 background-size: 80%;
             }
             &.curious {
-                // background-image: url('../pics/curious.svg');
                 background-image: url('../pics/curious77.svg');
             }
         }
@@ -281,7 +274,6 @@ section.whoIam {
     }
 }
 
-// ## (BRIDGE betwen Tinder and Honeycombs)
 // dESKTOP Tinder Unstyling 
 @media (min-width: $mobileBreakpoint) {
     .whoIamGame {
@@ -315,13 +307,7 @@ section.whoIam {
                 max-height: 10rem;
                 margin: -16% auto 0;
                 border: 0;
-                    // transition: transform 0.5s ease-in;
-                    // transition: filter 0.3s ease-in;
                 transition: all 0.7s ease-in;
-                // filter: none;
-                // transition: filter 0.3s linear, transform 0.5s ease-in;
-                // transition-property: filter, transform;
-                // transition-duration: 0.3s, 0.5s;
             }
 
             &__btm {
@@ -332,8 +318,6 @@ section.whoIam {
             &__we {
                 color: transparent;
                 font-size: 0;
-                // position: absolute;
-                // left: 0;
                 width: 100%;
                 opacity: 0;
                 transition: all 0.5s ease-in;
@@ -345,8 +329,6 @@ section.whoIam {
             }
 
             &:hover {
-
-
                 .whoIamGame__item__img {
                     width: 0;
                     height: 0;
@@ -354,13 +336,8 @@ section.whoIam {
                     transform: rotate(360deg);
                     filter: invert(18%) sepia(100%) saturate(6911%) hue-rotate(360deg) brightness(110%) contrast(116%);
                     transition: all 0.7s ease-in;
-                    // transition: filter 0.3s ease-in;
-                    // transition: filter 0.3s linear, transform 0.5s ease-in;
-                    // transition-property: filter, transform;
-                    // transition-duration: 0.3s, 0.5s;
                 }
                 .whoIamGame__item__btm {
-
                 }
                 .whoIamGame__item__we {
                     color: #fff;
@@ -378,8 +355,6 @@ section.whoIam {
         }
     }
 }
-// mobile HoneyComb Unstyling
-
 
 // DESKTOP HONEYCOMBS
 @media (min-width: $mobileBreakpoint) {

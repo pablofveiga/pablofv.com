@@ -1,8 +1,132 @@
 $hmc: $red;
-$header_main_color: $hmc;
+
+$header_main_color: $red;
+$menuDesktopHeight: 70px;
+$midHeight: $menuDesktopHeight/2;
+
+
+.mainHeader {
+	position: relative;
+
+	&__menu {
+		height: $menuDesktopHeight;
+		position: relative;
+		outline: 1px solid white;
+
+	    position: absolute;
+	    width: 100%;
+	    left: 0;
+	    top: 0;
+
+			    width: 1200px;
+			    left: 0;
+			    right: 0;
+			    margin: auto;
+
+			// &.framed {
+			//     width: 1200px;
+			//     left: 0;
+			//     right: 0;
+			//     margin: auto;
+			// }
+
+
+		&--front {
+			background: green;
+			transition: all 0.5s ease;
+
+
+
+			&.visible {
+
+			}
+			&.rotated {
+				transform: rotateX(-90deg);
+				transform-origin: 0 0;
+				transition: all 0.5s ease;
+			}
+		}
+		&--nav {
+			background: blue;
+			transform: rotateX(0);
+			transition: all 0.5s ease;
+			// transition-delay: 0.3s;
+
+			&.visible {
+
+			}
+
+			&.rotated {
+				transform: rotateX(-90deg);
+				transform-origin: 0 0;
+				transition: all 0.5s ease;
+				// transition-delay: 0.3s;
+			}
+		}
+	}
+
+	&__bar {
+		display: block;
+		height: 4px;
+		width: 100%;
+		background-color: $header_main_color;
+		position: absolute;
+		left: 0;
+		top: calc( (#{$menuDesktopHeight}/2) + 2px);
+	}
+
+}
+
+.frontMenu {
+	&__text {
+		&__title {}
+		&__subtitle {}
+	}
+	&__circle {
+		&__closeIcon {}
+	}
+	// &__bar {
+	// 	display: block;
+	// 	height: 4px;
+	// 	width: 100%;
+	// 	background-color: $header_main_color;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: calc( (#{$menuDesktopHeight}/2) + 2px);
+	// }
+	&__ninjaArea {
+		&__ninja {}
+		&__settings {}
+	}
+}
+
+.navMenu {
+
+	&__list {
+
+		&__item {
+			&__icon {
+				&--who {}
+				&--skills {}
+				&--work {}
+				&--contact {}
+				&--spanish {}
+				&--english {}
+			}
+			&__text {}
+		}
+	}
+}
+
+
+
+
+
+
+
 
 // delete test after merge
-.mainHeader {
+.mainHeader8 {
     position: fixed;
     left: 0;
     right: 0;

@@ -1,46 +1,38 @@
-@mixin svg2Red {
-    filter: invert(57%) sepia(85%) saturate(4911%) hue-rotate(350deg) brightness(108%) contrast(89%);
+// Transform Black Backgrounds into Red Backgrounds
+@mixin black2Red {
+    filter: invert(18%) sepia(100%) saturate(6911%) hue-rotate(360deg) brightness(110%) contrast(116%);
 }
 
-/// Mixin to place items on a circle
-/// @author Hugo Giraudel
-/// @author Ana Tudor
-/// @param {Integer} $item-count - Number of items on the circle
-/// @param {Length} $circle-size - Large circle size
-/// @param {Length} $item-size - Single item size
-@mixin on-circle($item-count, $circle-size, $item-size) {
-  position: relative;
-  width:  $circle-size;
-  height: $circle-size;
-  padding: 0;
-  border-radius: 50%; 
-  list-style: none;       
-  
-  > * {
-    display: block;
-    position: absolute;
-    top:  50%; 
-    left: 50%;
-    width:  $item-size;
-    height: $item-size;
-    margin: -($item-size / 2);
-  
-    $angle: (360 / $item-count);
-    $rot: 0;
+// Avoid Text Selection
+@mixin noTextSelection {
+  -webkit-touch-callout: none; // iOS Safari 
+    -webkit-user-select: none;   // Chrome/Safari/Opera 
+    -khtml-user-select: none;    // Konqueror 
+    -moz-user-select: none;      // Firefox 
+    -ms-user-select: none;       // Internet Explorer/Edge 
+    user-select: none;           // Non-prefixed version, currently supported by any browser but < IE9   
+}
 
-    @for $i from 1 through $item-count {
-      &:nth-of-type(#{$i}) {
-        transform: 
-          rotate($rot * 1deg) 
-          translate($circle-size / 2) 
-          rotate($rot * -1deg);
-      }
+// CUSTOM SCROLLBAR
+@mixin customScrollbars($scrollBackground, $scrollBarWidth, $bulletColor, $bulletRadius,$bulletShadow) {
+  $FF_bulletColor: $accentColor;
+  $FF_scrollBackground: darken($bgColor, 20%);
 
-      $rot: $rot + $angle;
-    }
+  // FIREFOX
+  scrollbar-color: $FF_bulletColor $FF_scrollBackground;
+  scrollbar-width: auto;
+  // The complete scrollbar.
+  &::-webkit-scrollbar {
+    width: $scrollBarWidth;
+  }
+  // The draggable or scrolling element in a scrollbar
+  &::-webkit-scrollbar-thumb {
+    background: $bulletColor;
+    border-radius: $bulletRadius;
+    box-shadow: $bulletShadow;
+  }
+  // The empty space in the scrollbar below the moving bar
+  &::-webkit-scrollbar-track {
+    background: $scrollBackground;
   }
 }
-
-
-
-

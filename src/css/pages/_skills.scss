@@ -58,14 +58,14 @@ ul.skillsList {
         }
         &:hover,
         &.clicked {
-            color: #0bb10b;
+            color: $thirdColor;
 
             .square {
-                color: #0bb10b;
+                color: $thirdColor;
                 transition: all 0.2s ease-in-out;
             }
             .text {
-                border-color: #0bb10b;
+                border-color: $thirdColor;
             }
             .mobileText {
                 opacity: 1;
@@ -196,7 +196,7 @@ ul.skillsList {
                 }
 
                 &:hover {
-                    color: #0bb10b;
+                    color: $thirdColor;
 
                     .square {
                         transition: all 0.2s ease-in-out;

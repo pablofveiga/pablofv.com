@@ -32,7 +32,57 @@
     </script>
 </head>
 <body id="spa">
-    <header class="mainHeader" id="main-header" >
+
+    <header class="mainHeader">    
+        <div class="mainHeader__menu mainHeader__menu--front framed container">
+            <div class="frontMenu">
+                <div class="frontMenu__text">
+                    <h1 class="frontMenu__text__title">pablofv.com</h1>
+                    <h2 class="frontMenu__text__subtitle">Front End Developer</h2>                
+                </div>
+                <div class="frontMenu__circle">
+                    <span class="frontMenu__circle__closeIcon"></span>
+                </div>      
+                <!-- <span class="frontMenu__bar"></span> -->
+                <div class="frontMenu__ninjaArea">
+                    <span class="mainHeader__ninjaArea__ninja ninja"></span>
+                    <button class="mainHeader__ninjaArea__settings">Settings</button>
+                </div>
+            </div>        
+        </div>
+        <div class="mainHeader__menu mainHeader__menu--nav rotated">
+            <nav class="navMenu">
+                <ul class="navMenu__list">
+                    <li class="navMenu__list__item navMenu__list__item--who">
+                        <span class="navMenu__list__item__icon"></span>
+                        <span class="navMenu__list__item__text">Who I am</span>
+                    </li>
+                    <li class="navMenu__list__item navMenu__list__item--skills">
+                        <span class="navMenu__list__item__icon"></span>
+                        <span class="navMenu__list__item__text">Skills & Certificates</span>
+                    </li>
+                    <li class="navMenu__list__item navMenu__list__item--work">
+                        <span class="navMenu__list__item__icon"></span>
+                        <span class="navMenu__list__item__text">Work Experience</span>
+                    </li>
+                    <li class="navMenu__list__item navMenu__list__item--contact">
+                        <span class="navMenu__list__item__icon"></span>
+                        <span class="navMenu__list__item__text">CV & Contact</span>
+                    </li>
+                    <li class="navMenu__list__item navMenu__list__item--language navMenu__list__item--language--spanish">
+                        <span class="navMenu__list__item__icon"></span>
+                        <span class="navMenu__list__item__text" lang="es">Versión en español</span>
+                    </li>                
+                </ul>
+            </nav>
+        </div>
+        <span class="mainHeader__bar"></span>
+    </header>
+
+
+
+
+    <header style="display: none;" class="mainHeader" id="main-header" >
         <div class="container">
             <div class="mainHeader__frontSection">
                 <h2 class="mainHeader__subtitle">pablofv.com</h2>
@@ -172,6 +222,7 @@
                         <div class="whoIamGame__content">
                             <div class="honeycomb whoIamGame__item-cont">
                                 <div class="honeycomb__cell honeycomb__placeholder"></div>
+
                                 <div class="honeycomb__cell card07 whoIamGame__item">
                                     <div class="brown whoIamGame__item__top">
                                         <div class="curious whoIamGame__item__img"></div>
@@ -188,6 +239,7 @@
                                     <div class="m--like whoIamGame__item__choice"></div>
                                     <div class="whoIamGame__item__drag"></div>
                                 </div>
+
                                 <div class="honeycomb__cell card06 whoIamGame__item">
                                     <div class="purple whoIamGame__item__top">
                                         <div class="foreveryoung whoIamGame__item__img"></div>
@@ -284,7 +336,8 @@
                                     <div class="m--reject whoIamGame__item__choice"></div>
                                     <div class="m--like whoIamGame__item__choice"></div>
                                     <div class="whoIamGame__item__drag"></div>
-                                </div>                                
+                                </div>
+                                
                             </div>                            
                             <p class="whoIamGame__tip">
                                 <span class="whoIamGame__tip__icon"></span>
@@ -318,10 +371,12 @@
          -->    
         <section class="homeSection skills wrapper" id="skills">
             <div class="container">
+
                 <header class="homeSection__header">
                     <span class="homeSection__header__icon skills"></span>
                     <h2 class="homeSection__header__text">Skills & Certificates</h2>
                 </header>
+
                 <div class="tabs">
                     <input type="radio" name="tabs" id="tabone" class="" checked="checked">
                     <label for="tabone" class="">
@@ -843,6 +898,8 @@
                         </div>                    
                     </div>
                 </div>
+
+
             </div>
         </section>
 
@@ -1422,7 +1479,8 @@
 
 
 
-    <script src="js/functions.js"></script>
+    <!-- <script src="js/functions.js"></script> -->
+    <script src="js/functions22.js"></script>
 
 
 <!-- 
@@ -1445,7 +1503,78 @@
     </script>
 
 
+<script type="text/javascript">
 
+// let navMenu = document.querySelector(".mainHeader__menu");
+// let frontMenu = document.querySelector(".mainHeader");    
+
+// function turnBlock(menu,status) {
+
+//     function showNavMenu() {
+//         // CHECK IF F.M. IS VISIBLE, THEN HIDE IT
+//         if (frontMenu.classList.contains("visible") ) {
+//             frontMenu.classList.remove("visible");
+//         }
+//         // CHECK IF N.M. IS NOT VISIBLE, THEN SHOW IT
+//         if (  (navMenu.classList.contains("visible") == false )  ) {
+//             navMenu.classList.add("visible");
+//         }
+//     }
+//     function hideNavMenu() {
+//         // CHECK IF N.M. IS VISIBLE, THEN HIDE IT
+//         if ((navMenu.classList.contains("visible"))) {
+//             navMenu.classList.remove("visible");
+//         }
+//         // CHECK IF F.M. IS NOT VISIBLE, THEN SHOW IT
+//         if (!(frontMenu.classList.contains("visible")) ) {
+//             frontMenu.classList.add("visible");
+//         }
+//     }
+//     function showFrontMenu() {
+//         // CHECK IF N.M. IS VISIBLE, THEN HIDE IT
+//         if (navMenu.classList.contains("visible")) {
+//             navMenu.classList.remove("visible");
+//         }
+//         // CHECK IF F.M. IS NOT VISIBLE, THEN SHOW IT
+//         if (!(frontMenu.classList.contains("visible")) ) {
+//             frontMenu.classList.add("visible");
+//         }
+//     }
+//     function hideFrontMenu() {
+//         // CHECK IF F.M. IS VISIBLE, THEN HIDE IT
+//         if (frontMenu.classList.contains("visible") ) {
+//             frontMenu.classList.remove("visible");
+//         }
+//         // CHECK IF N.M. IS NOT VISIBLE, THEN SHOW IT
+//         if (!(navMenu.classList.contains("visible"))) {
+//             navMenu.classList.add("visible");
+//         }
+//     }
+
+//     switch(menu) {
+//         case navMenu: 
+//             if (status == true) {
+//                 showNavMenu();
+//             } else {
+//                 hideNavMenu();
+//             }
+//             break;       
+
+//         case frontMenu:
+//             if (status == true) {
+//                 showFrontMenu();
+//             } else {
+//                 hideFrontMenu();
+//             }
+//             break;
+        
+//         default: 
+//             break;
+//     }
+// }    
+
+
+</script>
 
 
 </body>

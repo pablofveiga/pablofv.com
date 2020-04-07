@@ -79,15 +79,9 @@ $mobileBreakpoint: 769px;
 	}
 	&__content {
 
-		p {
+		@at-root p {
 			font-family: $font-lighter;
-			// font-size: 1.15em;
-			// line-height: 1.15em;
-			// margin: 0.45em 0;
-
-			// font-size: 0.95em;
-    		// margin: 5px 0;
-
+    		margin: 5px 0;
 		}
 	}
 	@media (min-width: $mobileBreakpoint) {		
@@ -102,9 +96,8 @@ $mobileBreakpoint: 769px;
 
 // #############################
 // ###	ELEMENTS LAYOUT
-img { max-width: 100%;}
-svg { max-width: 100%;}
-a { color: $red; }	// ERROR!!
+img, svg { max-width: 100%;}
+a { color: $accentColor; }	// Put in theme template
 // #############################
 // ###	CUSTOM CLASSES
 .static { position: static; }
@@ -119,4 +112,17 @@ a { color: $red; }	// ERROR!!
 	@media (max-width: 768px) {
 		display: none;
 	}
+}
+
+// #############################
+// ### LAYOUT ADDONS
+
+// CUSTOM SCROLLBAR
+$scrollBarBG: linear-gradient(to right, #636363, #4c4b4c 1px, #292929 1px, #333);
+$scrollBarWidth: 20px;
+$scrollBarBulletColor: linear-gradient(to bottom, #f13433, #b73433);
+$scrollBarBulletRadius: 8px;
+$scrollBarBulletShadow: inset 2px 2px 2px rgba(255,255,255,0.25), inset -2px -2px 2px rgba(0,0,0,0.25);
+html {
+	@include customScrollbars($scrollBarBG, $scrollBarWidth, $scrollBarBulletColor, $scrollBarBulletRadius, $scrollBarBulletShadow);
 }
