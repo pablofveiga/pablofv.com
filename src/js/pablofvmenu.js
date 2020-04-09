@@ -1,24 +1,33 @@
-// RESPONSIVE MENU
-// var lastScrollTop = 0;
-// $(window).scroll(function(event) {
-//     var st = $(this).scrollTop();
-//     if (st > lastScrollTop) {
-//     // downscroll code
-//     } 
-//     else {
-//     // upscroll code
-//     }
-//     lastScrollTop = st;
-// });
+let navMenu = document.querySelector(".mainHeader__menu--nav");
+let frontMenu = document.querySelector(".mainHeader__menu--front");    
 
-$(".mobileMenu").click(function(){
-    $(".mobileMenuOverlay").toggleClass("opened");
-    $(".mobileMenu__trigger").toggleClass("cross");
-    $("body").toggleClass("blocked");
-})
-
-
-
+// Methods:
+function switchMenus(){ 
+    // CHECK FRONT STATUS
+    if (frontMenu.classList.contains("rotated")) {
+        frontMenu.classList.remove("rotated");
+        setTimeout(function(){ 
+            navMenu.classList.add("rotated");           
+        }, 800);
+    } else {
+        frontMenu.classList.add("rotated");
+        setTimeout(function(){ 
+            navMenu.classList.remove("rotated");
+        }, 800);
+    }
+    // CHECK NAV STATUS
+    if (navMenu.classList.contains("rotated")) {
+        navMenu.classList.remove("rotated");
+        setTimeout(function(){ 
+            frontMenu.classList.add("rotated");         
+        }, 800);
+    } else {
+        navMenu.classList.add("rotated");
+        setTimeout(function(){ 
+            frontMenu.classList.remove("rotated");
+        }, 800);
+    }
+}
 function blockBody() {
     $("body").toggleClass("blocked");  
 }
@@ -28,15 +37,12 @@ function showTrigger() {
 function hideTrigger() {
     $(".menuTrigger").removeClass("visible");
 }
-
 function mobileTrigger() {
     $(".menuTrigger").click(function(){
         $(".mainHeader").toggleClass("opened","");
         blockBody();
     });
 }
-
-
 
 var scrollStop = function (callback) {
     // Make sure a valid callback was provided
@@ -54,23 +60,27 @@ var scrollStop = function (callback) {
         }, 66);
     }, false);
 };
-
-
 function scrollDetection() {
     let scrollPosition = 0;
     let target = document.querySelector(".mainHeader");
+
     window.addEventListener('scroll', function(){
         if ((document.body.getBoundingClientRect()).top > scrollPosition) {
             target.setAttribute("data-scroll","up");
             showTrigger();
+            // show Nav
+            target.classList.remove("rotated");
         } else {
             target.setAttribute("data-scroll","down");
             hideTrigger();
+            // hide Nav
+            target.classList.add("rotated");
         }
         scrollPosition = (document.body.getBoundingClientRect()).top;
     });
     scrollStop(function(){
         target.setAttribute("data-scroll","stopped");
+        // show Nav
     })
 }
 
@@ -79,48 +89,28 @@ function scrollDetection() {
 scrollDetection();
 mobileTrigger();
 
+$(".frontMenu__circle").click(function(){
+    switchMenus();
+})
+
+
+/*  FROM HERE: All shit */
+
+// $(".mobileMenu").click(function(){
+//     $(".mobileMenuOverlay").toggleClass("opened");
+//     $(".mobileMenu__trigger").toggleClass("cross");
+//     $("body").toggleClass("blocked");
+// })
 
 
 
 
-let navMenu = document.querySelector(".mainHeader__menu--nav");
-let frontMenu = document.querySelector(".mainHeader__menu--front");    
 
 
-
-
-
-// Methods:
-function switchMenus(){	
-	// CHECK FRONT STATUS
-	if (frontMenu.classList.contains("rotated")) {
-		frontMenu.classList.remove("rotated");
-		setTimeout(function(){ 
-			navMenu.classList.add("rotated");			
-		}, 800);
-	} else {
-		frontMenu.classList.add("rotated");
-		setTimeout(function(){ 
-			navMenu.classList.remove("rotated");
-		}, 800);
-	}
-	// CHECK NAV STATUS
-	if (navMenu.classList.contains("rotated")) {
-		navMenu.classList.remove("rotated");
-		setTimeout(function(){ 
-			frontMenu.classList.add("rotated");			
-		}, 800);
-	} else {
-		navMenu.classList.add("rotated");
-		setTimeout(function(){ 
-			frontMenu.classList.remove("rotated");
-		}, 800);
-	}
-}
 
 // $(".mainHeader__menu--front, .mainHeader__menu--nav").toggleClass("rotated","");
 
-function closeNavMenu() {
+function closeNavMenu() {   // NOT WORKING PROPERLY
 	if (navMenu.classList.contains("rotated")) {
 		navMenu.classList.remove("rotated");
 	}
