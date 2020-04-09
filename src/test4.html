@@ -22,14 +22,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png">    
     <link rel="icon" type="image/png" sizes="96x96" href="pics/favicon-96x96.png">
     <meta name="theme-color" content="#3e3e3e">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37442851-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-37442851-1');
-    </script>
+
+
 </head>
 <body id="spa">
 
@@ -45,40 +39,92 @@
                 </div>      
                 <!-- <span class="frontMenu__bar"></span> -->
                 <div class="frontMenu__ninjaArea">
-                    <span class="mainHeader__ninjaArea__ninja ninja"></span>
-                    <button class="mainHeader__ninjaArea__settings">Settings</button>
+                    <span class="frontMenu__ninjaArea__ninja ninja"></span>
+                    <button class="frontMenu__ninjaArea__settings">Settings</button>
                 </div>
             </div>        
         </div>
         <div class="mainHeader__menu mainHeader__menu--nav rotated">
             <nav class="navMenu">
                 <ul class="navMenu__list">
+
+                    <li class="navMenu__list__item navMenu__list__item--home mobileOnly">
+                        <a href="#" class="navMenu__list__item__link">
+                            <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--home"></span>
+                            <span class="navMenu__list__item__link__text">Home</span>
+                        </a>
+                    </li>
+
                     <li class="navMenu__list__item navMenu__list__item--who">
-                        <span class="navMenu__list__item__icon"></span>
-                        <span class="navMenu__list__item__text">Who I am</span>
+                        <a href="#" class="navMenu__list__item__link">
+                            <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--who"></span>
+                            <span class="navMenu__list__item__link__text">Who I am</span>
+                        </a>
                     </li>
                     <li class="navMenu__list__item navMenu__list__item--skills">
-                        <span class="navMenu__list__item__icon"></span>
-                        <span class="navMenu__list__item__text">Skills & Certificates</span>
+                        <a href="#" class="navMenu__list__item__link">
+                            <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--skills"></span>
+                            <span class="navMenu__list__item__link__text">Skills & Certificates</span>
+                        </a>
                     </li>
                     <li class="navMenu__list__item navMenu__list__item--work">
-                        <span class="navMenu__list__item__icon"></span>
-                        <span class="navMenu__list__item__text">Work Experience</span>
+                        <a href="#" class="navMenu__list__item__link">
+                            <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--work"></span>
+                            <span class="navMenu__list__item__link__text">Work Experience</span>
+                        </a>
                     </li>
                     <li class="navMenu__list__item navMenu__list__item--contact">
-                        <span class="navMenu__list__item__icon"></span>
-                        <span class="navMenu__list__item__text">CV & Contact</span>
+                        <a href="#" class="navMenu__list__item__link">
+                            <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--contact"></span>
+                            <span class="navMenu__list__item__link__text">CV & Contact</span>
+                        </a>
                     </li>
+
+
+
+                    <li class="navMenu__list__item navMenu__list__item--cv mobileOnly">
+                        <a href="#" class="navMenu__list__item__link">
+                            <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--cv"></span>
+                            <span class="navMenu__list__item__link__text">Download CV</span>
+                        </a>
+                    </li>
+                    <li class="navMenu__list__item navMenu__list__item--linkedin mobileOnly">
+                        <a href="#" class="navMenu__list__item__link">
+                            <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--linkedin"></span>
+                            <span class="navMenu__list__item__link__text">Linkedin Profile</span>
+                        </a>
+                    </li>
+                    <li class="navMenu__list__item navMenu__list__item--settings mobileOnly">
+                        <a href="#" class="navMenu__list__item__link">
+                            <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--settings"></span>
+                            <span class="navMenu__list__item__link__text">Settings</span>
+                        </a>
+                    </li>
+
+                    
+
                     <li class="navMenu__list__item navMenu__list__item--language navMenu__list__item--language--spanish">
-                        <span class="navMenu__list__item__icon"></span>
-                        <span class="navMenu__list__item__text" lang="es">Versión en español</span>
-                    </li>                
+                        <a href="#" class="navMenu__list__item__link">
+                            <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--language navMenu__list__item__link__icon--language--spanish"></span>
+                            <span class="navMenu__list__item__link__text" lang="es">Versión en español</span>
+                        </a>
+                    </li>
+
+
+
                 </ul>
             </nav>
         </div>
         <span class="mainHeader__bar"></span>
     </header>
 
+    <div class="menuTrigger">
+        <ul>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
 
 
 
@@ -1478,9 +1524,9 @@
     <script src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
 
-
     <!-- <script src="js/functions.js"></script> -->
     <script src="js/functions22.js"></script>
+    <script src="js/pablofvmenu.js"></script>
 
 
 <!-- 
@@ -1502,79 +1548,6 @@
 
     </script>
 
-
-<script type="text/javascript">
-
-// let navMenu = document.querySelector(".mainHeader__menu");
-// let frontMenu = document.querySelector(".mainHeader");    
-
-// function turnBlock(menu,status) {
-
-//     function showNavMenu() {
-//         // CHECK IF F.M. IS VISIBLE, THEN HIDE IT
-//         if (frontMenu.classList.contains("visible") ) {
-//             frontMenu.classList.remove("visible");
-//         }
-//         // CHECK IF N.M. IS NOT VISIBLE, THEN SHOW IT
-//         if (  (navMenu.classList.contains("visible") == false )  ) {
-//             navMenu.classList.add("visible");
-//         }
-//     }
-//     function hideNavMenu() {
-//         // CHECK IF N.M. IS VISIBLE, THEN HIDE IT
-//         if ((navMenu.classList.contains("visible"))) {
-//             navMenu.classList.remove("visible");
-//         }
-//         // CHECK IF F.M. IS NOT VISIBLE, THEN SHOW IT
-//         if (!(frontMenu.classList.contains("visible")) ) {
-//             frontMenu.classList.add("visible");
-//         }
-//     }
-//     function showFrontMenu() {
-//         // CHECK IF N.M. IS VISIBLE, THEN HIDE IT
-//         if (navMenu.classList.contains("visible")) {
-//             navMenu.classList.remove("visible");
-//         }
-//         // CHECK IF F.M. IS NOT VISIBLE, THEN SHOW IT
-//         if (!(frontMenu.classList.contains("visible")) ) {
-//             frontMenu.classList.add("visible");
-//         }
-//     }
-//     function hideFrontMenu() {
-//         // CHECK IF F.M. IS VISIBLE, THEN HIDE IT
-//         if (frontMenu.classList.contains("visible") ) {
-//             frontMenu.classList.remove("visible");
-//         }
-//         // CHECK IF N.M. IS NOT VISIBLE, THEN SHOW IT
-//         if (!(navMenu.classList.contains("visible"))) {
-//             navMenu.classList.add("visible");
-//         }
-//     }
-
-//     switch(menu) {
-//         case navMenu: 
-//             if (status == true) {
-//                 showNavMenu();
-//             } else {
-//                 hideNavMenu();
-//             }
-//             break;       
-
-//         case frontMenu:
-//             if (status == true) {
-//                 showFrontMenu();
-//             } else {
-//                 hideFrontMenu();
-//             }
-//             break;
-        
-//         default: 
-//             break;
-//     }
-// }    
-
-
-</script>
 
 
 </body>

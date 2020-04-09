@@ -27,7 +27,8 @@ body {
 $containerWidth: 1200px;
 $mobilePadding: 0 12px 12px;
 $desktopPadding: 0 20px;
-$mobileBreakpoint: 769px;
+// $mobileBreakpoint: 769px;
+$mobileBreakpoint: 991px;
 .container {
 	padding: $mobilePadding;
 	position: relative;
@@ -109,8 +110,13 @@ a { color: $accentColor; }	// Put in theme template
 }
 
 .desktopOnly {
-	@media (max-width: 768px) {
+	@media (max-width: $mobileBreakpoint) {
 		display: none;
+	}
+}
+.mobileOnly {
+	@media (min-width: $mobileBreakpoint) {
+		display: none;	
 	}
 }
 

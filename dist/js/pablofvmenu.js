@@ -1,3 +1,88 @@
+// RESPONSIVE MENU
+// var lastScrollTop = 0;
+// $(window).scroll(function(event) {
+//     var st = $(this).scrollTop();
+//     if (st > lastScrollTop) {
+//     // downscroll code
+//     } 
+//     else {
+//     // upscroll code
+//     }
+//     lastScrollTop = st;
+// });
+
+$(".mobileMenu").click(function(){
+    $(".mobileMenuOverlay").toggleClass("opened");
+    $(".mobileMenu__trigger").toggleClass("cross");
+    $("body").toggleClass("blocked");
+})
+
+
+
+function blockBody() {
+    $("body").toggleClass("blocked");  
+}
+function showTrigger() {
+    $(".menuTrigger").addClass("visible");
+}
+function hideTrigger() {
+    $(".menuTrigger").removeClass("visible");
+}
+
+function mobileTrigger() {
+    $(".menuTrigger").click(function(){
+        $(".mainHeader").toggleClass("opened","");
+        blockBody();
+    });
+}
+
+
+
+var scrollStop = function (callback) {
+    // Make sure a valid callback was provided
+    if (!callback || typeof callback !== 'function') return;
+    // Setup scrolling variable
+    var isScrolling;
+    // Listen for scroll events
+    window.addEventListener('scroll', function (event) {
+        // Clear our timeout throughout the scroll
+        window.clearTimeout(isScrolling);
+        // Set a timeout to run after scrolling ends
+        isScrolling = setTimeout(function() {
+            // Run the callback
+            callback();
+        }, 66);
+    }, false);
+};
+
+
+function scrollDetection() {
+    let scrollPosition = 0;
+    let target = document.querySelector(".mainHeader");
+    window.addEventListener('scroll', function(){
+        if ((document.body.getBoundingClientRect()).top > scrollPosition) {
+            target.setAttribute("data-scroll","up");
+            showTrigger();
+        } else {
+            target.setAttribute("data-scroll","down");
+            hideTrigger();
+        }
+        scrollPosition = (document.body.getBoundingClientRect()).top;
+    });
+    scrollStop(function(){
+        target.setAttribute("data-scroll","stopped");
+    })
+}
+
+
+
+scrollDetection();
+mobileTrigger();
+
+
+
+
+
 let navMenu = document.querySelector(".mainHeader__menu--nav");
 let frontMenu = document.querySelector(".mainHeader__menu--front");    
 
@@ -6,17 +91,41 @@ let frontMenu = document.querySelector(".mainHeader__menu--front");
 
 
 // Methods:
-function switchMenus(){
-	// if (navMenu.classList.contains("rotated")) {
-	// 	navMenu.classList.remove("rotated");
-	// 	frontMenu.classList.add("rotated");
-	// } else {
-	// 	navMenu.classList.add("rotated");
-	// 	frontMenu.classList.remove("rotated");
-	// }
-
-	$(".mainHeader__menu--nav, .mainHeader__menu--front").toggleClass("rotated");
+function switchMenus(){	
+	// CHECK FRONT STATUS
+	if (frontMenu.classList.contains("rotated")) {
+		frontMenu.classList.remove("rotated");
+		setTimeout(function(){ 
+			navMenu.classList.add("rotated");			
+		}, 800);
+	} else {
+		frontMenu.classList.add("rotated");
+		setTimeout(function(){ 
+			navMenu.classList.remove("rotated");
+		}, 800);
+	}
+	// CHECK NAV STATUS
+	if (navMenu.classList.contains("rotated")) {
+		navMenu.classList.remove("rotated");
+		setTimeout(function(){ 
+			frontMenu.classList.add("rotated");			
+		}, 800);
+	} else {
+		navMenu.classList.add("rotated");
+		setTimeout(function(){ 
+			frontMenu.classList.remove("rotated");
+		}, 800);
+	}
 }
+
+// $(".mainHeader__menu--front, .mainHeader__menu--nav").toggleClass("rotated","");
+
+function closeNavMenu() {
+	if (navMenu.classList.contains("rotated")) {
+		navMenu.classList.remove("rotated");
+	}
+}
+
 
 function closeMenus() {
 	let menuPosition;
@@ -29,18 +138,7 @@ function closeMenus() {
 		menuPosition = 2;
 		$(".mainHeader__menu--front").removeClass("rotated");
 		$(".mainHeader__menu--nav").addClass("rotated");
-	}
-
-	// $(".mainHeader__menu--nav").toggleClass("rotated","");
-	// $(".mainHeader__menu--front").toggleClass("rotated","");
-
-	// if ( frontMenu.classList.contains("rotated") ) {
-	// 	frontMenu.classList.remove("rotated");
-	// }
-	// if ( !(navMenu.classList.contains("rotated")) ) {
-	// 	navMenu.classList.add("rotated");
-	// }
-	
+	}	
 }
 
 
@@ -111,7 +209,12 @@ function turnBlock(menu,status) {
 // turnBlock(frontMenu,false);
 
 
-$(".mainHeader__menu--front, .mainHeader__menu--nav").toggleClass("rotated","");
+
+
+
+
+
+
 // NINJA.click(function(){
 		// Mostrar Nav Menu
 // })
