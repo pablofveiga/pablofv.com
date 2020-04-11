@@ -31,7 +31,7 @@ section.whoIam {
 
     &__header {
         height: 4em;
-        background: $blue;
+        background: $red;
         width: 80%;
         margin: auto;
 
@@ -99,38 +99,37 @@ section.whoIam {
             height: $altura;
             padding-top: 4rem;
 
-            $purple: #8859bd;
-            $blue2: #24b666;
-            $indigo: #244fce;
-            $cyan: #26C6DA;
-            $lime: #667f6a;
-            $brown: #ea4b11;
-            $orange: #FF945A;
-            $green: #B1DA96;
+            $orange: #ea4b11;
+            $skyblue: #03a9f4;
+            $lightgreen: #32d166;
+            $mediumblue: #244fce;
+            $palegreen: #c5ca88;
+            $violet: #8859bd;
+            $sicksalmon: #ffbaa1;
 
-            &.purple {
-                background: $purple;
+            &--orange {
+                background-color: $orange;
+            }
+            &--skyblue {
+                background-color: $skyblue;
+            }
+            &--lightgreen {
+                background-color: $lightgreen;
+            }
+            &--mediumblue {
+                background-color: $mediumblue;
+            }
+            &--palegreen {
+                background-color: $palegreen;
+            }
+            &--violet {
+                background-color: $violet;
+            }
+            &--sicksalmon {
+                background-color: $sicksalmon;
             }
 
-            &.blue {
-                background: $blue2;
-            }
 
-            &.indigo {
-                background: $indigo;
-            }
-
-            &.cyan {
-                background: $cyan;
-            }
-
-            &.lime {
-                background: $lime;
-            }
-
-            &.brown {
-                background: $brown;
-            }
         }
 
         &__img {

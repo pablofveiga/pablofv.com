@@ -120,17 +120,17 @@ function mobileTrigger() {
     trigger.addEventListener("click",function(){
         if (window.outerWidth < 991) {
             menusContainer.classList.toggle("opened");
+            trigger.classList.toggle("cross");
         } else {
             if (!(menusContainer.classList.contains("rotated"))) {
-                // switchMenus();
-                // scrollToTop(1000);
-                trigger.classList.toggle("clicked");
+                switchMenus();
             } else {
-                // showNavMenu();
-                // scrollToTop(1000);
-                trigger.classList.toggle("clicked");
+                showNavMenu();
             }
         }
+    });
+    trigger.addEventListener("dblclick",function(){
+        scrollToTop(500);
     });
 }
 // DATA-SCROLL FUNCTION

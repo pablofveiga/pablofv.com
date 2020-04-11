@@ -1,14 +1,8 @@
-/*
-// TODO: Create Class Menu;
-*/
 let menusContainer = document.querySelector(".mainHeader");
 let navMenu = document.querySelector(".mainHeader__menu--nav");
 let frontMenu = document.querySelector(".mainHeader__menu--front");
 let mobileTriggerBtn = document.querySelector(".menuTrigger");
 
-/*
-// ## METHODS:
-*/
 // SHOW FRONT
 function showNavMenu() {
     if (menusContainer.classList.contains("rotated")) {
@@ -75,7 +69,6 @@ function scrollToTop(scrollDuration) {
         else clearInterval(scrollInterval); 
     },15);
 }
-
 // DETECT LOBBY VISIBILITY ON WINDOW
 window.addEventListener("scroll",function(){
     let actualScroll = window.pageYOffset;
@@ -163,11 +156,12 @@ function scrollDetection() {
         menusContainer.setAttribute("data-scroll","stopped");
     })
 }
+$(".frontMenu__circle").click(function(){
+    switchMenus();
+})
+
 
 // LAUNCHER
 scrollDetection();
 mobileTrigger();
 
-$(".frontMenu__circle").click(function(){
-    switchMenus();
-})

@@ -16,47 +16,6 @@ $(document).ready(function(){
 
 
 
-    // STICKY header -> TODO: Convert to IIFE
- //    if ($(window).width()>768) {
-	//     var stickyNavTop = $('.mainHeader').offset().top;   	
-	//    	var stickyNav = function(){
-	// 	    var scrollTop = $(window).scrollTop();
-	// 	    if (scrollTop > stickyNavTop) { 
-	// 	        $('.mainHeader').addClass('sticky');
-	// 	    } else {
-	// 	        $('.mainHeader').removeClass('sticky'); 
-	// 	    }
-	// 	};
-	// 	stickyNav();
-	// 	$(window).scroll(function() {
-	// 		stickyNav();
-	// 	});
-	// }
-
-
-	// RESPONSIVE MENU
-	// var lastScrollTop = 0;
-	// $(window).scroll(function(event){
-	// 	var st = $(this).scrollTop();
-	// 	if (st > lastScrollTop){
-	// 		// downscroll code
-	// 		$(".mainHeader").addClass("rotated");		
-	// 		if( $(".mobileMenuOverlay").hasClass("opened")  ) {			
-	// 		} else {
-	// 			$(".mobileMenu").removeClass("visible");
-	// 		}		
-	// 	} else {
-	// 		// upscroll code
-	// 		$(".mobileMenu").addClass("visible");
-	// 		$(".mainHeader").removeClass("rotated");
-	// 	}
-	// 	lastScrollTop = st;
-	// });
-	// $(".mobileMenu").click(function(){
-	// 	$(".mobileMenuOverlay").toggleClass("opened");
-	// 	$(".mobileMenu__trigger").toggleClass("cross");
-	// 	$("body").toggleClass("blocked");
-	// })
 
 });
 
@@ -83,6 +42,8 @@ $(document).ready(function(){
 	focusCard();
 // }
 
+
+/*
 // NAVEGACIÓN DEL LOBBY
 // if ($(window).width()>768) {
 	let triggers = $(".lobbyContainer>section");
@@ -124,7 +85,7 @@ $(document).ready(function(){
 	});
 // }
 
-
+*/
 
 
 // // FILTER TOOLS 3.0
@@ -214,10 +175,10 @@ $(".settingsTrigger:not(.active)").hover(function() {
 });
 
 
-// SKILL LIST
-$(".skillsList li").dblclick(function(){
-	$(this).toggleClass("clicked");
-})
+// // SKILL LIST
+// $(".skillsList li").dblclick(function(){
+// 	$(this).toggleClass("clicked");
+// })
 
 
 

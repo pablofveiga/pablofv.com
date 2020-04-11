@@ -5,6 +5,7 @@
 	height: 100vh;
 	background-color: #212121;	
     z-index: 10000;
+    @include noTextSelection;
 
 	>.container {
 		display: flex;
@@ -57,6 +58,8 @@
 	    height: 100%;
 	    padding: 1em 0 1.3em;
 
+	    > * { pointer-events: none; }
+
 		&__header {
 			order: 2;
 			margin-top: 0.6em;
@@ -101,7 +104,8 @@
 	        border: 1px dashed;
             align-items: center;
             cursor: pointer;
-            padding: 0.3em 0.5em 0 0;           
+            padding: 0.3em 0.5em 0 0;
+            margin-top: 2.5em;       
 
 			header {
 				margin-top: 0;
@@ -278,6 +282,7 @@
 			    width: 150px;
 			    align-self: center;
 			    padding: 1em;
+			    margin-top: 0;
 
 			    header {
 			    	margin: 0.5em 0 0.25em;
