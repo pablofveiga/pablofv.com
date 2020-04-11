@@ -11,10 +11,8 @@
 @import "layout/_layout.scss";				// GRAN MIERDA
 
 // // // ==== COMPONENTS ====
-// @import "components/_main_header__new.scss";	// TOTAL DISASTER - WHAT TO DO WITH ANIMATIONS???
-@import "components/_main_header__new22.scss";
-@import "components/_responsiveMenu.scss";	// OK 90%
-@import "components/_tabSystem.scss";		// CSS OK
+@import "components/_header.scss";
+@import "components/_tabSystem.scss";		// CSS OK; ADD HTML CLASSES FOR BEM
 
 
 // // // ==== PAGES ====
@@ -23,14 +21,13 @@
 @import "pages/_contact.scss";				// ELIMINAR ID'S Y CONFLICTOS CON LAYOUT
 
 @import "pages/_skills.scss";				// ADD MOBILE FIRST, ELIMINAR ID'S Y CONFLICTOS CON LAYOUT
+@import "pages/_certificates.scss";			// ADD BEM
 @import "pages/_workexperience.scss";		// TRY TO QUIT IMPORTANT¡s
 
 // // ==== VENDORS ====
 @import "vendors/_slick-theme.scss";		// FUTURE: Implement my Own Slider;
 @import "vendors/_slick.scss";				// FUTURE: Implement my Own Slider;
 
-
-@import "cleaning/_orphans.scss";			// MERGE THIS SHIT
 
 .copycat {
 	color: green;

@@ -1,9 +1,8 @@
 // ##########################################|
 // ############# NEW FUNCTIONS ##############|
 // ##########################################|
-
 // ### MOBILE ONLY
-	// peibolTinder()
+// peibolTinder()
 function peibolTinder() {
     var animating = false;
     var cardsCounter = 0;
@@ -80,14 +79,8 @@ function peibolTinder() {
         });
     });
 }
-
-
 // ### DESKTOP ONLY
-	// focusCard() - jquery
-	// beeCursor()
-
-
-	// focusCard() - jquery
+// focusCard() - jquery
 function focusCard() {
     $(".lobbySection").removeClass("hovered");
     $(".lobbySection").mouseenter(function(){
@@ -100,23 +93,14 @@ function focusCard() {
         $(this).removeClass("hovered");
     })
 }
-	// beeCursor()
+// beeCursor()
 function beeCursor() {
     $(".honeycomb__cell").on("mousedown mouseup", function(e) {
     	$(this).toggleClass("clicked");
 	});
 }
-
-
 // ### MOBILE & DESKTOP
-	// navigation() navegación del Lobby 
-	// filterTools()  Filter TOOLS (jquery locura)
-	// sendForm()    Formulario
-	// invertItemsWhoIam()    WHO I AM (invert items)
-	// Header and Menu Functions
-
-
-	// navigation() navegación del Lobby 
+// navigation() navegación del Lobby 
 function navigation() {
 	let triggers = $(".lobbyContainer>section, .navMenu__list__item__link");
 	triggers.click(function(event) {
@@ -150,7 +134,7 @@ function navigation() {
 	    document.querySelector(".mainHeader").classList.remove("opened");
 	});	
 }
-	// Filter TOOLS (jquery locura)
+// Filter TOOLS (jquery locura)
 function filterTools() {
 	if ($(window).width()<768) {
 	    $("#scrollH").addClass("active");
@@ -221,7 +205,7 @@ function filterTools() {
 	    $(this).toggleClass("hovered");
 	});
 }
-	// sendForm()    Formulario
+// sendForm()    Formulario
 function sendForm() {
 	$(".boton_envio").click(function(e) {
 	    e.preventDefault();
@@ -268,14 +252,14 @@ function sendForm() {
 	    }
 	});
 }
-	// invertItemsWhoIam()    WHO I AM (invert items)
+// invertItemsWhoIam()    WHO I AM (invert items)
 function invertItemsWhoIam(){
     card_inv = $(".whoIamGame__item-cont");
     card_inv.children().each(function(i, div) {
         card_inv.prepend(div)
     })
 }
-	// peibolMenu()    Header and Menu Functions
+// peibolMenu()    Header and Menu Functions
 function peibolMenu() {
 	let menusContainer = document.querySelector(".mainHeader");
 	let navMenu = document.querySelector(".mainHeader__menu--nav");
