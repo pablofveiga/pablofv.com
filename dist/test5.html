@@ -27,12 +27,12 @@
 </head>
 <body id="spa">
 
-    <header class="mainHeader">    
-        <div class="mainHeader__menu mainHeader__menu--front framed container">
+    <header class="mainHeader onViewport">    
+        <div class="mainHeader__menu mainHeader__menu--front container">
             <div class="frontMenu">
                 <div class="frontMenu__text">
                     <h1 class="frontMenu__text__title">pablofv.com</h1>
-                    <h2 class="frontMenu__text__subtitle">Front End Developer</h2>                
+                    <h2 class="frontMenu__text__subtitle">Front End Developer</h2>
                 </div>
                 <div class="frontMenu__circle">
                     <span class="frontMenu__circle__closeIcon"></span>
@@ -47,49 +47,41 @@
         <div class="mainHeader__menu mainHeader__menu--nav rotated">
             <nav class="navMenu">
                 <ul class="navMenu__list">
-
                     <li class="navMenu__list__item navMenu__list__item--switcher desktopOnly">
                         <div class="frontMenu__circle">
                             <span class="frontMenu__circle__closeIcon"></span>
                         </div>
                     </li>
-
-
-
                     <li class="navMenu__list__item navMenu__list__item--home mobileOnly">
                         <a href="#" class="navMenu__list__item__link">
                             <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--home"></span>
                             <span class="navMenu__list__item__link__text">Home</span>
                         </a>
                     </li>
-
                     <li class="navMenu__list__item navMenu__list__item--who">
-                        <a href="#" class="navMenu__list__item__link">
+                        <a href="#" class="navMenu__list__item__link fillHover">
                             <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--who"></span>
                             <span class="navMenu__list__item__link__text">Who I am</span>
                         </a>
                     </li>
                     <li class="navMenu__list__item navMenu__list__item--skills">
-                        <a href="#" class="navMenu__list__item__link">
+                        <a href="#" class="navMenu__list__item__link fillHover">
                             <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--skills"></span>
                             <span class="navMenu__list__item__link__text">Skills & Certificates</span>
                         </a>
                     </li>
                     <li class="navMenu__list__item navMenu__list__item--work">
-                        <a href="#" class="navMenu__list__item__link">
+                        <a href="#" class="navMenu__list__item__link fillHover">
                             <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--work"></span>
                             <span class="navMenu__list__item__link__text">Work Experience</span>
                         </a>
                     </li>
                     <li class="navMenu__list__item navMenu__list__item--contact">
-                        <a href="#" class="navMenu__list__item__link">
+                        <a href="#" class="navMenu__list__item__link fillHover">
                             <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--contact"></span>
                             <span class="navMenu__list__item__link__text">CV & Contact</span>
                         </a>
                     </li>
-
-
-
                     <li class="navMenu__list__item navMenu__list__item--cv mobileOnly">
                         <a href="#" class="navMenu__list__item__link">
                             <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--cv"></span>
@@ -107,31 +99,36 @@
                             <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--settings"></span>
                             <span class="navMenu__list__item__link__text">Settings</span>
                         </a>
-                    </li>
-
-                    
-
+                    </li>                  
                     <li class="navMenu__list__item navMenu__list__item--language navMenu__list__item--language--spanish">
-                        <a href="#" class="navMenu__list__item__link navMenu__list__item__link--stretched">
+                        <a href="#" class="navMenu__list__item__link slicedHover">
                             <span class="navMenu__list__item__link__icon navMenu__list__item__link__icon--language navMenu__list__item__link__icon--language--spanish"></span>
                             <span class="navMenu__list__item__link__text" lang="es">Versión en español</span>
                         </a>
                     </li>
-
-
-
                 </ul>
             </nav>
         </div>
         <span class="mainHeader__bar"></span>
     </header>
 
-    <div class="menuTrigger">
-        <ul>
-            <li>&nbsp;</li>
-            <li>&nbsp;</li>
-            <li>&nbsp;</li>
-        </ul>
+    <div class="menuTrigger" id="menuTrigger">
+        <div class="menuTrigger__icon">
+            <ul>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+            </ul>
+        </div>
+        <div class="menuTrigger__scrollTop">
+            TOP
+        </div>
+        <div class="menuTrigger__settings">
+            SET
+        </div>
+        <div class="menuTrigger__ninja">
+            NIN
+        </div>        
     </div>
 
 
@@ -1480,7 +1477,7 @@
 
     <!-- <script src="js/functions.js"></script> -->
     <script src="js/functions22.js"></script>
-    <script src="js/pablofvmenu.js"></script>
+    <script src="js/pablofvmenu2.js"></script>
 
 
 <!-- 

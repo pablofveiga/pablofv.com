@@ -36,3 +36,136 @@
     background: $scrollBackground;
   }
 }
+
+
+@mixin fillingBox($bgColor,$textColor) {
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease-in;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top: 2px solid $bgColor;
+        border-bottom: 2px solid $bgColor;
+        transform: scaleY(2);
+        opacity: 0;
+        transition: .3s;        
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $bgColor;
+        transform: scale(0);
+        opacity: 0;
+        transition: .3s;
+        z-index: -1;        
+    }
+    &:hover {
+        color: $textColor;
+
+        &:before {
+            transform: scaleY(1);
+            opacity: 1;            
+        }
+        &:after {
+            transform: scaleY(1);
+            opacity: 1;            
+        }
+    }
+
+}
+
+@mixin sparkled {
+    padding: 0 10px;
+    position: relative;
+    &::before,
+    &::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transform-origin: center;
+    }
+
+    &::before {
+        border-top: 2px solid $red;
+        border-bottom: 2px solid $red;
+        transform: scale3d(0,1,1);
+    }
+
+    &::after {
+        border-left: 2px solid $red;
+        border-right: 2px solid $red;
+        transform: scale3d(1,0,1);
+    }
+
+    &:hover::before,
+    &:hover::after {
+        transform: scale3d(1,1,1);
+        transition: transform 900ms;
+    }
+}
+
+@mixin trikitron {
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+    max-width: 250px;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+
+    &:before {
+        bottom: 0;
+        left: 0;
+        border-color: transparent transparent transparent #561927;
+    }
+    &:after {
+
+    top: 0;
+    right: 0;
+    border-color: transparent #561927 transparent transparent;
+    }
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 0 solid;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);        
+    }
+
+    &:hover {
+
+        &:before {
+        }
+        &:after {
+        }
+        &:before,
+        &:after {
+            // border-width: 70px 262.5px;
+            border-width: 70px 178.5px;
+        }
+
+
+
+    }
+
+
+}

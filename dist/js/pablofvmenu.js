@@ -1,7 +1,77 @@
+/*
+// TODO: Create Class Menu;
+
+// # Valid (using Methods)
+
+
+
+
+
+
+
+
+*/
+let menusContainer = document.querySelector(".mainHeader");
 let navMenu = document.querySelector(".mainHeader__menu--nav");
-let frontMenu = document.querySelector(".mainHeader__menu--front");    
+let frontMenu = document.querySelector(".mainHeader__menu--front");
+let mobileTriggerBtn = document.querySelector(".menuTrigger");
 
 // Methods:
+function showNavMenu() {
+
+    // IF CONTAINER IS ROTATED (NOT VISIBLE)
+    if (menusContainer.classList.contains("rotated")) {
+        // MAKE CONTAINER VISIBLE
+        menusContainer.classList.remove("rotated");
+    
+        if (!(frontMenu.classList.contains("rotated"))) {
+            frontMenu.classList.add("rotated");
+            navMenu.classList.remove("rotated");
+        }
+
+    } 
+    // IF CONTAINER IS NOT ROTATED (VISIBLE)
+    else {
+
+
+        // Si FRONT visible
+        if (!(frontMenu.classList.contains("rotated"))) {
+            // frontMenu.classList.remove("rotated")
+            // navMenu.classList.add("rotated");
+            switchMenus();
+            console.log("Visible el front")
+        } 
+
+
+        // SI NAV ES visible
+        else if ( !(navMenu.classList.contains("rotated")) ){
+            // return;
+            console.log("Visible el Menu")
+        }
+
+
+    }
+}
+
+
+
+// DETECT LOBBY VISIBILITY ON WINDOW
+window.addEventListener("scroll",function(){
+    let actualScroll = window.pageYOffset;
+    let mainFrameHeight = document.querySelector(".introSection").offsetHeight;
+
+    if ( actualScroll > mainFrameHeight ) {
+        menusContainer.classList.remove("onViewport");
+    }
+    else {
+        menusContainer.classList.add("onViewport");
+    }
+})
+
+
+
+
+
 function switchMenus(){ 
     // CHECK FRONT STATUS
     if (frontMenu.classList.contains("rotated")) {
@@ -28,9 +98,15 @@ function switchMenus(){
         }, 800);
     }
 }
-function blockBody() {
-    $("body").toggleClass("blocked");  
+function blockBody(state) {
+    if (state == 1) {
+        document.querySelector("body").classList.add("blocked");
+    } 
+    else if (state == 0) {
+        document.querySelector("body").classList.remove("blocked");
+    }
 }
+
 function showTrigger() {
     $(".menuTrigger").addClass("visible");
 }
@@ -38,10 +114,21 @@ function hideTrigger() {
     $(".menuTrigger").removeClass("visible");
 }
 function mobileTrigger() {
-    $(".menuTrigger").click(function(){
-        $(".mainHeader").toggleClass("opened","");
-        blockBody();
-    });
+    let mobileBreakpoint = 991;
+
+    if (window.outerWidth < 991) {
+        $(".menuTrigger").click(function(){
+            $(".mainHeader").toggleClass("opened","");
+            blockBody();
+        });    
+    }
+    else {
+        $(".menuTrigger").click(function(){
+            // $(".mainHeader").toggleClass("opened","");    
+            // $(".mainHeader").toggleClass("rotated");
+            showNavMenu();
+        }); 
+    }
 }
 
 var scrollStop = function (callback) {
@@ -62,24 +149,30 @@ var scrollStop = function (callback) {
 };
 function scrollDetection() {
     let scrollPosition = 0;
-    let target = document.querySelector(".mainHeader");
+    // let target = document.querySelector(".mainHeader");
+
+    let actualScroll = window.pageYOffset;
+    let mainFrameHeight = document.querySelector(".introSection").offsetHeight;
+
 
     window.addEventListener('scroll', function(){
+
         if ((document.body.getBoundingClientRect()).top > scrollPosition) {
-            target.setAttribute("data-scroll","up");
+            menusContainer.setAttribute("data-scroll","up");
             showTrigger();
-            // show Nav
-            target.classList.remove("rotated");
+            // show menu container
+            menusContainer.classList.remove("rotated");
+            // showNavMenu();            
         } else {
-            target.setAttribute("data-scroll","down");
+            menusContainer.setAttribute("data-scroll","down");
             hideTrigger();
-            // hide Nav
-            target.classList.add("rotated");
+            // hide menu container
+            menusContainer.classList.add("rotated");
         }
         scrollPosition = (document.body.getBoundingClientRect()).top;
     });
     scrollStop(function(){
-        target.setAttribute("data-scroll","stopped");
+        menusContainer.setAttribute("data-scroll","stopped");
         // show Nav
     })
 }
@@ -94,7 +187,74 @@ $(".frontMenu__circle").click(function(){
 })
 
 
+
+
+
+
+
+
+/*
+
+
+    ## GOOD NOT USING FUNCTIONS
+
+
+// detect entering second section
+let visiblePortion = 0.4;
+let colisionElement = document.querySelector("#whoIam");
+
+var observer = new IntersectionObserver(function(entries) {
+    // isIntersecting is true when element and viewport are overlapping
+    // isIntersecting is false when element and viewport don't overlap
+    if(entries[0].isIntersecting === true) {
+        console.log('Element has just become visible in screen');
+    }
+}, { threshold: [visiblePortion] });
+observer.observe(colisionElement);
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*  FROM HERE: All shit */
+
+/*
 
 // $(".mobileMenu").click(function(){
 //     $(".mobileMenuOverlay").toggleClass("opened");
@@ -260,3 +420,5 @@ function menu() {
 // 	--> Hacer un prependTo si es preciso			
 	
 }
+
+*/
