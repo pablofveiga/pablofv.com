@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Error - P&aacute;gina no encontrada</title>
+
+
+
+<style type="text/css">
+	html , body { margin: 0; padding: 0; }
+	/* ===== TIPOGRAFIA  ===== */
+	@font-face {
+	    font-family: 'museo_sans300';
+	    src: url('fonts/museosans-300-webfont.eot');
+	    src: url('fonts/museosans-300-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/museosans-300-webfont.woff') format('woff'),
+	         url('fonts/museosans-300-webfont.ttf') format('truetype'),
+	         url('fonts/museosans-300-webfont.svg#museo_sans300') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	a { text-decoration: none;}
+	ul { padding: 0; list-style-type: none; }
+	* { font-family: 'museo_sans300',"Times New Roman",Georgia,Serif;}
+	/*  ========= CABECERA ========= */
+	header.cabecera {  
+	  display: block;
+	  padding: 2% 0 0;
+	  position: relative;
+	  text-align: center;
+	  width: 100%;
+	  background-color: #333;
+	} 
+	header.cabecera h2 {
+	    color: #FFF;
+	    font-size: 3em;
+	    margin: 0 auto;
+	    display: inline-block;
+	    width: 100%;
+	}
+	header.cabecera h2 a { color: #FFF;}
+	header.cabecera h1 {
+	  color: #443344;
+	  font-size: 2em;
+	  letter-spacing: 0.1em;
+	  text-shadow: 0 0 3px #FFF;
+	  margin: 0;
+	  display: inline-block;
+	  width: 100%;
+	  padding-bottom: 1em;
+	}
+	/*  ========= MENU ========= */
+	nav.menuprincipal {
+	  background: url("../pics/diagonal.png") repeat scroll 0 0 #FFF;    /*  ANTES #2980B9 */
+	  padding: 1em 0;
+	}
+	nav.menuprincipal ul li {
+	  background-color: #333333;
+	  display: inline-block;
+	  margin: 0 0.5em;
+	}
+	nav.menuprincipal ul li a {
+	  color: #FFFFFF;
+	  display: block;
+	  padding: 0.25em 1em;
+	  font-size: 1.2em;  
+	}
+	nav ul li:hover {
+		-moz-box-shadow: 0 0 14px #000;
+		-webkit-box-shadow: 0 0 14px #000;
+		box-shadow: 0 0 14px #000;
+	}
+	nav.menuprincipal ul li:hover { background-color: #17A517; }
+	.menulaboratorio a:hover {background-color: #A7092E; }
+	/* articulo */
+	section.error { padding: 0 10%; }
+	article ul li { margin: 0.5em 0; }
+	article ul li a { color: #2980B9; }
+	article ul li a:hover { color: #D8950F; }
+	/* -/\-/\-/\ PIE /\-/\-/\- */
+	footer { background-color: #444; }
+	div.datos { padding: 1.5em 0; }
+	div.datos p {
+	  color: #FFFFFF;
+	  font-size: 0.8em;
+	  margin: 0.35em 2em 0 0;
+	  text-align: right;
+	}
+	footer p a { color: #FF0;}
+</style>
+</head>
+<body>
+<div class="contenedor">
+	<!-- ==== CABECERA ==== -->	
+	<header class="cabecera" id="animacioncabecera">
+		<h2>pablofv.com</h2>
+		<h1>desarrollador web y multimedia</h1>
+		
+		<nav class="menuprincipal animacionmenu"> 	
+			<ul>
+				<li class="menuinicio">
+					<a href="/" accesskey="0" >Inicio</a>
+				</li>
+
+				<li class="menudesarrolloweb">
+					<a href="desarrollo-web/" accesskey="1">Desarrollo Web</a>
+				</li>
+				<li class="menudisenografico">
+					<a href="diseno-grafico/" accesskey="2">
+						Dise&ntilde;o Gr&aacute;fico
+					</a>
+				</li>
+				<li class="menulaboratorio">
+					<a href="http://laboratorio.pablofv.com/" target="_blank">Labora&#8224;orio</a>
+				</li>								
+				<li class="menucontacto telefonoanimado">
+					<a href="contacto/" accesskey="3">
+						Contacto
+					</a>	
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- ==== FINAL DE CABECERA ==== -->	
+
+	<section class="error">
+		<header>
+			<h1>
+				Ups... parece que esta p&aacute;gina no existe...
+			</h1>
+		</header>
+		<article>
+			<p>
+				Puedes visitar alguna de estas p&aacute;ginas:
+			</p>
+			<ul>
+				<li><a href="http://www.pablofv.com" title="ir a la p&aacute;gina de inicio">Pablofv.com - Inicio</a></li>
+				<li><a href="http://www.pablofv.com/desarrollo-web/" title="ir a Desarrollo Web">Desarrollo Web</a></li>
+				<li><a href="http://www.pablofv.com/diseno-grafico/" title="ir a Dise&ntilde;o Gr&aacute;fico">Dise&ntilde;o Gr&aacute;fico</a></li>
+				<li><a href="http://laboratorio.pablofv.com/" target="_blank" title="ir al Laboratorio Web ">Laboratorio</a></li>
+				<li><a href="http://www.pablofv.com/contacto/" title="ir a la p&aacute;gina de Contacto">Contacto</a></li>
+			</ul>
+	
+		</article>
+	</section>        
+
+</div>
+
+</body>
+</html>
